@@ -1,0 +1,43 @@
+[
+  {
+    "label": "rss",
+    "url": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08.rss",
+    "final": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08.rss",
+    "status": 200,
+    "bytes": 195957,
+    "type": "application/atom+xml; charset=UTF-8",
+    "start": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns=\"http://www.w3.org/2005/Atom\" xmlns:media=\"http://search.yahoo.com/mrs"
+  },
+  {
+    "label": "api",
+    "url": "https://api.reddit.com/comments/1xjvc08?limit=500",
+    "error": "HTTP Error 403: Blocked"
+  },
+  {
+    "label": "plain",
+    "url": "https://www.reddit.com/comments/1xjvc08",
+    "final": "https://www.reddit.com/comments/1xjvc08",
+    "status": 200,
+    "bytes": 8422,
+    "type": "text/html",
+    "start": "\n  <!DOCTYPE html>\n  <html lang=\"en\">\n    <head>\n      <meta charset=\"UTF-8\" />\n      <meta name=\"viewport\" content=\"wid"
+  },
+  {
+    "label": "embed",
+    "url": "https://www.redditmedia.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/?ref_source=embed&ref=share&embed=true",
+    "final": "https://embed.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/?ref_source=embed&ref=share&embed=true",
+    "status": 200,
+    "bytes": 347142,
+    "type": "text/html; charset=utf-8",
+    "start": "\n    <!DOCTYPE html>\n    <html lang=\"en-US\" class=\"theme-embed theme-beta theme-light\" dir=\"ltr\" device=\"desktop\">\n     "
+  },
+  {
+    "label": "old-rss",
+    "url": "https://old.reddit.com/r/LocalLLM/comments/1xjvc08.rss",
+    "final": "https://old.reddit.com/login/?reason=lor2&dest=https%3A%2F%2Fold.reddit.com%2Fr%2FLocalLLM%2Fcomments%2F1xjvc08.rss",
+    "status": 200,
+    "bytes": 341166,
+    "type": "text/html; charset=utf-8",
+    "start": "\n    <!DOCTYPE html>\n    <html lang=\"en-US\" class=\"theme-beta\" dir=\"ltr\" device=\"desktop\">\n      <head prefix=\"og: https"
+  }
+]

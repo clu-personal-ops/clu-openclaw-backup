@@ -1,0 +1,25 @@
+{
+  "url": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08.rss?limit=1000",
+  "status": 429,
+  "headers": {
+    "Connection": "close",
+    "Content-Length": "0",
+    "x-ratelimit-used": "1",
+    "x-ratelimit-remaining": "0.0",
+    "x-ratelimit-reset": "11",
+    "Accept-Ranges": "bytes",
+    "Date": "Sat, 31 Oct 2026 13:31:48 GMT",
+    "Via": "1.1 varnish",
+    "Vary": "Accept-Encoding",
+    "server-timing": "reddit-ct;desc=\"dn=FT,p=IAD,cs=MISS\"",
+    "Strict-Transport-Security": "max-age=31536000; includeSubdomains",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1; mode=block",
+    "Set-Cookie": "csv=2; Max-Age=63072000; Domain=.reddit.com; Path=/; Secure; SameSite=None",
+    "Server": "snooserv",
+    "Report-To": "{\"group\": \"w3-reporting-nel\", \"max_age\": 14400, \"include_subdomains\": true,  \"endpoints\": [{ \"url\": \"https://w3-reporting-nel.reddit.com/reports\" }]}, {\"group\": \"w3-reporting\", \"max_age\": 14400, \"include_subdomains\": true, \"endpoints\": [{ \"url\": \"https://w3-reporting.reddit.com/reports\" }]}, {\"group\": \"w3-reporting-csp\", \"max_age\": 14400, \"include_subdomains\": true, \"endpoints\": [{ \"url\": \"https://w3-reporting-csp.reddit.com/reports\" }]}",
+    "NEL": "{\"report_to\": \"w3-reporting-nel\", \"max_age\": 14400, \"include_subdomains\": false, \"success_fraction\": 1.0, \"failure_fraction\": 1.0}"
+  },
+  "time": "2026-10-31T13:31:48.020543+00:00"
+}

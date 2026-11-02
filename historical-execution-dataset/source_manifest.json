@@ -1,0 +1,2025 @@
+{
+  "collection_counters": {
+    "deduplicated_rollout_records": 2609,
+    "deduplicated_trajectory_events": 1051,
+    "deduplicated_transcript_events": 1677,
+    "harness_diagnostic_records_scanned": 51519,
+    "lm_unlinked_prediction_records_not_double_counted": 28,
+    "lm_unlinked_stream_completion_records": 2505
+  },
+  "collection_finished_utc": "2026-10-30T13:39:00.687Z",
+  "cutoff_utc": "2026-10-30T13:25:53.425Z",
+  "extractor_version": 1,
+  "limitations": [
+    {
+      "limitation": "macOS_permission_denied; deleted backups not accessible",
+      "source": "~/.Trash"
+    }
+  ],
+  "output_sha256": {
+    "attempts.csv": "cc3cfa12d908e6de91f0893317905094776359878c493a51739421004d2392f9",
+    "data_dictionary.md": "a0ec3a5d136eec0b5da5bbb8d51fbd919e5c9a69852a01c0add7825cd8df1d94",
+    "extract_dataset.py": "2f7584f63a0a2246b42cf541955bdbcd6a83178e754377508e059a4ef1b79f6d",
+    "runs.csv": "676cb4b52c68a84267876b74eb16a6af10d0726fb93ac46b2579847cc307e5ea",
+    "validation.json": "1b2e662374a43f509b2e59618c7109be18c24cb7b4f8b606e3d50af57c07c2da"
+  },
+  "sources": {
+    "backup_0": {
+      "first_timestamp_utc": null,
+      "kind": "retained_backup_archive",
+      "last_timestamp_utc": null,
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz",
+      "records_read": 0
+    },
+    "backup_0_db_0": {
+      "first_timestamp_utc": "2026-10-29T05:22:36.899Z",
+      "flow_run_rows": 0,
+      "kind": "sqlite",
+      "last_timestamp_utc": "2026-10-29T14:35:33.692Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix/Users/clu/.openclaw/state/openclaw.sqlite",
+      "records_read": 1110,
+      "tables_present": [
+        "audit_events",
+        "audit_identity_keys",
+        "backup_runs",
+        "cron_run_receipts",
+        "flow_runs",
+        "meeting_transcript_sessions",
+        "meeting_transcript_summaries",
+        "meeting_transcript_utterances",
+        "migration_runs",
+        "subagent_runs",
+        "task_runs",
+        "worker_transcript_commit_heads",
+        "worker_transcript_commits"
+      ]
+    },
+    "backup_0_db_1": {
+      "first_timestamp_utc": "2026-10-29T05:22:38.389Z",
+      "kind": "sqlite",
+      "last_timestamp_utc": "2026-10-29T14:35:33.689Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix/Users/clu/.openclaw/agents/main/agent/openclaw-agent.sqlite",
+      "records_read": 2518,
+      "tables_present": [
+        "message_tool_run_outcomes",
+        "session_goal_operations",
+        "session_transcript_active_events",
+        "session_transcript_archives",
+        "session_transcript_cold_archives",
+        "session_transcript_fts",
+        "session_transcript_fts_config",
+        "session_transcript_fts_content",
+        "session_transcript_fts_data",
+        "session_transcript_fts_docsize",
+        "session_transcript_fts_idx",
+        "session_transcript_fts_rows",
+        "session_transcript_index_state",
+        "trajectory_runtime_events",
+        "transcript_event_identities",
+        "transcript_events",
+        "transcript_rewrite_watermarks"
+      ]
+    },
+    "backup_0_db_2": {
+      "first_timestamp_utc": null,
+      "goal_rows": 0,
+      "kind": "sqlite",
+      "last_timestamp_utc": null,
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix/Users/clu/.openclaw/agents/main/agent/codex-home/goals_1.sqlite",
+      "records_read": 0,
+      "tables_present": [
+        "thread_goal_continuation_deferrals",
+        "thread_goals"
+      ]
+    },
+    "backup_0_db_3": {
+      "diagnostic_levels": {
+        "DEBUG": 2921,
+        "INFO": 5392,
+        "TRACE": 4505,
+        "WARN": 64
+      },
+      "diagnostic_rows": 12882,
+      "first_timestamp_utc": "2026-10-29T05:31:00.000Z",
+      "kind": "sqlite",
+      "last_timestamp_utc": "2026-10-29T14:35:30.000Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix/Users/clu/.openclaw/agents/main/agent/codex-home/logs_2.sqlite",
+      "records_read": 0,
+      "tables_present": []
+    },
+    "backup_0_db_6": {
+      "first_timestamp_utc": "2026-10-29T05:33:15.000Z",
+      "kind": "sqlite",
+      "last_timestamp_utc": "2026-10-29T14:35:33.684Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix/Users/clu/.openclaw/agents/main/agent/codex-home/thread_history_1.sqlite",
+      "records_read": 465,
+      "tables_present": [
+        "thread_items",
+        "thread_turns"
+      ]
+    },
+    "backup_0_jsonl_11": {
+      "first_timestamp_utc": "2026-10-29T05:33:15.671Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T05:47:40.911Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-33-15-01a18625-efb2-71e1-b16c-9d1e5afc15d7.jsonl",
+      "records_read": 387
+    },
+    "backup_0_jsonl_12": {
+      "first_timestamp_utc": "2026-10-29T05:47:42.146Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T05:48:59.595Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-47-42-01a18633-284a-7c52-81aa-a960f0e75dd4.jsonl",
+      "records_read": 87
+    },
+    "backup_0_jsonl_13": {
+      "first_timestamp_utc": "2026-10-29T05:49:51.866Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T05:52:03.861Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-49-51-01a18635-2314-7d43-93af-58d7647544f3.jsonl",
+      "records_read": 53
+    },
+    "backup_0_jsonl_14": {
+      "first_timestamp_utc": "2026-10-29T05:52:37.527Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T05:52:42.244Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-52-37-01a18637-aa3d-7840-ace8-8b415174af5b.jsonl",
+      "records_read": 21
+    },
+    "backup_0_jsonl_15": {
+      "first_timestamp_utc": "2026-10-29T05:54:47.085Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T06:05:31.131Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-54-47-01a18639-a44e-74b1-be5c-835433a0b019.jsonl",
+      "records_read": 311
+    },
+    "backup_0_jsonl_16": {
+      "first_timestamp_utc": "2026-10-29T06:08:55.636Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T06:16:58.244Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-08-55-01a18646-96dd-7280-a622-ec9da874a38b.jsonl",
+      "records_read": 248
+    },
+    "backup_0_jsonl_17": {
+      "first_timestamp_utc": "2026-10-29T06:09:40.492Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T06:17:08.400Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-09-40-01a18647-4632-7383-aee9-856174b37d73.jsonl",
+      "records_read": 94
+    },
+    "backup_0_jsonl_18": {
+      "first_timestamp_utc": "2026-10-29T06:13:51.371Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T06:17:14.955Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-13-51-01a1864b-1a29-7172-bef4-15ce507a8b22.jsonl",
+      "records_read": 93
+    },
+    "backup_0_jsonl_19": {
+      "first_timestamp_utc": "2026-10-29T06:17:12.828Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T06:17:14.194Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-17-12-01a1864e-2ce4-70c3-977a-300de9b49c1f.jsonl",
+      "records_read": 14
+    },
+    "backup_0_jsonl_20": {
+      "first_timestamp_utc": "2026-10-29T06:17:12.976Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T06:17:14.161Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-17-12-01a1864e-2db5-7112-9995-0c2fdf72697a.jsonl",
+      "records_read": 13
+    },
+    "backup_0_jsonl_21": {
+      "first_timestamp_utc": "2026-10-29T06:17:16.792Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T06:17:18.042Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-17-16-01a1864e-3c9d-7e32-9ede-5a9e4d805d99.jsonl",
+      "records_read": 14
+    },
+    "backup_0_jsonl_22": {
+      "first_timestamp_utc": "2026-10-29T08:36:26.707Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T08:36:31.624Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T04-36-26-01a186cd-a57b-72d2-93f2-61695715dc08.jsonl",
+      "records_read": 20
+    },
+    "backup_0_jsonl_23": {
+      "first_timestamp_utc": "2026-10-29T08:52:38.148Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T08:52:42.640Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T04-52-38-01a186dc-782f-7f13-8dfd-d223baf4b64c.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_24": {
+      "first_timestamp_utc": "2026-10-29T09:34:46.362Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T09:34:51.416Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T05-34-46-01a18703-0a3a-7fe2-b303-c742d5e3a3ec.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_25": {
+      "first_timestamp_utc": "2026-10-29T10:16:35.595Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T10:16:39.503Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T06-16-35-01a18729-5335-7070-8afc-849a0805bbb5.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_26": {
+      "first_timestamp_utc": "2026-10-29T10:50:55.602Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T10:51:01.175Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T06-50-55-01a18748-c096-7fc2-8875-3fd9fbe7e70e.jsonl",
+      "records_read": 18
+    },
+    "backup_0_jsonl_27": {
+      "first_timestamp_utc": "2026-10-29T11:21:19.634Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T11:21:23.374Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T07-21-19-01a18764-93fd-7e20-a24d-bfd40a46722a.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_28": {
+      "first_timestamp_utc": "2026-10-29T12:01:19.446Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:01:23.952Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-01-19-01a18789-37f9-7483-a831-a8f1b3235d40.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_29": {
+      "first_timestamp_utc": "2026-10-29T12:15:09.838Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:15:14.810Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-15-09-01a18795-e3ae-7a10-8742-364b406fbb23.jsonl",
+      "records_read": 21
+    },
+    "backup_0_jsonl_30": {
+      "first_timestamp_utc": "2026-10-29T12:18:45.654Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:19:20.828Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-18-45-01a18799-2eb9-7b62-8748-8bbd0484cf20.jsonl",
+      "records_read": 48
+    },
+    "backup_0_jsonl_31": {
+      "first_timestamp_utc": "2026-10-29T12:20:10.479Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:20:12.788Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-20-10-01a1879a-7a15-7d72-b120-23fb0c49a17d.jsonl",
+      "records_read": 15
+    },
+    "backup_0_jsonl_32": {
+      "first_timestamp_utc": "2026-10-29T12:20:17.767Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:20:34.715Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-20-17-01a1879a-968b-7173-a25e-6502f709670f.jsonl",
+      "records_read": 41
+    },
+    "backup_0_jsonl_33": {
+      "first_timestamp_utc": "2026-10-29T12:20:55.600Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:21:44.498Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-20-55-01a1879b-2a53-7720-9d07-a5c8a78faa57.jsonl",
+      "records_read": 60
+    },
+    "backup_0_jsonl_34": {
+      "first_timestamp_utc": "2026-10-29T12:21:21.902Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:23:18.142Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-21-21-01a1879b-9113-7641-8db0-0fe316eab3ce.jsonl",
+      "records_read": 62
+    },
+    "backup_0_jsonl_35": {
+      "first_timestamp_utc": "2026-10-29T12:23:19.813Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:23:37.146Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-23-19-01a1879d-5d96-7c43-9a2d-4f4cc1d0612a.jsonl",
+      "records_read": 20
+    },
+    "backup_0_jsonl_36": {
+      "first_timestamp_utc": "2026-10-29T12:25:13.769Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:25:17.447Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-25-13-01a1879f-1ab5-7d72-a4ff-77c836e47cab.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_37": {
+      "first_timestamp_utc": "2026-10-29T12:27:05.660Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:27:45.012Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-27-05-01a187a0-cfdd-7611-99f9-517f3a23a449.jsonl",
+      "records_read": 52
+    },
+    "backup_0_jsonl_38": {
+      "first_timestamp_utc": "2026-10-29T12:28:09.936Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:32:08.846Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-28-09-01a187a1-caf5-7553-ba9c-b217799615c1.jsonl",
+      "records_read": 96
+    },
+    "backup_0_jsonl_39": {
+      "first_timestamp_utc": "2026-10-29T12:32:17.484Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:32:21.536Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-32-17-01a187a5-91eb-7c12-b26f-db39f741b101.jsonl",
+      "records_read": 18
+    },
+    "backup_0_jsonl_40": {
+      "first_timestamp_utc": "2026-10-29T13:01:17.874Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T13:01:21.992Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-01-17-01a187c0-204f-7f21-91f6-606195e6bc9f.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_41": {
+      "first_timestamp_utc": "2026-10-29T13:13:21.700Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T13:13:41.202Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-13-21-01a187cb-2bc8-7742-9cc8-660e8cb49889.jsonl",
+      "records_read": 43
+    },
+    "backup_0_jsonl_42": {
+      "first_timestamp_utc": "2026-10-29T13:31:17.603Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T13:31:22.795Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-31-17-01a187db-968e-73c1-8202-67a7414f51b0.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_43": {
+      "first_timestamp_utc": "2026-10-29T13:36:40.487Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T13:37:15.823Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-36-40-01a187e0-83c4-72e1-98c6-f28d11018576.jsonl",
+      "records_read": 41
+    },
+    "backup_0_jsonl_44": {
+      "first_timestamp_utc": "2026-10-29T13:39:36.935Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T13:40:24.301Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-39-36-01a187e3-350c-7650-b096-e3f09f46430c.jsonl",
+      "records_read": 39
+    },
+    "backup_0_jsonl_45": {
+      "first_timestamp_utc": "2026-10-29T13:51:30.098Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T13:52:28.152Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-51-30-01a187ee-16cb-78b2-a5f3-2dd5b8aa52d5.jsonl",
+      "records_read": 52
+    },
+    "backup_0_jsonl_46": {
+      "first_timestamp_utc": "2026-10-29T13:52:04.683Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:01:06.003Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-52-04-01a187ee-9dfe-7832-8e09-ed39c884fbbe.jsonl",
+      "records_read": 124
+    },
+    "backup_0_jsonl_47": {
+      "first_timestamp_utc": "2026-10-29T14:01:10.953Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:02:33.342Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-01-10-01a187f6-f3c6-76a3-a683-1fb6225d2b8d.jsonl",
+      "records_read": 62
+    },
+    "backup_0_jsonl_48": {
+      "first_timestamp_utc": "2026-10-29T14:04:17.435Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:04:22.581Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-04-17-01a187f9-cc3f-7100-91bf-e53180cb3e40.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_49": {
+      "first_timestamp_utc": "2026-10-29T14:06:02.313Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:06:52.296Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-06-02-01a187fb-65ef-77f2-8ea1-def6fc39f000.jsonl",
+      "records_read": 55
+    },
+    "backup_0_jsonl_50": {
+      "first_timestamp_utc": "2026-10-29T14:06:33.496Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:07:40.624Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-06-33-01a187fb-dfc5-7b90-ba7d-3438b21c8721.jsonl",
+      "records_read": 52
+    },
+    "backup_0_jsonl_51": {
+      "first_timestamp_utc": "2026-10-29T14:07:42.437Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:08:23.924Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-07-42-01a187fc-ed09-79c2-9a36-9c62c37891e0.jsonl",
+      "records_read": 38
+    },
+    "backup_0_jsonl_52": {
+      "first_timestamp_utc": "2026-10-29T14:31:17.655Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:31:21.923Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-31-17-01a18812-8547-7a02-b2b9-d75cea1da902.jsonl",
+      "records_read": 17
+    },
+    "backup_0_jsonl_53": {
+      "first_timestamp_utc": "2026-10-29T14:34:06.222Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:35:30.809Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-34-06-01a18815-17b7-74b1-acf2-3ee7a8154209.jsonl",
+      "records_read": 65
+    },
+    "backup_0_jsonl_54": {
+      "first_timestamp_utc": "2026-10-29T14:34:51.796Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:35:34.874Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-34-51-01a18815-c9b8-7c82-bb67-ad01efbfbbb1.jsonl",
+      "records_read": 62
+    },
+    "backup_0_jsonl_55": {
+      "first_timestamp_utc": "2026-10-29T12:21:21.736Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:23:18.165Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/sessions/6b54fc25-a4fe-446a-8980-3a99afb9f87f.jsonl.deleted.2026-10-29T12-23-18.972Z.ee73def2f08848cda2a6b1fae5852803.zst",
+      "records_read": 39
+    },
+    "backup_0_jsonl_56": {
+      "first_timestamp_utc": "2026-10-29T14:06:33.352Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:07:40.647Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/sessions/ef5d8264-f3c6-43b7-b846-6b4b99ac4406.jsonl.deleted.2026-10-29T14-07-41.440Z.8b1773dc78cb44dda0eb6c33b5022f01.zst",
+      "records_read": 35
+    },
+    "backup_0_jsonl_57": {
+      "first_timestamp_utc": "2026-10-29T05:40:05.575Z",
+      "kind": "backup_jsonl",
+      "last_timestamp_utc": "2026-10-29T05:40:06.753Z",
+      "path": "~/Clu-Backups/clean-slate-20261029/openclaw-clean-slate-20261029.tar.gz!2026-10-29T10-35-34.240-04-00-openclaw-backup/payload/posix~/.openclaw/agents/main/sessions/f5cd51dc-bc1a-46d7-b931-87c73099b1e4.jsonl.deleted.2026-10-29T05-40-16.098Z.c44ee9c6c3504bdbbc1937b5d6daf437.zst",
+      "records_read": 5
+    },
+    "db_live_0": {
+      "first_timestamp_utc": "2026-10-29T05:22:36.899Z",
+      "flow_run_rows": 0,
+      "kind": "sqlite",
+      "last_timestamp_utc": "2026-10-30T13:25:53.148Z",
+      "path": "~/.openclaw/state/openclaw.sqlite",
+      "records_read": 3907,
+      "tables_present": [
+        "audit_events",
+        "audit_identity_keys",
+        "backup_runs",
+        "cron_run_receipts",
+        "flow_runs",
+        "meeting_transcript_sessions",
+        "meeting_transcript_summaries",
+        "meeting_transcript_utterances",
+        "migration_runs",
+        "subagent_runs",
+        "task_runs",
+        "worker_transcript_commit_heads",
+        "worker_transcript_commits"
+      ]
+    },
+    "db_live_1": {
+      "first_timestamp_utc": "2026-10-29T05:22:38.389Z",
+      "kind": "sqlite",
+      "last_timestamp_utc": "2026-10-30T13:25:53.141Z",
+      "path": "~/.openclaw/agents/main/agent/openclaw-agent.sqlite",
+      "records_read": 8996,
+      "tables_present": [
+        "message_tool_run_outcomes",
+        "session_goal_operations",
+        "session_transcript_active_events",
+        "session_transcript_archives",
+        "session_transcript_cold_archives",
+        "session_transcript_fts",
+        "session_transcript_fts_config",
+        "session_transcript_fts_content",
+        "session_transcript_fts_data",
+        "session_transcript_fts_docsize",
+        "session_transcript_fts_idx",
+        "session_transcript_fts_rows",
+        "session_transcript_index_state",
+        "trajectory_runtime_events",
+        "transcript_event_identities",
+        "transcript_events",
+        "transcript_rewrite_watermarks"
+      ]
+    },
+    "db_live_2": {
+      "first_timestamp_utc": "2026-10-29T05:33:15.000Z",
+      "kind": "sqlite",
+      "last_timestamp_utc": "2026-10-30T13:25:53.094Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/thread_history_1.sqlite",
+      "records_read": 1526,
+      "tables_present": [
+        "thread_items",
+        "thread_turns"
+      ]
+    },
+    "db_live_3": {
+      "first_timestamp_utc": null,
+      "goal_rows": 0,
+      "kind": "sqlite",
+      "last_timestamp_utc": null,
+      "path": "~/.openclaw/agents/main/agent/codex-home/goals_1.sqlite",
+      "records_read": 0,
+      "tables_present": [
+        "thread_goal_continuation_deferrals",
+        "thread_goals"
+      ]
+    },
+    "db_live_4": {
+      "diagnostic_levels": {
+        "DEBUG": 8998,
+        "INFO": 17716,
+        "TRACE": 11736,
+        "WARN": 187
+      },
+      "diagnostic_rows": 38637,
+      "first_timestamp_utc": "2026-10-29T05:31:00.000Z",
+      "kind": "sqlite",
+      "last_timestamp_utc": "2026-10-30T13:38:25.000Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/logs_2.sqlite",
+      "records_read": 0,
+      "tables_present": []
+    },
+    "gateway_0": {
+      "failure_only": false,
+      "first_timestamp_utc": null,
+      "kind": "gateway_log",
+      "last_timestamp_utc": null,
+      "path": "~/.openclaw/logs/gateway-restart.log",
+      "records_read": 9
+    },
+    "gateway_1": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-25T01:52:04.993Z",
+      "kind": "gateway_log",
+      "last_timestamp_utc": "2026-10-30T13:24:38.034Z",
+      "path": "~/Library/Logs/openclaw/gateway.log",
+      "records_read": 20858
+    },
+    "gateway_2": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-29T04:01:19.061Z",
+      "kind": "gateway_log",
+      "last_timestamp_utc": "2026-10-30T03:59:59.668Z",
+      "path": "/tmp/openclaw/openclaw-2026-10-29.log",
+      "records_read": 3437
+    },
+    "gateway_3": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-30T04:00:00.401Z",
+      "kind": "gateway_log",
+      "last_timestamp_utc": "2026-10-30T13:24:38.033Z",
+      "path": "/tmp/openclaw/openclaw-2026-10-30.log",
+      "records_read": 370
+    },
+    "lm_app_0": {
+      "first_timestamp_utc": "2026-10-24T17:40:26.497Z",
+      "kind": "lm_studio_app_log",
+      "last_timestamp_utc": "2026-10-28T22:31:25.221Z",
+      "limitation": "Application lifecycle diagnostics; no unambiguous inference attempt identities extracted.",
+      "path": "~/Library/Logs/LM Studio/main.log",
+      "records_read": 409
+    },
+    "lm_server_0": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-24T17:40:26.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-25T03:59:57.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-24.1.log",
+      "records_read": 1748
+    },
+    "lm_server_1": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-25T04:00:01.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-26T03:59:59.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-25.1.log",
+      "records_read": 2668
+    },
+    "lm_server_10": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:52:06.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:54:19.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.10.log",
+      "records_read": 322
+    },
+    "lm_server_11": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:54:19.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:56:30.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.11.log",
+      "records_read": 300
+    },
+    "lm_server_12": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:56:30.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T22:36:53.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.12.log",
+      "records_read": 2682
+    },
+    "lm_server_13": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T22:36:53.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-29T03:59:16.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.13.log",
+      "records_read": 1112
+    },
+    "lm_server_14": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:26:28.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:31:21.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.2.log",
+      "records_read": 785
+    },
+    "lm_server_15": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:31:21.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:35:16.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.3.log",
+      "records_read": 618
+    },
+    "lm_server_16": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:35:16.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:38:45.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.4.log",
+      "records_read": 507
+    },
+    "lm_server_17": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:38:45.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:41:52.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.5.log",
+      "records_read": 462
+    },
+    "lm_server_18": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:41:52.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:44:45.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.6.log",
+      "records_read": 404
+    },
+    "lm_server_19": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:44:45.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:47:20.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.7.log",
+      "records_read": 369
+    },
+    "lm_server_2": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-26T04:00:00.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-27T02:47:48.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-26.1.log",
+      "records_read": 6931
+    },
+    "lm_server_20": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:47:20.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:49:46.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.8.log",
+      "records_read": 340
+    },
+    "lm_server_21": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T05:49:46.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:52:06.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.9.log",
+      "records_read": 321
+    },
+    "lm_server_22": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-29T04:00:32.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-30T03:56:42.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-29.1.log",
+      "records_read": 4128
+    },
+    "lm_server_23": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-30T04:00:00.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-30T13:19:56.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-30.1.log",
+      "records_read": 1602
+    },
+    "lm_server_3": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-27T02:47:48.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-27T03:59:49.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-26.2.log",
+      "records_read": 898
+    },
+    "lm_server_4": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-27T04:00:22.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T00:33:16.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-27.1.log",
+      "records_read": 4735
+    },
+    "lm_server_5": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T00:33:16.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T01:23:54.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-27.2.log",
+      "records_read": 2907
+    },
+    "lm_server_6": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T01:23:54.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T01:31:44.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-27.3.log",
+      "records_read": 844
+    },
+    "lm_server_7": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T01:31:44.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T03:59:39.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-27.4.log",
+      "records_read": 1939
+    },
+    "lm_server_8": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T03:59:39.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T03:59:57.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-27.5.log",
+      "records_read": 34
+    },
+    "lm_server_9": {
+      "failure_only": false,
+      "first_timestamp_utc": "2026-10-28T04:00:42.000Z",
+      "kind": "lm_studio_server_log",
+      "last_timestamp_utc": "2026-10-28T05:26:28.000Z",
+      "path": "~/.lmstudio/server-logs/2026-10/2026-10-28.1.log",
+      "records_read": 1809
+    },
+    "rollout_0": {
+      "first_timestamp_utc": "2026-10-29T05:33:15.671Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T05:47:40.911Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-33-15-01a18625-efb2-71e1-b16c-9d1e5afc15d7.jsonl",
+      "records_read": 387
+    },
+    "rollout_1": {
+      "first_timestamp_utc": "2026-10-29T05:47:42.146Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T05:48:59.595Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-47-42-01a18633-284a-7c52-81aa-a960f0e75dd4.jsonl",
+      "records_read": 87
+    },
+    "rollout_10": {
+      "first_timestamp_utc": "2026-10-29T06:17:16.792Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T06:17:18.042Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-17-16-01a1864e-3c9d-7e32-9ede-5a9e4d805d99.jsonl",
+      "records_read": 14
+    },
+    "rollout_100": {
+      "first_timestamp_utc": "2026-10-30T01:05:42.481Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:06:15.209Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-05-42-01a18a57-5801-7e31-b649-ee0e1b784bb1.jsonl",
+      "records_read": 71
+    },
+    "rollout_101": {
+      "first_timestamp_utc": "2026-10-30T01:06:15.594Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:06:21.894Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-06-15-01a18a57-d956-7663-b17d-76fdef3bc24e.jsonl",
+      "records_read": 18
+    },
+    "rollout_102": {
+      "first_timestamp_utc": "2026-10-30T01:06:42.750Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:06:57.072Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-06-42-01a18a58-4363-79c1-927c-5c1b37afe693.jsonl",
+      "records_read": 30
+    },
+    "rollout_103": {
+      "first_timestamp_utc": "2026-10-30T01:06:53.835Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:09:59.266Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-06-53-01a18a58-6eba-70c2-a8ee-6249130fb432.jsonl",
+      "records_read": 257
+    },
+    "rollout_104": {
+      "first_timestamp_utc": "2026-10-30T01:09:59.686Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:10:25.596Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-09-59-01a18a5b-44b2-7ec2-9408-fbbce62c98e7.jsonl",
+      "records_read": 35
+    },
+    "rollout_105": {
+      "first_timestamp_utc": "2026-10-30T01:12:53.584Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:13:21.087Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-12-53-01a18a5d-ebdc-7713-9213-a0a028772080.jsonl",
+      "records_read": 36
+    },
+    "rollout_106": {
+      "first_timestamp_utc": "2026-10-30T01:13:15.118Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:16:09.636Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-13-15-01a18a5e-4015-7ed2-abf0-aa48e98e9484.jsonl",
+      "records_read": 144
+    },
+    "rollout_107": {
+      "first_timestamp_utc": "2026-10-30T01:15:44.772Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:16:32.958Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-15-44-01a18a60-88a6-7e33-8533-38bd0a5558ce.jsonl",
+      "records_read": 59
+    },
+    "rollout_108": {
+      "first_timestamp_utc": "2026-10-30T01:16:33.354Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:17:02.681Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-16-33-01a18a61-4677-70c3-a547-343acf79e30e.jsonl",
+      "records_read": 43
+    },
+    "rollout_109": {
+      "first_timestamp_utc": "2026-10-30T01:16:54.520Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:18:08.129Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-16-54-01a18a61-9923-7803-893f-d3759d4b576f.jsonl",
+      "records_read": 77
+    },
+    "rollout_11": {
+      "first_timestamp_utc": "2026-10-29T08:36:26.707Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T08:36:31.624Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T04-36-26-01a186cd-a57b-72d2-93f2-61695715dc08.jsonl",
+      "records_read": 20
+    },
+    "rollout_110": {
+      "first_timestamp_utc": "2026-10-30T01:17:03.108Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:17:23.623Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-17-03-01a18a61-baa3-7ec2-be86-d700f4870ee8.jsonl",
+      "records_read": 32
+    },
+    "rollout_111": {
+      "first_timestamp_utc": "2026-10-30T01:18:08.463Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:19:39.887Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-18-08-01a18a62-b9fb-7a41-a382-2a284c6873cb.jsonl",
+      "records_read": 99
+    },
+    "rollout_112": {
+      "first_timestamp_utc": "2026-10-30T01:18:08.578Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:18:36.221Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-18-08-01a18a62-ba73-7aa0-ba34-132ef21924ce.jsonl",
+      "records_read": 42
+    },
+    "rollout_113": {
+      "first_timestamp_utc": "2026-10-30T01:19:40.271Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:20:40.588Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-19-40-01a18a64-206b-7a73-8adf-89f3ff77fd9e.jsonl",
+      "records_read": 89
+    },
+    "rollout_114": {
+      "first_timestamp_utc": "2026-10-30T01:19:40.370Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:20:03.879Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-19-40-01a18a64-20fb-7e70-851d-096c113845cb.jsonl",
+      "records_read": 35
+    },
+    "rollout_115": {
+      "first_timestamp_utc": "2026-10-30T01:20:04.322Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:20:36.681Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-20-04-01a18a64-7e8a-7033-9afe-52f2c0694613.jsonl",
+      "records_read": 46
+    },
+    "rollout_116": {
+      "first_timestamp_utc": "2026-10-30T01:20:37.121Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:22:19.286Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-20-37-01a18a64-fea1-79a0-ae4e-141eef0378c1.jsonl",
+      "records_read": 81
+    },
+    "rollout_117": {
+      "first_timestamp_utc": "2026-10-30T01:20:40.885Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:20:59.056Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-20-40-01a18a65-0d5a-74e2-b7e6-44d94afb1b0c.jsonl",
+      "records_read": 42
+    },
+    "rollout_118": {
+      "first_timestamp_utc": "2026-10-30T01:21:47.967Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:22:48.170Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-21-47-01a18a66-136d-7743-abde-77dbaebc13d0.jsonl",
+      "records_read": 122
+    },
+    "rollout_119": {
+      "first_timestamp_utc": "2026-10-30T01:22:19.761Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:22:45.823Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-22-19-01a18a66-8f90-7043-b52f-b782d2b22ef7.jsonl",
+      "records_read": 42
+    },
+    "rollout_12": {
+      "first_timestamp_utc": "2026-10-29T08:52:38.148Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T08:52:42.640Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T04-52-38-01a186dc-782f-7f13-8dfd-d223baf4b64c.jsonl",
+      "records_read": 17
+    },
+    "rollout_120": {
+      "first_timestamp_utc": "2026-10-30T01:22:46.194Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:22:58.748Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-22-46-01a18a66-f6e3-7ab0-8e37-d7997f6a24d5.jsonl",
+      "records_read": 30
+    },
+    "rollout_121": {
+      "first_timestamp_utc": "2026-10-30T01:22:59.093Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:23:37.449Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-22-59-01a18a67-2943-7023-9f35-fdcf823c05cf.jsonl",
+      "records_read": 58
+    },
+    "rollout_122": {
+      "first_timestamp_utc": "2026-10-30T01:23:37.984Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:23:55.822Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-23-37-01a18a67-c119-70e1-852f-7a4a91e211e6.jsonl",
+      "records_read": 29
+    },
+    "rollout_123": {
+      "first_timestamp_utc": "2026-10-30T01:23:56.202Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:24:29.590Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-23-56-01a18a68-0850-7b51-a06f-7516daf0fbb3.jsonl",
+      "records_read": 40
+    },
+    "rollout_124": {
+      "first_timestamp_utc": "2026-10-30T01:24:30.076Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:24:41.757Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-24-29-01a18a68-8c99-7f43-acef-3836d4d4cbc6.jsonl",
+      "records_read": 18
+    },
+    "rollout_125": {
+      "first_timestamp_utc": "2026-10-30T01:25:05.353Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:25:24.703Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-25-05-01a18a69-1678-7851-9e5c-7cc073136313.jsonl",
+      "records_read": 28
+    },
+    "rollout_126": {
+      "first_timestamp_utc": "2026-10-30T01:26:20.121Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:26:41.381Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-26-20-01a18a6a-3a85-7c93-b27a-c74118441b28.jsonl",
+      "records_read": 38
+    },
+    "rollout_127": {
+      "first_timestamp_utc": "2026-10-30T01:28:10.704Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:28:35.789Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-28-10-01a18a6b-ea7b-7b91-a37e-9c4e2fe75d9b.jsonl",
+      "records_read": 42
+    },
+    "rollout_128": {
+      "first_timestamp_utc": "2026-10-30T01:28:53.510Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:28:57.361Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-28-53-01a18a6c-91ae-7922-884a-a1cd2d8f11c3.jsonl",
+      "records_read": 19
+    },
+    "rollout_129": {
+      "first_timestamp_utc": "2026-10-30T01:31:17.920Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:31:19.881Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-31-17-01a18a6e-c5ca-7b63-a772-7c97c3fcf595.jsonl",
+      "records_read": 14
+    },
+    "rollout_13": {
+      "first_timestamp_utc": "2026-10-29T09:34:46.362Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T09:34:51.416Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T05-34-46-01a18703-0a3a-7fe2-b303-c742d5e3a3ec.jsonl",
+      "records_read": 17
+    },
+    "rollout_130": {
+      "first_timestamp_utc": "2026-10-30T01:31:20.305Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:31:38.592Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-31-20-01a18a6e-cf16-72f0-a6fd-b70ff4e8ba59.jsonl",
+      "records_read": 30
+    },
+    "rollout_131": {
+      "first_timestamp_utc": "2026-10-30T01:32:20.314Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:32:25.036Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-32-20-01a18a6f-b976-7f92-896a-df56e869e2df.jsonl",
+      "records_read": 17
+    },
+    "rollout_132": {
+      "first_timestamp_utc": "2026-10-30T01:33:24.909Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:34:01.101Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-33-24-01a18a70-b5d0-7932-b9b8-67afa11a1326.jsonl",
+      "records_read": 41
+    },
+    "rollout_133": {
+      "first_timestamp_utc": "2026-10-30T01:33:55.531Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:36:59.762Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-33-55-01a18a71-2d6d-7af3-b367-46b85ac8b584.jsonl",
+      "records_read": 198
+    },
+    "rollout_134": {
+      "first_timestamp_utc": "2026-10-30T01:37:06.064Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:37:47.585Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-37-05-01a18a74-15ae-7be0-b9d9-e1bcf8af3c69.jsonl",
+      "records_read": 61
+    },
+    "rollout_135": {
+      "first_timestamp_utc": "2026-10-30T01:37:28.368Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:38:12.511Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-37-28-01a18a74-6cd6-7ef3-a7a6-1880769f9ecf.jsonl",
+      "records_read": 73
+    },
+    "rollout_136": {
+      "first_timestamp_utc": "2026-10-30T01:37:51.701Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:38:10.037Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-37-51-01a18a74-c7fe-7500-9c8f-7687e9fe0ff0.jsonl",
+      "records_read": 36
+    },
+    "rollout_137": {
+      "first_timestamp_utc": "2026-10-30T01:38:12.942Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:38:16.382Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-38-12-01a18a75-1af9-7273-97d6-05246cabe6b4.jsonl",
+      "records_read": 18
+    },
+    "rollout_138": {
+      "first_timestamp_utc": "2026-10-30T01:38:16.674Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:38:24.086Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-38-16-01a18a75-2972-75d2-9601-7bf6fcf12827.jsonl",
+      "records_read": 20
+    },
+    "rollout_139": {
+      "first_timestamp_utc": "2026-10-30T01:38:47.415Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:40:00.644Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-38-47-01a18a75-a198-7232-bfd5-35ed3f18bbc6.jsonl",
+      "records_read": 81
+    },
+    "rollout_14": {
+      "first_timestamp_utc": "2026-10-29T10:16:35.595Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T10:16:39.503Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T06-16-35-01a18729-5335-7070-8afc-849a0805bbb5.jsonl",
+      "records_read": 17
+    },
+    "rollout_140": {
+      "first_timestamp_utc": "2026-10-30T01:41:31.560Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:42:04.825Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-41-31-01a18a78-22d1-7150-af99-ddb873934cbd.jsonl",
+      "records_read": 42
+    },
+    "rollout_141": {
+      "first_timestamp_utc": "2026-10-30T01:42:33.952Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:42:43.183Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-42-33-01a18a79-1684-72f0-aa8e-b62948a70f29.jsonl",
+      "records_read": 19
+    },
+    "rollout_142": {
+      "first_timestamp_utc": "2026-10-30T01:43:17.147Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:43:27.317Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-43-17-01a18a79-bf45-7680-a120-ce1f667cdbbd.jsonl",
+      "records_read": 19
+    },
+    "rollout_143": {
+      "first_timestamp_utc": "2026-10-30T01:44:09.533Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:44:52.918Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-44-09-01a18a7a-8be2-7032-8c32-0fe0d4ee1496.jsonl",
+      "records_read": 49
+    },
+    "rollout_144": {
+      "first_timestamp_utc": "2026-10-30T05:22:38.183Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T05:22:42.930Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T01-22-38-01a18b42-9143-73e3-906d-ea62f46d1cef.jsonl",
+      "records_read": 18
+    },
+    "rollout_145": {
+      "first_timestamp_utc": "2026-10-30T05:52:37.894Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T05:52:44.691Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T01-52-37-01a18b5e-07ac-7030-ad72-239f427e9f47.jsonl",
+      "records_read": 18
+    },
+    "rollout_146": {
+      "first_timestamp_utc": "2026-10-30T06:22:37.765Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T06:22:41.813Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T02-22-37-01a18b79-7e48-7ba1-8e57-21a80f480ed4.jsonl",
+      "records_read": 18
+    },
+    "rollout_147": {
+      "first_timestamp_utc": "2026-10-30T06:52:37.809Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T06:52:44.056Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T02-52-37-01a18b94-f5df-71a3-b6fb-56ccfb7c3f4c.jsonl",
+      "records_read": 18
+    },
+    "rollout_148": {
+      "first_timestamp_utc": "2026-10-30T07:22:37.733Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T07:22:43.235Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T03-22-37-01a18bb0-6cd1-7813-84e2-fd49b48bc487.jsonl",
+      "records_read": 17
+    },
+    "rollout_149": {
+      "first_timestamp_utc": "2026-10-30T07:52:37.846Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T07:52:43.145Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T03-52-37-01a18bcb-e47c-7500-aec7-99ab28216cf9.jsonl",
+      "records_read": 17
+    },
+    "rollout_15": {
+      "first_timestamp_utc": "2026-10-29T10:50:55.602Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T10:51:01.175Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T06-50-55-01a18748-c096-7fc2-8875-3fd9fbe7e70e.jsonl",
+      "records_read": 18
+    },
+    "rollout_150": {
+      "first_timestamp_utc": "2026-10-30T08:22:37.937Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T08:22:42.037Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T04-22-37-01a18be7-5c13-7b93-8ea0-3941896ace23.jsonl",
+      "records_read": 18
+    },
+    "rollout_151": {
+      "first_timestamp_utc": "2026-10-30T08:52:37.884Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T08:52:42.655Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T04-52-37-01a18c02-d328-7fd0-b231-eb20b301731e.jsonl",
+      "records_read": 18
+    },
+    "rollout_152": {
+      "first_timestamp_utc": "2026-10-30T09:22:37.815Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T09:22:41.628Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T05-22-37-01a18c1e-4a23-7401-9ab8-e6c6c10539d9.jsonl",
+      "records_read": 18
+    },
+    "rollout_153": {
+      "first_timestamp_utc": "2026-10-30T09:52:37.916Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T09:52:41.606Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T05-52-37-01a18c39-c1c7-72f3-b1bf-f00338267d1e.jsonl",
+      "records_read": 17
+    },
+    "rollout_154": {
+      "first_timestamp_utc": "2026-10-30T10:22:38.003Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T10:22:42.638Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T06-22-37-01a18c55-395c-7891-b5a4-2f54dba8fda1.jsonl",
+      "records_read": 18
+    },
+    "rollout_155": {
+      "first_timestamp_utc": "2026-10-30T10:52:37.946Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T10:52:42.638Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T06-52-37-01a18c70-b067-7751-bdb0-fdfd2837110c.jsonl",
+      "records_read": 18
+    },
+    "rollout_156": {
+      "first_timestamp_utc": "2026-10-30T11:22:38.139Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T11:22:42.576Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T07-22-38-01a18c8c-2862-79e1-950f-7e76e32758ef.jsonl",
+      "records_read": 17
+    },
+    "rollout_157": {
+      "first_timestamp_utc": "2026-10-30T11:52:38.051Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T11:52:43.115Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T07-52-37-01a18ca7-9f3f-7c53-8f45-c7a4a5fdf5b8.jsonl",
+      "records_read": 17
+    },
+    "rollout_158": {
+      "first_timestamp_utc": "2026-10-30T12:13:04.409Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:13:21.563Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-13-04-01a18cba-55b4-7950-82db-862d0ec2db02.jsonl",
+      "records_read": 32
+    },
+    "rollout_159": {
+      "first_timestamp_utc": "2026-10-30T12:15:28.948Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:15:55.967Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-15-28-01a18cbc-8a54-76c3-a8ed-1551d70838d7.jsonl",
+      "records_read": 43
+    },
+    "rollout_16": {
+      "first_timestamp_utc": "2026-10-29T11:21:19.634Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T11:21:23.374Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T07-21-19-01a18764-93fd-7e20-a24d-bfd40a46722a.jsonl",
+      "records_read": 17
+    },
+    "rollout_160": {
+      "first_timestamp_utc": "2026-10-30T12:15:47.235Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:17:01.262Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-15-47-01a18cbc-d1ce-7311-ab94-948eb56e4e55.jsonl",
+      "records_read": 63
+    },
+    "rollout_161": {
+      "first_timestamp_utc": "2026-10-30T12:17:02.858Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:17:26.610Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-17-02-01a18cbd-f91c-7940-aaea-283096747d85.jsonl",
+      "records_read": 37
+    },
+    "rollout_162": {
+      "first_timestamp_utc": "2026-10-30T12:18:28.905Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:18:54.241Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-18-28-01a18cbf-494a-7703-bbc1-9fee4eb2e280.jsonl",
+      "records_read": 35
+    },
+    "rollout_163": {
+      "first_timestamp_utc": "2026-10-30T12:22:37.687Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:22:41.815Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-22-37-01a18cc3-151d-7510-949c-ef00da09c7b5.jsonl",
+      "records_read": 17
+    },
+    "rollout_164": {
+      "first_timestamp_utc": "2026-10-30T12:33:18.224Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:34:03.203Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-33-18-01a18ccc-db2c-7142-b727-a9b642ab5387.jsonl",
+      "records_read": 52
+    },
+    "rollout_165": {
+      "first_timestamp_utc": "2026-10-30T12:33:58.386Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:38:58.120Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-33-58-01a18ccd-781c-7ba1-80fd-8cd318256acd.jsonl",
+      "records_read": 108
+    },
+    "rollout_166": {
+      "first_timestamp_utc": "2026-10-30T12:38:51.303Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:39:06.741Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-38-51-01a18cd1-f047-7982-ad63-6c0fdd923f94.jsonl",
+      "records_read": 39
+    },
+    "rollout_167": {
+      "first_timestamp_utc": "2026-10-30T12:39:46.855Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:40:08.530Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-39-46-01a18cd2-c954-7222-8f5d-2a4793714d3a.jsonl",
+      "records_read": 36
+    },
+    "rollout_168": {
+      "first_timestamp_utc": "2026-10-30T12:42:41.008Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:43:23.431Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-42-40-01a18cd5-7191-7552-9d0b-74540357f10b.jsonl",
+      "records_read": 46
+    },
+    "rollout_169": {
+      "first_timestamp_utc": "2026-10-30T12:42:55.424Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:43:28.998Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-42-55-01a18cd5-a9e6-73b1-8727-f3701e7a3171.jsonl",
+      "records_read": 44
+    },
+    "rollout_17": {
+      "first_timestamp_utc": "2026-10-29T12:01:19.446Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:01:23.952Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-01-19-01a18789-37f9-7483-a831-a8f1b3235d40.jsonl",
+      "records_read": 17
+    },
+    "rollout_170": {
+      "first_timestamp_utc": "2026-10-30T12:43:29.738Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:43:34.595Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-43-29-01a18cd6-2fe4-7f31-a432-5e13bf6f32b2.jsonl",
+      "records_read": 18
+    },
+    "rollout_171": {
+      "first_timestamp_utc": "2026-10-30T12:52:38.002Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T12:52:42.343Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T08-52-37-01a18cde-8da2-7ab0-853a-1a68f4c0ab36.jsonl",
+      "records_read": 17
+    },
+    "rollout_172": {
+      "first_timestamp_utc": "2026-10-30T13:14:32.068Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T13:25:53.083Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/30/rollout-2026-10-30T09-14-31-01a18cf2-9aa6-76d2-8f21-d5d632b17650.jsonl",
+      "records_read": 348
+    },
+    "rollout_18": {
+      "first_timestamp_utc": "2026-10-29T12:15:09.838Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:15:14.810Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-15-09-01a18795-e3ae-7a10-8742-364b406fbb23.jsonl",
+      "records_read": 21
+    },
+    "rollout_19": {
+      "first_timestamp_utc": "2026-10-29T12:18:45.654Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:19:20.828Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-18-45-01a18799-2eb9-7b62-8748-8bbd0484cf20.jsonl",
+      "records_read": 48
+    },
+    "rollout_2": {
+      "first_timestamp_utc": "2026-10-29T05:49:51.866Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T05:52:03.861Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-49-51-01a18635-2314-7d43-93af-58d7647544f3.jsonl",
+      "records_read": 53
+    },
+    "rollout_20": {
+      "first_timestamp_utc": "2026-10-29T12:20:10.479Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:20:12.788Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-20-10-01a1879a-7a15-7d72-b120-23fb0c49a17d.jsonl",
+      "records_read": 15
+    },
+    "rollout_21": {
+      "first_timestamp_utc": "2026-10-29T12:20:17.767Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:20:34.715Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-20-17-01a1879a-968b-7173-a25e-6502f709670f.jsonl",
+      "records_read": 41
+    },
+    "rollout_22": {
+      "first_timestamp_utc": "2026-10-29T12:20:55.600Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:21:44.498Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-20-55-01a1879b-2a53-7720-9d07-a5c8a78faa57.jsonl",
+      "records_read": 60
+    },
+    "rollout_23": {
+      "first_timestamp_utc": "2026-10-29T12:21:21.902Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:23:18.142Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-21-21-01a1879b-9113-7641-8db0-0fe316eab3ce.jsonl",
+      "records_read": 62
+    },
+    "rollout_24": {
+      "first_timestamp_utc": "2026-10-29T12:23:19.813Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:23:37.146Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-23-19-01a1879d-5d96-7c43-9a2d-4f4cc1d0612a.jsonl",
+      "records_read": 20
+    },
+    "rollout_25": {
+      "first_timestamp_utc": "2026-10-29T12:25:13.769Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:25:17.447Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-25-13-01a1879f-1ab5-7d72-a4ff-77c836e47cab.jsonl",
+      "records_read": 17
+    },
+    "rollout_26": {
+      "first_timestamp_utc": "2026-10-29T12:27:05.660Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:27:45.012Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-27-05-01a187a0-cfdd-7611-99f9-517f3a23a449.jsonl",
+      "records_read": 52
+    },
+    "rollout_27": {
+      "first_timestamp_utc": "2026-10-29T12:28:09.936Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:32:08.846Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-28-09-01a187a1-caf5-7553-ba9c-b217799615c1.jsonl",
+      "records_read": 96
+    },
+    "rollout_28": {
+      "first_timestamp_utc": "2026-10-29T12:32:17.484Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T12:32:21.536Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T08-32-17-01a187a5-91eb-7c12-b26f-db39f741b101.jsonl",
+      "records_read": 18
+    },
+    "rollout_29": {
+      "first_timestamp_utc": "2026-10-29T13:01:17.874Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T13:01:21.992Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-01-17-01a187c0-204f-7f21-91f6-606195e6bc9f.jsonl",
+      "records_read": 17
+    },
+    "rollout_3": {
+      "first_timestamp_utc": "2026-10-29T05:52:37.527Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T05:52:42.244Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-52-37-01a18637-aa3d-7840-ace8-8b415174af5b.jsonl",
+      "records_read": 21
+    },
+    "rollout_30": {
+      "first_timestamp_utc": "2026-10-29T13:13:21.700Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T13:13:41.202Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-13-21-01a187cb-2bc8-7742-9cc8-660e8cb49889.jsonl",
+      "records_read": 43
+    },
+    "rollout_31": {
+      "first_timestamp_utc": "2026-10-29T13:31:17.603Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T13:31:22.795Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-31-17-01a187db-968e-73c1-8202-67a7414f51b0.jsonl",
+      "records_read": 17
+    },
+    "rollout_32": {
+      "first_timestamp_utc": "2026-10-29T13:36:40.487Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T13:37:15.823Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-36-40-01a187e0-83c4-72e1-98c6-f28d11018576.jsonl",
+      "records_read": 41
+    },
+    "rollout_33": {
+      "first_timestamp_utc": "2026-10-29T13:39:36.935Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T13:40:24.301Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-39-36-01a187e3-350c-7650-b096-e3f09f46430c.jsonl",
+      "records_read": 39
+    },
+    "rollout_34": {
+      "first_timestamp_utc": "2026-10-29T13:51:30.098Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T13:52:28.152Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-51-30-01a187ee-16cb-78b2-a5f3-2dd5b8aa52d5.jsonl",
+      "records_read": 52
+    },
+    "rollout_35": {
+      "first_timestamp_utc": "2026-10-29T13:52:04.683Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:01:06.003Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T09-52-04-01a187ee-9dfe-7832-8e09-ed39c884fbbe.jsonl",
+      "records_read": 124
+    },
+    "rollout_36": {
+      "first_timestamp_utc": "2026-10-29T14:01:10.953Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:02:33.342Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-01-10-01a187f6-f3c6-76a3-a683-1fb6225d2b8d.jsonl",
+      "records_read": 62
+    },
+    "rollout_37": {
+      "first_timestamp_utc": "2026-10-29T14:04:17.435Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:04:22.581Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-04-17-01a187f9-cc3f-7100-91bf-e53180cb3e40.jsonl",
+      "records_read": 17
+    },
+    "rollout_38": {
+      "first_timestamp_utc": "2026-10-29T14:06:02.313Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:06:52.296Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-06-02-01a187fb-65ef-77f2-8ea1-def6fc39f000.jsonl",
+      "records_read": 55
+    },
+    "rollout_39": {
+      "first_timestamp_utc": "2026-10-29T14:06:33.496Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:07:40.624Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-06-33-01a187fb-dfc5-7b90-ba7d-3438b21c8721.jsonl",
+      "records_read": 52
+    },
+    "rollout_4": {
+      "first_timestamp_utc": "2026-10-29T05:54:47.085Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T06:05:31.131Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T01-54-47-01a18639-a44e-74b1-be5c-835433a0b019.jsonl",
+      "records_read": 311
+    },
+    "rollout_40": {
+      "first_timestamp_utc": "2026-10-29T14:07:42.437Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:08:23.924Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-07-42-01a187fc-ed09-79c2-9a36-9c62c37891e0.jsonl",
+      "records_read": 38
+    },
+    "rollout_41": {
+      "first_timestamp_utc": "2026-10-29T14:31:17.655Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:31:21.923Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-31-17-01a18812-8547-7a02-b2b9-d75cea1da902.jsonl",
+      "records_read": 17
+    },
+    "rollout_42": {
+      "first_timestamp_utc": "2026-10-29T14:34:06.222Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:36:12.733Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-34-06-01a18815-17b7-74b1-acf2-3ee7a8154209.jsonl",
+      "records_read": 97
+    },
+    "rollout_43": {
+      "first_timestamp_utc": "2026-10-29T14:34:51.796Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:38:45.423Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-34-51-01a18815-c9b8-7c82-bb67-ad01efbfbbb1.jsonl",
+      "records_read": 123
+    },
+    "rollout_44": {
+      "first_timestamp_utc": "2026-10-29T14:38:46.267Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:40:15.141Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-38-46-01a18819-5d88-7fb0-a06c-e36edc81cd53.jsonl",
+      "records_read": 70
+    },
+    "rollout_45": {
+      "first_timestamp_utc": "2026-10-29T14:47:18.976Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:48:32.103Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-47-18-01a18821-306d-7860-bca8-658d928355a1.jsonl",
+      "records_read": 63
+    },
+    "rollout_46": {
+      "first_timestamp_utc": "2026-10-29T14:47:58.450Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:57:32.714Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-47-58-01a18821-caa5-71d3-a069-340267259a0b.jsonl",
+      "records_read": 188
+    },
+    "rollout_47": {
+      "first_timestamp_utc": "2026-10-29T14:57:33.691Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T14:59:15.138Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T10-57-33-01a1882a-91a4-7bc1-ae70-181ee345f65e.jsonl",
+      "records_read": 74
+    },
+    "rollout_48": {
+      "first_timestamp_utc": "2026-10-29T15:01:17.424Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T15:01:22.353Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T11-01-17-01a1882d-fb9f-7e20-9424-b8f4d6aff49c.jsonl",
+      "records_read": 17
+    },
+    "rollout_49": {
+      "first_timestamp_utc": "2026-10-29T15:05:22.166Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T15:06:56.702Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T11-05-22-01a18831-b79f-77b3-bac0-44d13b7d651e.jsonl",
+      "records_read": 81
+    },
+    "rollout_5": {
+      "first_timestamp_utc": "2026-10-29T06:08:55.636Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T06:16:58.244Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-08-55-01a18646-96dd-7280-a622-ec9da874a38b.jsonl",
+      "records_read": 248
+    },
+    "rollout_50": {
+      "first_timestamp_utc": "2026-10-29T15:05:46.435Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T15:12:11.384Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T11-05-46-01a18832-1672-7162-bb89-6ca7668b48b1.jsonl",
+      "records_read": 185
+    },
+    "rollout_51": {
+      "first_timestamp_utc": "2026-10-29T15:12:12.157Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T15:14:21.313Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T11-12-12-01a18837-f925-7fc1-9c04-a0a9f32e521b.jsonl",
+      "records_read": 93
+    },
+    "rollout_52": {
+      "first_timestamp_utc": "2026-10-29T15:31:17.706Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T15:31:22.278Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T11-31-17-01a18849-73f5-7483-8382-c2b76fc20b2a.jsonl",
+      "records_read": 17
+    },
+    "rollout_53": {
+      "first_timestamp_utc": "2026-10-29T16:01:17.935Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T16:01:25.600Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T12-01-17-01a18864-ec16-72b0-bfb3-287f3f2eb3bc.jsonl",
+      "records_read": 17
+    },
+    "rollout_54": {
+      "first_timestamp_utc": "2026-10-29T16:31:17.739Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T16:31:21.745Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T12-31-17-01a18880-6298-75f3-b1ab-34254cd5402e.jsonl",
+      "records_read": 18
+    },
+    "rollout_55": {
+      "first_timestamp_utc": "2026-10-29T17:01:17.965Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T17:01:21.805Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T13-01-17-01a1889b-dab3-7662-a1ad-0ceef7eb2945.jsonl",
+      "records_read": 17
+    },
+    "rollout_56": {
+      "first_timestamp_utc": "2026-10-29T17:31:17.860Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T17:31:21.814Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T13-31-17-01a188b7-518d-7d23-9424-3562068e4dc1.jsonl",
+      "records_read": 18
+    },
+    "rollout_57": {
+      "first_timestamp_utc": "2026-10-29T18:01:17.891Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T18:01:24.647Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T14-01-17-01a188d2-c8ee-7710-b8f3-f7b2691cdb84.jsonl",
+      "records_read": 17
+    },
+    "rollout_58": {
+      "first_timestamp_utc": "2026-10-29T18:31:17.881Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T18:31:22.538Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T14-31-17-01a188ee-4022-7711-a9fe-fd8035093e70.jsonl",
+      "records_read": 18
+    },
+    "rollout_59": {
+      "first_timestamp_utc": "2026-10-29T19:01:17.940Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T19:01:22.487Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T15-01-17-01a18909-b79e-75b3-820d-836a75c0d53f.jsonl",
+      "records_read": 17
+    },
+    "rollout_6": {
+      "first_timestamp_utc": "2026-10-29T06:09:40.492Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T06:17:08.400Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-09-40-01a18647-4632-7383-aee9-856174b37d73.jsonl",
+      "records_read": 94
+    },
+    "rollout_60": {
+      "first_timestamp_utc": "2026-10-29T19:31:17.953Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T19:31:22.254Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T15-31-17-01a18925-2ef0-76d0-b854-469c55abbaa0.jsonl",
+      "records_read": 17
+    },
+    "rollout_61": {
+      "first_timestamp_utc": "2026-10-29T20:01:18.010Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T20:01:21.065Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T16-01-17-01a18940-a660-7852-8485-6e0a70ef61e0.jsonl",
+      "records_read": 18
+    },
+    "rollout_62": {
+      "first_timestamp_utc": "2026-10-29T20:31:18.054Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T20:31:22.037Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T16-31-17-01a1895c-1dd0-7361-9b2a-acb963c48e5c.jsonl",
+      "records_read": 17
+    },
+    "rollout_63": {
+      "first_timestamp_utc": "2026-10-29T21:01:18.063Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T21:01:24.804Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T17-01-18-01a18977-951e-73b2-97e2-8ae43cda71a3.jsonl",
+      "records_read": 17
+    },
+    "rollout_64": {
+      "first_timestamp_utc": "2026-10-29T21:31:18.063Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T21:31:21.989Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T17-31-17-01a18993-0c58-75d1-b705-e6f22290b9f4.jsonl",
+      "records_read": 18
+    },
+    "rollout_65": {
+      "first_timestamp_utc": "2026-10-29T22:01:18.136Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T22:01:21.864Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T18-01-18-01a189ae-83e6-7493-97c4-0a7c8323e255.jsonl",
+      "records_read": 17
+    },
+    "rollout_66": {
+      "first_timestamp_utc": "2026-10-29T22:31:17.922Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T22:31:21.583Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T18-31-17-01a189c9-fa4d-7281-9861-1d52474dbee8.jsonl",
+      "records_read": 18
+    },
+    "rollout_67": {
+      "first_timestamp_utc": "2026-10-29T23:01:18.089Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T23:01:21.788Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T19-01-18-01a189e5-7230-73d3-87e3-163c35734b67.jsonl",
+      "records_read": 18
+    },
+    "rollout_68": {
+      "first_timestamp_utc": "2026-10-29T23:31:17.976Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T23:31:22.601Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T19-31-17-01a18a00-e905-7db0-82e2-db3b0b353245.jsonl",
+      "records_read": 18
+    },
+    "rollout_69": {
+      "first_timestamp_utc": "2026-10-29T23:36:33.231Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T23:36:59.834Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T19-36-33-01a18a05-b872-79d3-aea6-98cace862b51.jsonl",
+      "records_read": 38
+    },
+    "rollout_7": {
+      "first_timestamp_utc": "2026-10-29T06:13:51.371Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T06:17:14.955Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-13-51-01a1864b-1a29-7172-bef4-15ce507a8b22.jsonl",
+      "records_read": 93
+    },
+    "rollout_70": {
+      "first_timestamp_utc": "2026-10-29T23:43:45.825Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T23:44:09.805Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T19-43-45-01a18a0c-524a-7940-a66a-059fdd2e9b1d.jsonl",
+      "records_read": 41
+    },
+    "rollout_71": {
+      "first_timestamp_utc": "2026-10-29T23:43:56.018Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T23:44:29.022Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T19-43-55-01a18a0c-7a1a-7901-87fd-d9f4ff8c252c.jsonl",
+      "records_read": 30
+    },
+    "rollout_72": {
+      "first_timestamp_utc": "2026-10-29T23:44:32.175Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T23:44:50.162Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T19-44-32-01a18a0d-0740-7341-a097-aac030230714.jsonl",
+      "records_read": 20
+    },
+    "rollout_73": {
+      "first_timestamp_utc": "2026-10-30T00:01:18.117Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:01:22.801Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-01-18-01a18a1c-60d1-7061-92e3-1c5ad5d7b8ff.jsonl",
+      "records_read": 17
+    },
+    "rollout_74": {
+      "first_timestamp_utc": "2026-10-30T00:15:16.089Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:15:45.060Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-15-16-01a18a29-2a1f-7d20-9457-769e13ff4e2e.jsonl",
+      "records_read": 33
+    },
+    "rollout_75": {
+      "first_timestamp_utc": "2026-10-30T00:17:09.819Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:17:14.829Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-17-09-01a18a2a-e660-7ee1-8478-25dd32ee59c5.jsonl",
+      "records_read": 19
+    },
+    "rollout_76": {
+      "first_timestamp_utc": "2026-10-30T00:18:30.274Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:18:57.268Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-18-30-01a18a2c-20a6-70f2-888d-76dad2502fa0.jsonl",
+      "records_read": 39
+    },
+    "rollout_77": {
+      "first_timestamp_utc": "2026-10-30T00:21:52.647Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:22:10.962Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-21-52-01a18a2f-3725-7102-8fae-3e88fe335582.jsonl",
+      "records_read": 34
+    },
+    "rollout_78": {
+      "first_timestamp_utc": "2026-10-30T00:31:17.991Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:31:24.663Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-31-17-01a18a37-d794-79e0-a344-ecccc76985ab.jsonl",
+      "records_read": 18
+    },
+    "rollout_79": {
+      "first_timestamp_utc": "2026-10-30T00:44:54.923Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:45:20.425Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-44-54-01a18a44-4ea4-7240-aea1-d9783e7b6a94.jsonl",
+      "records_read": 40
+    },
+    "rollout_8": {
+      "first_timestamp_utc": "2026-10-29T06:17:12.828Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T06:17:14.194Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-17-12-01a1864e-2ce4-70c3-977a-300de9b49c1f.jsonl",
+      "records_read": 14
+    },
+    "rollout_80": {
+      "first_timestamp_utc": "2026-10-30T00:45:14.667Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:45:35.672Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-45-14-01a18a44-9bd4-7ea2-a911-97fd5de2d005.jsonl",
+      "records_read": 43
+    },
+    "rollout_81": {
+      "first_timestamp_utc": "2026-10-30T00:45:37.515Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:46:11.334Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-45-37-01a18a44-f4f8-78f1-96cb-ae69bb893f81.jsonl",
+      "records_read": 36
+    },
+    "rollout_82": {
+      "first_timestamp_utc": "2026-10-30T00:46:30.409Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:47:03.821Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-46-30-01a18a45-c3af-7783-80cd-eef39bcf833b.jsonl",
+      "records_read": 45
+    },
+    "rollout_83": {
+      "first_timestamp_utc": "2026-10-30T00:48:18.662Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:49:01.172Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-48-18-01a18a47-6a85-7ea1-b7a3-6699841d4303.jsonl",
+      "records_read": 41
+    },
+    "rollout_84": {
+      "first_timestamp_utc": "2026-10-30T00:48:52.604Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:53:32.758Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-48-52-01a18a47-ef2a-7f93-96e4-1995f90ea3b0.jsonl",
+      "records_read": 251
+    },
+    "rollout_85": {
+      "first_timestamp_utc": "2026-10-30T00:52:13.917Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:52:42.199Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-52-13-01a18a4b-0185-7411-b924-1d67e387d860.jsonl",
+      "records_read": 42
+    },
+    "rollout_86": {
+      "first_timestamp_utc": "2026-10-30T00:53:33.622Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:53:59.662Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-53-33-01a18a4c-38c4-7612-a242-2da388458cbb.jsonl",
+      "records_read": 45
+    },
+    "rollout_87": {
+      "first_timestamp_utc": "2026-10-30T00:53:53.154Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:54:33.362Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-53-53-01a18a4c-852c-7623-af63-f8b3e2304e13.jsonl",
+      "records_read": 65
+    },
+    "rollout_88": {
+      "first_timestamp_utc": "2026-10-30T00:54:00.127Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:54:25.582Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-54-00-01a18a4c-a052-7211-a7aa-7ef30c1fa0b9.jsonl",
+      "records_read": 37
+    },
+    "rollout_89": {
+      "first_timestamp_utc": "2026-10-30T00:54:33.857Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:54:52.474Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-54-33-01a18a4d-2426-7b02-9740-98d0fa6cd059.jsonl",
+      "records_read": 30
+    },
+    "rollout_9": {
+      "first_timestamp_utc": "2026-10-29T06:17:12.976Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-29T06:17:14.161Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T02-17-12-01a1864e-2db5-7112-9995-0c2fdf72697a.jsonl",
+      "records_read": 13
+    },
+    "rollout_90": {
+      "first_timestamp_utc": "2026-10-30T00:58:22.011Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T00:58:52.125Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-58-21-01a18a50-9f5d-7c61-aff2-52ac12143a37.jsonl",
+      "records_read": 43
+    },
+    "rollout_91": {
+      "first_timestamp_utc": "2026-10-30T00:58:45.643Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:00:07.859Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T20-58-45-01a18a50-fbb2-7063-8bea-20121e7203c8.jsonl",
+      "records_read": 130
+    },
+    "rollout_92": {
+      "first_timestamp_utc": "2026-10-30T01:00:08.294Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:00:18.303Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-00-08-01a18a52-3e8d-7202-bf63-40083636298e.jsonl",
+      "records_read": 21
+    },
+    "rollout_93": {
+      "first_timestamp_utc": "2026-10-30T01:00:38.172Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:01:02.349Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-00-38-01a18a52-b33e-7e83-a7e4-8dae36bcf86d.jsonl",
+      "records_read": 29
+    },
+    "rollout_94": {
+      "first_timestamp_utc": "2026-10-30T01:00:58.486Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:02:07.155Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-00-58-01a18a53-02a6-7692-873c-8bcac02da768.jsonl",
+      "records_read": 143
+    },
+    "rollout_95": {
+      "first_timestamp_utc": "2026-10-30T01:02:07.592Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:02:30.215Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-02-07-01a18a54-1090-7493-aa03-f7f5da059ab2.jsonl",
+      "records_read": 34
+    },
+    "rollout_96": {
+      "first_timestamp_utc": "2026-10-30T01:03:22.794Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:03:36.227Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-03-22-01a18a55-364e-7521-9615-ea393ec9ec80.jsonl",
+      "records_read": 21
+    },
+    "rollout_97": {
+      "first_timestamp_utc": "2026-10-30T01:04:20.755Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:04:48.731Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-04-20-01a18a56-18b6-7b11-90e6-a27e975489f2.jsonl",
+      "records_read": 40
+    },
+    "rollout_98": {
+      "first_timestamp_utc": "2026-10-30T01:04:44.625Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:05:20.330Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-04-44-01a18a56-7600-7bf1-bbb1-bff552ffb64f.jsonl",
+      "records_read": 61
+    },
+    "rollout_99": {
+      "first_timestamp_utc": "2026-10-30T01:05:21.127Z",
+      "kind": "codex_rollout",
+      "last_timestamp_utc": "2026-10-30T01:05:55.996Z",
+      "path": "~/.openclaw/agents/main/agent/codex-home/sessions/2026/10/29/rollout-2026-10-29T21-05-21-01a18a57-0481-7780-8ab2-d1d00c5b8831.jsonl",
+      "records_read": 45
+    },
+    "session_archive_0": {
+      "first_timestamp_utc": "2026-10-29T12:21:21.736Z",
+      "kind": "compressed_session_jsonl",
+      "last_timestamp_utc": "2026-10-29T12:23:18.165Z",
+      "path": "~/.openclaw/agents/main/sessions/6b54fc25-a4fe-446a-8980-3a99afb9f87f.jsonl.deleted.2026-10-29T12-23-18.972Z.ee73def2f08848cda2a6b1fae5852803.zst",
+      "records_read": 39
+    },
+    "session_archive_1": {
+      "first_timestamp_utc": "2026-10-30T12:15:47.090Z",
+      "kind": "compressed_session_jsonl",
+      "last_timestamp_utc": "2026-10-30T12:17:01.281Z",
+      "path": "~/.openclaw/agents/main/sessions/7bda126a-a537-4e07-8d1b-8d20c7a7ba56.jsonl.deleted.2026-10-30T12-17-02.086Z.ac2402e40cab43c29f7e0b18ede75a3e.zst",
+      "records_read": 45
+    },
+    "session_archive_2": {
+      "first_timestamp_utc": "2026-10-29T23:43:55.873Z",
+      "kind": "compressed_session_jsonl",
+      "last_timestamp_utc": "2026-10-29T23:44:29.041Z",
+      "path": "~/.openclaw/agents/main/sessions/a4cdd6ff-3217-4f55-9837-514e616338c7.jsonl.deleted.2026-10-29T23-44-29.807Z.e10e79e37d9e4d70a935598bc260e172.zst",
+      "records_read": 11
+    },
+    "session_archive_3": {
+      "first_timestamp_utc": "2026-10-29T14:06:33.352Z",
+      "kind": "compressed_session_jsonl",
+      "last_timestamp_utc": "2026-10-29T14:07:40.647Z",
+      "path": "~/.openclaw/agents/main/sessions/ef5d8264-f3c6-43b7-b846-6b4b99ac4406.jsonl.deleted.2026-10-29T14-07-41.440Z.8b1773dc78cb44dda0eb6c33b5022f01.zst",
+      "records_read": 35
+    },
+    "session_archive_4": {
+      "first_timestamp_utc": "2026-10-29T05:40:05.575Z",
+      "kind": "compressed_session_jsonl",
+      "last_timestamp_utc": "2026-10-29T05:40:06.753Z",
+      "path": "~/.openclaw/agents/main/sessions/f5cd51dc-bc1a-46d7-b931-87c73099b1e4.jsonl.deleted.2026-10-29T05-40-16.098Z.c44ee9c6c3504bdbbc1937b5d6daf437.zst",
+      "records_read": 5
+    }
+  },
+  "structured_acceptance_criteria_key_counts": {},
+  "validation": {
+    "attempts": 8481,
+    "checks_passed": true,
+    "errors": {},
+    "linked_attempts": 4804,
+    "parent_linked_runs": 29,
+    "runs": 550
+  }
+}

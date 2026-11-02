@@ -1,0 +1,7 @@
+{
+  "qualifying": {
+    "C001": {"author": "Repulsive_Initial308", "themes": ["runtime"]},
+    "C002": {"author": "InfiniteBlink", "themes": ["runtime"]}
+  },
+  "excluded": ["C015","C024"]
+}

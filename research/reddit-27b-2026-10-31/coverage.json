@@ -1,0 +1,87 @@
+{
+  "canonical_url": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/",
+  "title": "Local Qwen 27B is practically unusable for coding tasks. Are we doing something wrong?",
+  "collection_last_success_utc": "2026-10-31T13:40:43.128659+00:00",
+  "post_count": 1,
+  "distinct_comment_ids": 591,
+  "readable_comment_bodies": 589,
+  "deleted_placeholders": 2,
+  "removed_placeholders_observed": 0,
+  "removed_total": "unknown",
+  "qualifying_comments": 534,
+  "excluded_total": 57,
+  "readable_excluded": 55,
+  "displayed_comment_counter": 599,
+  "displayed_counter_source": "embed-response contains View 599 comments; earlier snapshot than final RSS union",
+  "counter_minus_collected_ids": 8,
+  "counter_discrepancy_explanation": "Unknown: omitted/hidden/deleted/removed items or temporal drift; not eight proven removed comments.",
+  "more_nodes_observed_in_atom": 0,
+  "more_node_total": "unknown: Atom does not serialize Reddit morechildren markers",
+  "parent_ids_available": false,
+  "comment_scores_available": false,
+  "comment_depths_available": false,
+  "low_score_coverage_certified": false,
+  "full_tree_completeness_certified": false,
+  "review_complete_for_collected_corpus": true,
+  "body_variant_count": 0,
+  "feeds": [
+    {
+      "file": "rss-response",
+      "entries_including_post": 199,
+      "comment_ids": 198,
+      "new_comment_ids": 198,
+      "sha256": "1c570fa6c2ef904b49b9d28d0c9ec206f690b2b72303378aad612deaee527383"
+    },
+    {
+      "file": "rss-limit500.xml",
+      "entries_including_post": 485,
+      "comment_ids": 484,
+      "new_comment_ids": 286,
+      "sha256": "5539f316c66d14d787e20549c23ccddba6f8c036f607bae411911a3ca5377e05"
+    },
+    {
+      "file": "rss-limit1000.xml",
+      "entries_including_post": 484,
+      "comment_ids": 483,
+      "new_comment_ids": 0,
+      "sha256": "68cc596b92d1cc3582478f64c6062c7da15d32721d41d9c2e05ad2a70ddc1b90"
+    },
+    {
+      "file": "rss-old.xml",
+      "entries_including_post": 488,
+      "comment_ids": 487,
+      "new_comment_ids": 95,
+      "sha256": "8f0511e421348a9503cf81ab2cd4d1e5ad982a4f77d35d3e61a274e494c81a16"
+    },
+    {
+      "file": "rss-new.xml",
+      "entries_including_post": 486,
+      "comment_ids": 485,
+      "new_comment_ids": 12,
+      "sha256": "35c1499f6cad5a2ef48d0ddb101ca13cb76e390885993e3e0b8c3abd178e8f90"
+    },
+    {
+      "file": "rss-controversial.xml",
+      "entries_including_post": 486,
+      "comment_ids": 485,
+      "new_comment_ids": 0,
+      "sha256": "7baf267fbc186575a6ba7d1e51b9865886ea0f356f5b612022592827e86d00eb"
+    },
+    {
+      "file": "rss-top.xml",
+      "entries_including_post": 485,
+      "comment_ids": 484,
+      "new_comment_ids": 0,
+      "sha256": "27fe81906a657993044a912f7362592e9efd2a13f3380b7b6892fd5b8b2437c3"
+    },
+    {
+      "file": "rss-confidence.xml",
+      "entries_including_post": 485,
+      "comment_ids": 484,
+      "new_comment_ids": 0,
+      "sha256": "6d65945b1f832bf94ade5754a0ecc62f4b90fd018a98308bc51a5fab759812ae"
+    }
+  ],
+  "independent_reviewer_scope": "C001\u2013C198 only; partition indexers reviewed remaining fixed non-overlapping ranges",
+  "no_implementation_or_config_changes": true
+}

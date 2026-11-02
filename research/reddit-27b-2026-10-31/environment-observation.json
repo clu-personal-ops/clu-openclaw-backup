@@ -1,0 +1,250 @@
+{
+  "captured_utc": "2026-10-31T13:31:07.456941+00:00",
+  "scope": "Current read-only observation; NOT a historical benchmark configuration proof",
+  "hardware": {
+    "model": {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.model"
+      ],
+      "returncode": 0,
+      "value": "Mac17,16"
+    },
+    "memory_bytes": {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "returncode": 0,
+      "value": "68719476736"
+    },
+    "cpu": {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "returncode": 0,
+      "value": "Apple M5 Pro"
+    },
+    "architecture": {
+      "command": [
+        "/usr/bin/uname",
+        "-m"
+      ],
+      "returncode": 0,
+      "value": "arm64"
+    },
+    "os": {
+      "command": [
+        "/usr/bin/sw_vers"
+      ],
+      "returncode": 0,
+      "value": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434"
+    }
+  },
+  "local_model_directory": "/Users/clu/.lmstudio/models/lmstudio-community/Qwen3.8-27B-MLX-4bit",
+  "local_model_metadata": {
+    "config.json": {
+      "sha256": "14b65a0ee06517060a6bbd979bb1a8ff54e7b304b1a1f01d54344b88b8285e85",
+      "size_bytes": 4932,
+      "modified_utc": "2026-10-24T20:26:59.370383+00:00"
+    },
+    "generation_config.json": {
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "size_bytes": 202,
+      "modified_utc": "2026-10-24T20:26:59.403097+00:00"
+    },
+    "chat_template.jinja": {
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "size_bytes": 8952,
+      "modified_utc": "2026-10-24T20:26:59.351740+00:00"
+    }
+  },
+  "current_model_api": {
+    "http://127.0.0.1:1234/api/v0/models": {
+      "data": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "object": "model",
+          "type": "vlm",
+          "publisher": "qwen",
+          "arch": "qwen3_5",
+          "compatibility_type": "mlx",
+          "quantization": "4bit",
+          "state": "not-loaded",
+          "max_context_length": 262144,
+          "capabilities": [
+            "tool_use"
+          ]
+        }
+      ]
+    },
+    "http://127.0.0.1:1234/v1/models": {
+      "data": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "object": "model",
+          "owned_by": "organization_owner"
+        }
+      ]
+    }
+  },
+  "derived_saved_promptfoo": [
+    {
+      "source": "/Users/clu/Clu-Benchmarks/results/20261031T061213Z/qwen--qwen3.8-27b/promptfoo-baseline-0.json",
+      "repetition": 0,
+      "finish_reasons": {
+        "stop": 7
+      },
+      "tests": [
+        {
+          "id": "instruction",
+          "passed": false,
+          "output": "\n\nBENCH_READY",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "classification",
+          "passed": false,
+          "output": "\n\nnetwork",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "arithmetic",
+          "passed": false,
+          "output": "\n\n45",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "bounded_reasoning",
+          "passed": false,
+          "output": "\n\n6",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "json",
+          "passed": true,
+          "output": "\n\n{\"sum\":45,\"status\":\"complete\"}",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "extraction",
+          "passed": true,
+          "output": "\n\n{\"name\":\"Mira\",\"quantity\":3}",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "tool_format",
+          "passed": true,
+          "output": "\n\n{\"tool\":\"read\",\"arguments\":{\"path\":\"fixture.txt\"}}",
+          "finish_reason": "stop"
+        }
+      ]
+    },
+    {
+      "source": "/Users/clu/Clu-Benchmarks/results/20261031T061213Z/qwen--qwen3.8-27b/promptfoo-baseline-1.json",
+      "repetition": 1,
+      "finish_reasons": {
+        "stop": 7
+      },
+      "tests": [
+        {
+          "id": "instruction",
+          "passed": false,
+          "output": "\n\nBENCH_READY",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "classification",
+          "passed": false,
+          "output": "\n\nnetwork",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "arithmetic",
+          "passed": false,
+          "output": "\n\n45",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "bounded_reasoning",
+          "passed": false,
+          "output": "\n\n6",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "json",
+          "passed": true,
+          "output": "\n\n{\"sum\":45,\"status\":\"complete\"}",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "extraction",
+          "passed": true,
+          "output": "\n\n{\"name\":\"Mira\",\"quantity\":3}",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "tool_format",
+          "passed": true,
+          "output": "\n\n{\"tool\":\"read\",\"arguments\":{\"path\":\"fixture.txt\"}}",
+          "finish_reason": "stop"
+        }
+      ]
+    },
+    {
+      "source": "/Users/clu/Clu-Benchmarks/results/20261031T061213Z/qwen--qwen3.8-27b/promptfoo-baseline-2.json",
+      "repetition": 2,
+      "finish_reasons": {
+        "stop": 7
+      },
+      "tests": [
+        {
+          "id": "instruction",
+          "passed": false,
+          "output": "\n\nBENCH_READY",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "classification",
+          "passed": false,
+          "output": "\n\nnetwork",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "arithmetic",
+          "passed": false,
+          "output": "\n\n45",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "bounded_reasoning",
+          "passed": false,
+          "output": "\n\n6",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "json",
+          "passed": true,
+          "output": "\n\n{\"sum\":45,\"status\":\"complete\"}",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "extraction",
+          "passed": true,
+          "output": "\n\n{\"name\":\"Mira\",\"quantity\":3}",
+          "finish_reason": "stop"
+        },
+        {
+          "id": "tool_format",
+          "passed": true,
+          "output": "\n\n{\"tool\":\"read\",\"arguments\":{\"path\":\"fixture.txt\"}}",
+          "finish_reason": "stop"
+        }
+      ]
+    }
+  ]
+}

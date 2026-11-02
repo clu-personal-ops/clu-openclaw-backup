@@ -1,0 +1,36 @@
+{
+  "status": "BLOCKED",
+  "stages": [
+    {
+      "stage": "Original trace",
+      "status": "PASS",
+      "detail": "Existing trajectory available"
+    },
+    {
+      "stage": "Original failures extracted",
+      "status": "PASS",
+      "detail": "6 failed results, {'UNCLASSIFIED': 3, 'TOOL_FORMAT': 3}"
+    },
+    {
+      "stage": "Safe remediation",
+      "status": "PASS",
+      "detail": "Browser-agent loop bypassed; configuration unchanged"
+    },
+    {
+      "stage": "Source identifiers",
+      "status": "PASS",
+      "detail": "Three distinct share identifiers available"
+    },
+    {
+      "stage": "Conversation 1",
+      "status": "PASS",
+      "detail": "22 messages recovered into source-1.md"
+    },
+    {
+      "stage": "Conversation 2",
+      "status": "FAIL",
+      "detail": "ValueError: Conversation not found in page data"
+    }
+  ],
+  "output": "/Users/clu/.openclaw/workspace/clu-tests/real-recovery-20261030-010402"
+}

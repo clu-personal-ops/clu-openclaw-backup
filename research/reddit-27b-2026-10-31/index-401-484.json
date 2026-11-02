@@ -1,0 +1,1565 @@
+[
+  {
+    "ref": "C401",
+    "disposition": "qualifying",
+    "author": "cagriuluc",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx46pway5k1/",
+    "contribution": "Asks whether the missing quantization and runtime configuration were omitted because the poster already tried everything.",
+    "type": "diagnostic question",
+    "relevance": "Directly identifies missing reproducibility details.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual question: why were quants and configuration not shared; have alternatives actually been tried?",
+    "transferability": "Requesting configuration is transferable; it does not establish that configuration is the cause.",
+    "themes": [
+      "weights",
+      "runtime",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C402",
+    "disposition": "qualifying",
+    "author": "T_rex2700",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx47m8c4qe9/",
+    "contribution": "Guesses the setup is Ollama on Windows, dismisses its performance for this use, suggests a runtime with llama.cpp argument overrides and Linux, and says personal experience taught them to be very specific with Qwen because of reasoning loops.",
+    "type": "runtime recommendation and anecdote",
+    "relevance": "Addresses runtime and prompting, but the platform diagnosis is a guess and the named alternative is obscured in the source.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "Is the poster actually on Windows; which overridden arguments and alternative runtime are intended; what prompts stopped loops?",
+    "transferability": "Do not infer that Windows or Ollama universally prevents agentic coding; no controlled comparison or exact configuration is supplied.",
+    "themes": [
+      "runtime",
+      "hardware",
+      "workflow",
+      "reasoning"
+    ]
+  },
+  {
+    "ref": "C403",
+    "disposition": "qualifying",
+    "author": "Comprehensive_Rock50",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx49zpk1leo/",
+    "contribution": "Distinguishes advertised 128K capacity from comprehension, estimates 4-bit weights at about 13.5GB before overhead/cache, and argues VRAM shortages usually cause offload, slowness or allocation failure rather than directly reducing inherent reasoning. Says quantization/truncation can affect quality and requests a failed execution trace to separate model failure from agent-environment failure. Also argues that understanding a project, making a small change, running a test and reporting it is a reasonable local-agent evaluation target rather than an inherently unrealistic expectation.",
+    "type": "diagnostic analysis",
+    "relevance": "Strong diagnostic framing, but its memory estimate and causal assertions are explanatory claims, not measurements from this setup.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual question: is Qwen failing to reason or being given an incoherent agent environment? Missing prompt, files read, tool trace, actual context, quant, offload and loop onset.",
+    "transferability": "The proposed trace-based diagnosis is broadly useful; the rough memory estimate is not a measured fit guarantee and capability remains untested.",
+    "themes": [
+      "runtime",
+      "weights",
+      "kv",
+      "context",
+      "harness",
+      "reasoning",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C404",
+    "disposition": "qualifying",
+    "author": "xb1n0ry",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx4pqkg0l2c/",
+    "contribution": "Calls harness choice central; recommends Pi with medium/low thinking and at least Q6, claiming high/xhigh causes overthinking. Suggests llama.cpp/vLLM, Flash Next with Strata and possibly more RAM, or a linked coding/reasoning fine-tune for remaining on 27B.",
+    "type": "configuration and alternative recommendations",
+    "relevance": "Contains concrete knobs and alternatives but no described test or hardware fit evidence.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What exact Pi settings and fine-tune tests support Q6 and the thinking ceiling; can the proposed alternatives fit the available memory?",
+    "transferability": "The Q6 minimum and high-thinking failure claim are unvalidated universals and conflict with successful Q4/xhigh reports in this slice.",
+    "themes": [
+      "harness",
+      "reasoning",
+      "weights",
+      "runtime",
+      "alternatives",
+      "hardware"
+    ]
+  },
+  {
+    "ref": "C405",
+    "disposition": "qualifying",
+    "author": "relmny",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx4ptzd0plv/",
+    "contribution": "Criticizes declaring the model bad without reporting quantization/parameters and recommends changing inference engine, understanding the quant and applying recommended parameters.",
+    "type": "diagnostic recommendation",
+    "relevance": "Retains the substantive reproducibility request despite accusatory phrasing; the claim that hardware was not supplied should not be adopted as fact.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Which engine, quant and recommended parameters are meant, and what is the actual runtime configuration?",
+    "transferability": "Configuration disclosure and parameter checking generalize; replacing Ollama is a hypothesis, not an established remedy.",
+    "themes": [
+      "runtime",
+      "weights",
+      "sampling",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C406",
+    "disposition": "qualifying",
+    "author": "ddensa",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx52aqitl7n/",
+    "contribution": "Reports good results with Unsloth Desktop serving an Unsloth Q4 model through Qwen Desktop, while Codex plans every ticket, writes coding guidance, reviews the result and issues change requests until satisfactory.",
+    "type": "hybrid workflow report",
+    "relevance": "A concrete positive Q4 example, but cloud planning and repeated review are integral to the claimed success.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Hardware, task sizes, exact quant/settings, success rate and number/cost of Codex review cycles are missing.",
+    "transferability": "Supports testing assisted local execution rather than proving independent local-agent parity; Q4 success may depend on task decomposition and cloud supervision.",
+    "themes": [
+      "runtime",
+      "weights",
+      "harness",
+      "workflow",
+      "alternatives"
+    ]
+  },
+  {
+    "ref": "C407",
+    "disposition": "qualifying",
+    "author": "LocalhostRonin",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx52yc5j99f/",
+    "contribution": "Requests full runtime/quant/KV/vision details and asks how long the poster waited before calling behavior a loop. Says Qwen may circle before resolving and use 5–10 times Opus's tokens per task; contrasts a claimed 128K Qwen window with Sonnet's claimed 1M, noting 30K documentation consumes a larger share of Qwen's budget.",
+    "type": "diagnostic questions and anecdotal comparison",
+    "relevance": "Raises patience and context overhead as competing explanations, without measured traces or verified cross-model capacities.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "Actual question: how long was allowed before deciding it was repetitive? Missing runtime settings, actual token use and whether apparent loops eventually complete.",
+    "transferability": "Measure tokens-to-completion and effective context rather than transferring the 5–10x ratio or treating advertised capacities as equal-quality usable windows.",
+    "themes": [
+      "runtime",
+      "weights",
+      "kv",
+      "context",
+      "reasoning",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C408",
+    "disposition": "qualifying",
+    "author": "loudguitar42",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx53z9l8sdd/",
+    "contribution": "Says Qwen3.8-27B has been their main coding agent since May and works wonderfully on an RTX3090 with llama; recommends a harness such as Hermes and a properly prepared system setup.",
+    "type": "positive setup report",
+    "relevance": "Direct same-GPU counterexample to unusability, but successful tasks and configuration are unspecified.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What does 'system trained properly' mean; what quant, context, prompts, test results and harness settings were used?",
+    "transferability": "Same GPU improves relevance but does not isolate the harness or demonstrate reliability on the poster's codebase.",
+    "themes": [
+      "hardware",
+      "runtime",
+      "harness",
+      "workflow"
+    ]
+  },
+  {
+    "ref": "C409",
+    "disposition": "qualifying",
+    "author": "_BookBurner_",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx58zrllqjp/",
+    "contribution": "Reports making Qwen27B usable with a planner, a planning-only orchestrator, separate worker sessions, serial/round-robin execution, context cleanup above 60%, task scheduling and a final tester checking diffs against a requirements file. Says this enables extensive work but adds orchestration tokens and latency; on dual 16GB RX9060XT plus 64GB RAM, Flash-Next GSQ-RCO coder reportedly does better and finishes sooner despite slower token generation and partial offload.",
+    "type": "detailed orchestration and alternative report",
+    "relevance": "Concrete workflow and hardware anecdote highlighting task completion rather than raw token speed.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Which tasks and success rates were compared; what models/quants and timing measurements underpin the Flash-Next comparison; what is the exact cleanup policy?",
+    "transferability": "Decomposition, explicit criteria and independent checks are testable patterns, but the 60% threshold, hardware fit and alternative-model superiority are setup-dependent.",
+    "themes": [
+      "workflow",
+      "harness",
+      "context",
+      "reasoning",
+      "alternatives",
+      "hardware",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C410",
+    "disposition": "qualifying",
+    "author": "jsbot-02",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx5f9r3nezk/",
+    "contribution": "Reports a mostly successful pelican-riding-a-bike test, with incorrect leg/pedal relationships, using Qwen3.8-27B-GSQ-RCO-GGUF Q3 on a 9800X3D, RX9070XT 16GB and 64GB DDR5 at roughly 30–40 tokens/s.",
+    "type": "single-task setup report",
+    "relevance": "A concrete low-quant positive result with an admitted defect, but a visual demo does not test repository-scale autonomous coding.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What harness, prompt, generated artifact and correctness criteria were used; what does '30–40 tokens' measure exactly?",
+    "transferability": "Useful as a narrow Q3 counterexample, not evidence of reliable multi-file coding or transfer to a 3090.",
+    "themes": [
+      "weights",
+      "hardware",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C411",
+    "disposition": "qualifying",
+    "author": "Joozio",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx5uc3zz3c1/",
+    "contribution": "Reports swapping a model-agnostic non-coding agent from Claude to Ollama-served Qwen9B with a one-line change. File lookup, memory recall and simple tools held up, while analysis/synthesis degraded; 4B was much worse and 9B was their practical floor. Asks whether the poster first fails at cross-file planning or individual edits.",
+    "type": "adjacent comparative report and question",
+    "relevance": "Useful task-level distinction and dissent against blanket Ollama failure, explicitly adjacent rather than 27B coding evidence.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Actual question: does planning across files or individual editing fail first? Exact tasks, quant, hardware and measured comparisons are absent.",
+    "transferability": "Narrow retrieval/tool tasks may be separable from synthesis, but findings from 4B/9B non-coding agents do not establish a 27B coding ceiling.",
+    "themes": [
+      "runtime",
+      "harness",
+      "workflow",
+      "reasoning",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C412",
+    "disposition": "qualifying",
+    "author": "Damn-Sky",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx5vscyrixw/",
+    "contribution": "Reports Swift1.5 IQ3_XXS on 16GB VRAM with 132K context and DeepSeek harness working well for home use at about 46 tokens/s, with occasional errors and slower operation than Claude.",
+    "type": "positive alternative setup report",
+    "relevance": "Specific low-bit/context counterexample; acceptable home-use errors differ from professional reliability requirements.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Exact model identity, hardware, resident memory/offload, tasks, actual context occupancy and speed measurement are missing.",
+    "transferability": "Do not transfer the advertised context or subjective success to stock Qwen27B or professional workloads; the model variant and harness may matter.",
+    "themes": [
+      "alternatives",
+      "weights",
+      "hardware",
+      "context",
+      "harness"
+    ]
+  },
+  {
+    "ref": "C413",
+    "disposition": "qualifying",
+    "author": "vintagevibes_",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx69edwx4tg/",
+    "contribution": "Says Ollama never worked for their agentic tasks and reports LM Studio plus Claude Code CLI Q4_K_M on a 4090 succeeding at 60–70 tokens/s. Recommends it for a 3090, says sub-Q4 quants loop in tool calls in their experience, and notes the model installs things readily and fact-checks less than Claude, speculating prompts could fix this.",
+    "type": "comparative setup report",
+    "relevance": "Concrete positive configuration with behavioral caveats; the Ollama attribution and prompting remedy are not isolated tests.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Which tasks, actual quant files, context and settings; was the same model/harness compared across servers; did prompting fix the autonomy/fact-checking issue?",
+    "transferability": "A 4090 test suggests a candidate 24GB configuration but not identical speed or reliability on a 3090; the sub-Q4 cutoff is anecdotal.",
+    "themes": [
+      "runtime",
+      "harness",
+      "weights",
+      "hardware",
+      "workflow",
+      "sampling"
+    ]
+  },
+  {
+    "ref": "C414",
+    "disposition": "qualifying",
+    "author": "fififijamie",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx69im9z63p/",
+    "contribution": "Reports good results mostly on small personal projects with a 24B oQ4e-mtp model on oMLX, 64GB unified memory and 262K context, usually with thinking disabled.",
+    "type": "adjacent positive setup report",
+    "relevance": "Shows another local workflow can work with thinking off, but this is not the same model or memory architecture.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Which 24B model, tasks, actual occupied context and correctness checks were involved?",
+    "transferability": "Different model and unified-memory hardware make this an adjacent option, not a direct Qwen27B configuration fix.",
+    "themes": [
+      "alternatives",
+      "weights",
+      "runtime",
+      "hardware",
+      "context",
+      "reasoning"
+    ]
+  },
+  {
+    "ref": "C415",
+    "disposition": "qualifying",
+    "author": "sarp3d0n",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6amdc1zmo/",
+    "contribution": "Reports moving from Ollama through llama.cpp to PolyStrata and obtaining 3x speed on an RTX5060 8GB/32GB RAM; now uses Tiel Coder35B A3B and suggests Swift1.5 for the poster's hardware.",
+    "type": "runtime migration and alternative report",
+    "relevance": "Concrete hardware and speed anecdote, but model changes may confound the runtime comparison.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Which model was held constant for the 3x measurement; what quant, offload, task and latency metrics were used?",
+    "transferability": "This motivates comparing runtimes/MoE options, not assuming a 3x gain or fit for a 3090 with another model.",
+    "themes": [
+      "runtime",
+      "alternatives",
+      "hardware",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C416",
+    "disposition": "qualifying",
+    "author": "BlAcKdN",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6b8egtc4h/",
+    "contribution": "Reports Qwen27B working well for light work through OpenCode and argues the harness may not be the culprit. Recommends llama.cpp over Ollama and case-specific tuning; reports rare loops on high thinking and offers to share configuration privately.",
+    "type": "positive use report and diagnostic dissent",
+    "relevance": "Substantive dissent from harness-first explanations, with a limited light-work scope.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What exact llama.cpp configuration, quant, hardware, tasks and high-thinking failure traces were used?",
+    "transferability": "Light-task success and rare loops do not establish performance for autonomous larger tasks; runtime causality remains untested.",
+    "themes": [
+      "harness",
+      "runtime",
+      "reasoning",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C417",
+    "disposition": "qualifying",
+    "author": "bobish01",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6baubhrxf/",
+    "contribution": "Recommends Qwen Strata Flash125B for larger projects and instruction following; reports using ChatGPT to architect/plan, Qwen3.8 Flash to code and GPT for final bug fixing.",
+    "type": "hybrid alternative workflow report",
+    "relevance": "Relevant alternative and division of labor, not evidence for stock 27B autonomous success.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What exact model/runtime/hardware, task outcomes and cloud intervention levels support the superiority claim?",
+    "transferability": "The hybrid workflow can be trialed, but a much larger model plus cloud planning/review is not a like-for-like 27B comparison.",
+    "themes": [
+      "alternatives",
+      "runtime",
+      "workflow",
+      "reasoning"
+    ]
+  },
+  {
+    "ref": "C418",
+    "disposition": "qualifying",
+    "author": "sumane12",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6bh1aoh45/",
+    "contribution": "Recommends llama.cpp, DeepSeek harness and Q4 quant, with Claude Opus5.5 supplying objectives and instructions.",
+    "type": "hybrid configuration recommendation",
+    "relevance": "Provides a concrete candidate stack while relying on frontier planning.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What model variant, hardware, context, settings and evaluated tasks support this recommendation?",
+    "transferability": "Treat as a proposed hybrid experiment, not proof that Q4 is sufficient or that local autonomy matches Claude.",
+    "themes": [
+      "runtime",
+      "harness",
+      "weights",
+      "workflow",
+      "alternatives"
+    ]
+  },
+  {
+    "ref": "C419",
+    "disposition": "qualifying",
+    "author": "No_Oil_6152",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6bxqz7zj8/",
+    "contribution": "Requests temperature, KV cache and harness details; claims Qwen3.8 can produce good results but is very slow.",
+    "type": "diagnostic request and capability claim",
+    "relevance": "Identifies omitted settings that can affect debugging without giving a tested remedy.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What temperature, KV format/size and harness are actually being used; how is slowness measured?",
+    "transferability": "Settings disclosure transfers; the quality and slowness claims lack workload-specific evidence.",
+    "themes": [
+      "sampling",
+      "kv",
+      "harness",
+      "runtime",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C420",
+    "disposition": "qualifying",
+    "author": "webAd-8847",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6etug50o4/",
+    "contribution": "Reports similar problems resolved through LM Studio's greater control and hours spent selecting model/settings/context, using VSCode Chat with a custom LM Studio endpoint.",
+    "type": "runtime tuning report",
+    "relevance": "Concrete toolchain anecdote but no reproducible successful parameter set.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Which model, quant, hardware, context and settings changed; which changes actually fixed the failures?",
+    "transferability": "Supports budgeting tuning time, but changing models and parameters alongside runtime prevents attributing success solely to LM Studio.",
+    "themes": [
+      "runtime",
+      "harness",
+      "context",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C421",
+    "disposition": "qualifying",
+    "author": "nomorespamplz",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6ftbfzag1/",
+    "contribution": "Claims llama.cpp plus a good harness and custom prompt would make even a smaller model outperform the poster's current results.",
+    "type": "configuration claim",
+    "relevance": "Relevant proposed cause/remedy but lacks a named harness, prompt or test.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Which smaller model, harness, custom prompt and matched task comparison justify the claim?",
+    "transferability": "A candidate hypothesis, not a general guarantee that runtime/prompt quality dominates model capability.",
+    "themes": [
+      "runtime",
+      "harness",
+      "workflow",
+      "alternatives"
+    ]
+  },
+  {
+    "ref": "C422",
+    "disposition": "qualifying",
+    "author": "immediate-drink-9876",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxbhmc3e00w/",
+    "contribution": "Asks which harness works best based on the other commenter's experience.",
+    "type": "harness question",
+    "relevance": "Retains a substantive unresolved tool-selection question.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual question: which harness works best in the respondent's experience, and for which model/tasks?",
+    "transferability": "Harness ranking needs task/configuration context; the question itself provides no comparative evidence.",
+    "themes": [
+      "harness",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C423",
+    "disposition": "qualifying",
+    "author": "Ancient-Camel1636",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6isohm9i9/",
+    "contribution": "Says Qwen27B is capable though below frontier models and attributes total failure to setup. Recommends at least 128K and preferably around 200K context, compaction/handoff, low-overhead Pi, thinking budgets, minimal skills/MCP, frontier planning/advice/review, organized documentation and code indexing/retrieval tools.",
+    "type": "broad workflow recommendations",
+    "relevance": "Substantive multi-layer advice, including an unsupported claim that sub-128K context is useless.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What tasks establish the context threshold, Pi benefit or '90% local work' split; can 200K fit and remain coherent on the actual setup?",
+    "transferability": "Low-overhead/decomposition ideas can be tested; the universal context floor conflicts with short-context diagnostic advice and is not validated here.",
+    "themes": [
+      "context",
+      "harness",
+      "reasoning",
+      "workflow",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C424",
+    "disposition": "qualifying",
+    "author": "floriv1999",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6iu372279/",
+    "contribution": "Suggests disabling rolling context and setting context size in the harness because otherwise prompts may fall out of the window, depending on runtime and harness.",
+    "type": "context-retention recommendation",
+    "relevance": "A specific context-loss hypothesis that could explain degraded agent behavior.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Which runtime/harness uses rolling context; what is retained or evicted; is prompt loss observable in a trace?",
+    "transferability": "Audit actual truncation/compaction semantics before changing settings; the behavior is implementation-specific.",
+    "themes": [
+      "context",
+      "runtime",
+      "harness"
+    ]
+  },
+  {
+    "ref": "C425",
+    "disposition": "qualifying",
+    "author": "Pretend_Engineer5951",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6kqwguvfn/",
+    "contribution": "Calls Swift3.8-27B at 8-bit/xhigh excellent, recommends a second 3090 with FP8 vLLM tensor parallelism, and prefers OMP over Pi. Reports Pi with several extensions sent 26K tokens for a 'hi' prompt versus OMP's 12K because of extra tool instructions.",
+    "type": "configuration and harness comparison report",
+    "relevance": "Provides an explicit prompt-overhead comparison and contradicts blanket Pi-lightweight and low-thinking prescriptions.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Were extension features and tools equivalent; what exact models/tasks and GPU configuration were tested; were 26K/12K counts reproduced?",
+    "transferability": "Audit enabled tools rather than universalizing the harness ranking; 8-bit/xhigh advice requires more hardware and conflicts with lower-quant positive reports.",
+    "themes": [
+      "weights",
+      "reasoning",
+      "hardware",
+      "runtime",
+      "harness",
+      "context",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C426",
+    "disposition": "qualifying",
+    "author": "Thutex",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6yiaketuo/",
+    "contribution": "Reports Qwen27B doing tasks well but slower than cloud on a laptop RTX5090 24GB using llama.cpp/Hermes; says repeated context compression degrades quality. Recommends mcpproxy/Markdown setup and potentially adding one or two 32GB Tesla V100s, claiming combined VRAM would make a large difference.",
+    "type": "positive setup and hardware recommendations",
+    "relevance": "Same VRAM class with a useful compaction caveat, but hardware expansion claims are not demonstrated.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What quant, tasks, actual context and compression policy; do the suggested cards fit, interoperate and provide useful performance in this system?",
+    "transferability": "The laptop result does not establish desktop 3090 throughput; summed VRAM alone is not proof of practical multi-GPU compatibility or performance.",
+    "themes": [
+      "hardware",
+      "runtime",
+      "harness",
+      "context",
+      "workflow"
+    ]
+  },
+  {
+    "ref": "C427",
+    "disposition": "qualifying",
+    "author": "lacrem",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx6yt3qubab/",
+    "contribution": "Reports Qwen3.8-27B at about 20 tokens/s via LM Studio on a Mac Studio M2 Max with 64GB, says Flint is faster with similar reasoning, and recommends smaller prompt chunks rather than expecting DeepSeek1.7T behavior.",
+    "type": "setup report and expectation advice",
+    "relevance": "Concrete throughput context and task-decomposition advice, with an unmeasured alternative comparison.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What quants, tasks, context and timing methods support the speed/reasoning comparison with Flint?",
+    "transferability": "Unified-memory Mac results do not predict a 3090 setup; chunking is testable but may not preserve cross-file task requirements automatically.",
+    "themes": [
+      "hardware",
+      "runtime",
+      "workflow",
+      "alternatives",
+      "reasoning"
+    ]
+  },
+  {
+    "ref": "C428",
+    "disposition": "qualifying",
+    "author": "ChemicalRoom2878",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx7dp1mb2cj/",
+    "contribution": "Suggests Linux, unlocking the GPU's full TFLOPS potential and moving from Ollama to Unsloth could produce a different experience.",
+    "type": "runtime/hardware recommendation",
+    "relevance": "Relevant performance suggestions, but 'unlocking TFLOPS' is not operationally defined.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What GPU settings, Unsloth runtime/version and matched workload comparison are intended?",
+    "transferability": "Do not infer that unspecified GPU tuning or OS migration fixes reasoning quality; this is an untested recommendation.",
+    "themes": [
+      "hardware",
+      "runtime",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C429",
+    "disposition": "excluded",
+    "author": "rusl1",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx7ebxcbna9/",
+    "contribution": "Dismisses the post as 'AI slop' without adding technical information.",
+    "type": "personal attack/pure reaction",
+    "relevance": "Excluded: personal dismissal with no substantive model/runtime claim.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "No substantive unanswered question.",
+    "transferability": "No technical inference warranted.",
+    "themes": [
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C430",
+    "disposition": "qualifying",
+    "author": "Crazyfucker73",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx7iz80r6oz/",
+    "contribution": "Claims Qwen27B requires at least 8-bit, more than 24GB VRAM, a decent harness and maximum reasoning to be useful; says they use Hermes.",
+    "type": "universal configuration claims and limited anecdote",
+    "relevance": "Strong contrary prescription worth retaining because it conflicts with Q3/Q4 and medium/off-thinking successes.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "What hardware, exact quant, tasks and controlled comparisons establish these claimed requirements?",
+    "transferability": "Do not treat these asserted minimums as validated; Hermes use alone does not verify universal 8-bit/VRAM/max-thinking requirements.",
+    "themes": [
+      "weights",
+      "hardware",
+      "harness",
+      "reasoning"
+    ]
+  },
+  {
+    "ref": "C431",
+    "disposition": "qualifying",
+    "author": "sometimes_angery",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx7jq68tdpg/",
+    "contribution": "Guesses the poster may be using float8 given memory limits, asks the quant, and reports workplace float16 Qwen27B can complete tasks with blind spots; says int4 Flash Next performed better than float16 27B.",
+    "type": "workplace model comparison report",
+    "relevance": "Concrete precision/model contrast argues that model choice may matter more than simply increasing bit depth.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Actual question: what quant is the poster using? Missing workplace hardware, tasks, context, scores and matched comparison details.",
+    "transferability": "An int4 larger-model win is plausible as a test candidate but not established generally; do not adopt the guessed float8 diagnosis.",
+    "themes": [
+      "weights",
+      "hardware",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C432",
+    "disposition": "excluded",
+    "author": "AnxietyCorrect106",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx7laxa9mzn/",
+    "contribution": "Makes a mocking one-bit-quant joke without substantive setup information.",
+    "type": "joke/personal insult",
+    "relevance": "Excluded: joke and insult, not an actual report of the poster's quantization.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "No substantive unanswered question.",
+    "transferability": "The joke does not establish that a one-bit quant was used.",
+    "themes": [
+      "weights"
+    ]
+  },
+  {
+    "ref": "C433",
+    "disposition": "qualifying",
+    "author": "Sirlowcruz",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx8hbfnpi1s/",
+    "contribution": "Suggests the model needs an agentic harness such as Hermes, asks quantization/reasoning mode, and says Q4 or lower makes this model behave oddly in their opinion.",
+    "type": "harness advice and diagnostic questions",
+    "relevance": "Direct troubleshooting advice with an unsupported quant cutoff.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual question: what quantization and reasoning mode are being run? What observed failures justify the Q4 cutoff?",
+    "transferability": "Verify harness/tool support and test the actual quant; the cutoff conflicts with positive Q4 reports and is not a universal rule.",
+    "themes": [
+      "harness",
+      "weights",
+      "reasoning"
+    ]
+  },
+  {
+    "ref": "C434",
+    "disposition": "qualifying",
+    "author": "megadonkeyx",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx8i49l0mg4/",
+    "contribution": "Reports Strata and Qwen Next working very well on a dedicated headless Linux machine, with a custom harness developed over months for loop detection and thinking intervention.",
+    "type": "custom-harness alternative report",
+    "relevance": "Shows that favorable outcomes may rely on substantial intervention engineering, not a drop-in model swap.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What model/quant, hardware, tasks and loop-detection/intervention policies were used; how often are interventions needed?",
+    "transferability": "Custom-loop handling is a candidate engineering pattern, but the result concerns Qwen Next and an undisclosed mature harness.",
+    "themes": [
+      "runtime",
+      "alternatives",
+      "harness",
+      "reasoning",
+      "workflow"
+    ]
+  },
+  {
+    "ref": "C435",
+    "disposition": "qualifying",
+    "author": "xapep",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx91i1tw6n6/",
+    "contribution": "Estimates 4-bit 27B weights at 15–16GB plus KV memory, claims spill to RAM yields very low speed and poor long-context behavior, and proposes rerunning the same prompt at 16K while watching VRAM/tokens per second. Recommends one file at a time, explicit paths and failing-test feedback; identifies as working on inference API serving.",
+    "type": "diagnostic test proposal",
+    "relevance": "Concrete matched-prompt experiment separates capacity/performance concerns, but the claim that RAM spill itself causes quality collapse is not demonstrated.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual question: what are tokens/s at 16K versus 128K? Also missing quant, VRAM/offload measurements, agent loop and retained prompt content.",
+    "transferability": "The short/long-context comparison is useful; separate offload latency from truncation/quant/long-context quality rather than equating RAM spill with lost reasoning.",
+    "themes": [
+      "weights",
+      "kv",
+      "context",
+      "hardware",
+      "runtime",
+      "harness",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C436",
+    "disposition": "qualifying",
+    "author": "Slow-Secretary4262",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx91rw0hvoh/",
+    "contribution": "Says runtime changes and days of tuning can improve results but not approach Sonnet/DeepSeek/GLM, and suggests many low-budget local users enjoy optimization more than productive autonomous coding.",
+    "type": "capability/economics dissent",
+    "relevance": "Retains substantive skepticism about practical value rather than reducing all dissatisfaction to misconfiguration.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What workloads, configurations, quality measures and cost comparisons support the claimed ceiling or €5000 distinction?",
+    "transferability": "Treat as a practical-value opinion, not a measured capability bound or a reliable description of all local-model users.",
+    "themes": [
+      "runtime",
+      "alternatives",
+      "economics",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C437",
+    "disposition": "qualifying",
+    "author": "flapjack",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx9hq1a1wv9/",
+    "contribution": "Claims 128K is tiny relative to Claude, requires significant context management, and estimates a Sonnet task taking 20 minutes could take 3–6 hours on the poster's setup.",
+    "type": "context and latency claim",
+    "relevance": "Highlights end-to-end time overhead, but provides no timed run.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Which task, settings, context occupancy and measured timings justify the 20-minute versus 3–6-hour estimate?",
+    "transferability": "Measure task completion and interventions directly; this timing ratio and the sufficiency of 128K cannot be generalized.",
+    "themes": [
+      "context",
+      "workflow",
+      "economics",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C438",
+    "disposition": "qualifying",
+    "author": "Future_Deer_7518",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx9ox1prq90/",
+    "contribution": "Reports using Qwen3 Coder Instruct30B A3B UD-Q3_K_XL through llama.cpp/OpenCode on a Ryzen8700G iGPU/32GB RAM, since Q4 does not fit. Uses 30–90-line helper tasks at 11–19 tokens/s; poor prompts yield messy output while refined prompts often need one pass plus cleanup. Prefers architectural control/short feedback to slow dense27B and is considering a 128GB Ryzen AI395 upgrade but not at the current cost.",
+    "type": "detailed constrained-hardware workflow report",
+    "relevance": "Concrete alternative, task scope and human-supervision evidence rather than autonomous coding parity.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What repeatable task outcomes and prompt differences underlie the first-pass claims; are proposed upgrade capabilities measured or anticipated?",
+    "transferability": "Useful example of small supervised tasks on CPU/iGPU, not direct proof of 27B behavior or the projected upgrade's fit/performance.",
+    "themes": [
+      "alternatives",
+      "hardware",
+      "weights",
+      "runtime",
+      "harness",
+      "workflow",
+      "economics"
+    ]
+  },
+  {
+    "ref": "C439",
+    "disposition": "qualifying",
+    "author": "Minimum_Site_1915",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx9per340ip/",
+    "contribution": "Speculates that local models perform poorly on Roblox because Luau is too niche for sufficient model knowledge.",
+    "type": "domain-knowledge hypothesis",
+    "relevance": "Raises task/domain knowledge as an alternative to configuration explanations, though the poster's domain is unknown.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Is the project actually Roblox/Luau; which models and reproducible tasks show the claimed knowledge limitation?",
+    "transferability": "Domain coverage should be tested, but this does not justify a blanket statement about all local models or all Luau work.",
+    "themes": [
+      "knowledge",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C440",
+    "disposition": "qualifying",
+    "author": "Top_Ingenuity_1830",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx9pq9r96zn/",
+    "contribution": "Recommends Pi.dev, suspects other tools add too much system context, suggests Claude-assisted tuning, and says the result is slowish but works.",
+    "type": "harness recommendation and vague report",
+    "relevance": "Relevant context-overhead hypothesis with limited setup detail.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "Which runtime, model, settings, context accounting and tasks support the improvement?",
+    "transferability": "Audit actual prompt/tool overhead rather than assuming Pi is always smaller; cloud-assisted tuning changes the workflow.",
+    "themes": [
+      "harness",
+      "context",
+      "workflow",
+      "alternatives"
+    ]
+  },
+  {
+    "ref": "C441",
+    "disposition": "qualifying",
+    "author": "ThrowawayALAT",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx9rf3d8yoz/",
+    "contribution": "Argues the problem is not the user but stronger, frequently updated industrial models and restricted public access, using broad analogies rather than technical evidence.",
+    "type": "speculative capability dissent",
+    "relevance": "Retains the substantive frontier-gap dissent; the access and capability explanation is speculative and not diagnostic.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Which models, restrictions, updates or matched task results support this explanation?",
+    "transferability": "Do not infer concrete model capabilities or causes from the analogies; this offers no tested local setup remedy.",
+    "themes": [
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C442",
+    "disposition": "qualifying",
+    "author": "Ok-Concentrate-5228",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rx9u164tuap/",
+    "contribution": "Recommends a cloud GPU and at least 120B BF16 for professional work, while noting deployment time, vLLM flags and IDE matter. Suggests Claude planning with Qwen3.8 coding and says experience indicates Qwen must be explicitly prompted/skilled to test in a loop, unlike what they describe as innate frontier-model behavior.",
+    "type": "deployment and hybrid workflow advice",
+    "relevance": "Substantive cost/scale alternative and test-loop guidance, but no hardware/task/cost evidence.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "What workloads and costs justify 120B BF16; which exact prompts/skills, runtime flags and tests produce reliable Qwen loops?",
+    "transferability": "Explicit testing is transferable as a workflow pattern; minimum model size/precision and innate frontier reliability are not established requirements.",
+    "themes": [
+      "hardware",
+      "runtime",
+      "harness",
+      "workflow",
+      "alternatives",
+      "economics"
+    ]
+  },
+  {
+    "ref": "C443",
+    "disposition": "qualifying",
+    "author": "Head_Evening_5697",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxa4hfzg4o0/",
+    "contribution": "Suggests trying Gemma4 27B A4B with a claimed 1M context and reporting back.",
+    "type": "alternative-model suggestion",
+    "relevance": "Retains a substantive alternative proposal without treating its advertised specifications as verified.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Is this exact model/specification available and correct; can it fit this hardware; how does it perform on the failed tasks?",
+    "transferability": "Candidate only: different model architecture and advertised context do not imply equal effective capacity or coding reliability.",
+    "themes": [
+      "alternatives",
+      "context",
+      "hardware",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C444",
+    "disposition": "qualifying",
+    "author": "boosnie",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxa6mpbmz6s/",
+    "contribution": "Reports professional code analysis/coding with Pi, a single RTX3090 24GB and Swift-Qwen3.8-27B-Uncensored-Dynamic-MTP UD-Q4_K_XL in llama.cpp router mode at 160K context, with minor issues and about 110 generation/1250 prefill tokens/s on fresh context. Supplies GPU layers99, flash attention, one slot, MTP draft3, batch1024/ubatch512, K-cache q8_0/V-cache q4_0, Jinja, temperature1, top-p0.95, top-k20, min-p0 and neutral penalties; asserts total VRAM is the only relevant hardware specification.",
+    "type": "detailed same-GPU configuration report",
+    "relevance": "One of the most reproducible positive 24GB/Q4 reports, directly challenging asserted 8-bit and Q8-V-cache minimums; its hardware-only assertion is overbroad.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What actual occupied context, memory breakdown, tasks/error rate, llama.cpp build and reproducible benchmarks support the figures? Full literal config remains in the corpus.",
+    "transferability": "A useful candidate configuration, not proof of 160K quality or reported speed on all 3090 systems; CPU, bandwidth, runtime build and task effects are not ruled out.",
+    "themes": [
+      "runtime",
+      "weights",
+      "kv",
+      "template",
+      "sampling",
+      "context",
+      "harness",
+      "hardware",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C445",
+    "disposition": "qualifying",
+    "author": "Ok_Parfait_5373",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxadhu7zfz6/",
+    "contribution": "In French, reports using the same model daily on the same GPU at 150 tokens/s without problems as a developer. Claims medium thinking is better for everyday tasks, suggests Swift, suspects too many skills in context, and recommends lean Pi-agent setup with only necessary context.",
+    "type": "same-GPU positive report and advice",
+    "relevance": "Same-hardware anecdote and medium-thinking prescription conflict with claims that maximum reasoning/extra GPUs are essential.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What exact quant/runtime, task size, actual context and speed method; is excessive skill context observed or guessed?",
+    "transferability": "Useful candidate settings, but the claimed speed and medium-thinking advantage are not controlled or universally transferable.",
+    "themes": [
+      "hardware",
+      "reasoning",
+      "context",
+      "harness",
+      "alternatives"
+    ]
+  },
+  {
+    "ref": "C446",
+    "disposition": "qualifying",
+    "author": "Rogglando",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxafychgqea/",
+    "contribution": "Says the hardware is adequate and recommends Strata CLI, Linux, a dedicated server, at least two preferably three slots, a two-hour tuning step and about 200K context. Suggests Qwen3.8 Flash Next Coding125B A6B spread across GPU/RAM/SSD and remote coding clients; contrasts this with a claim dense27B must stay entirely on GPU.",
+    "type": "alternative deployment prescription",
+    "relevance": "Concrete architecture proposal, but no first-person run, fit measurement or validation of its dense-model residency claim.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Can the named model plus 200K context and multiple slots fit and perform on 24GB VRAM/32GB RAM/SSD; what does the tuning step entail?",
+    "transferability": "Treat tiered-memory MoE deployment as an experiment; dense models are not demonstrated here to require GPU-only residency, and multi-slot context increases resource needs.",
+    "themes": [
+      "runtime",
+      "hardware",
+      "context",
+      "alternatives",
+      "harness",
+      "workflow"
+    ]
+  },
+  {
+    "ref": "C447",
+    "disposition": "qualifying",
+    "author": "pinkwar",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxax0csoqzl/",
+    "contribution": "Argues hardware should be bought only after finding a suitable model/setup using rented GPUs, and questions who approved purchasing without a proof of concept.",
+    "type": "procurement/methodology critique",
+    "relevance": "Retains a useful evaluation-before-purchase point despite blame-oriented wording.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual question: was there a proof of concept and who approved purchase? More relevant gap: was a representative workload evaluated before selecting hardware?",
+    "transferability": "Workload-first proof-of-concept evaluation generalizes; it does not diagnose the current failure or establish that cloud tests reproduce local hardware behavior.",
+    "themes": [
+      "methodology",
+      "hardware",
+      "economics"
+    ]
+  },
+  {
+    "ref": "C448",
+    "disposition": "qualifying",
+    "author": "dc740",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxaydwsf3c5/",
+    "contribution": "Asserts the poster is using a heavily quantized Qwen and that this can differ greatly from the full version, asks for details, and adds criticism of AI-written posting.",
+    "type": "quantization hypothesis and detail request",
+    "relevance": "Retains the substantive quantization issue while setting aside the personal/post-authorship criticism.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What quant is actually used; is it substantially degraded on matched tasks relative to higher precision?",
+    "transferability": "Do not adopt the guessed quant or assume quantization is the entire cause without a like-for-like comparison.",
+    "themes": [
+      "weights",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C449",
+    "disposition": "qualifying",
+    "author": "Sensitive_Mountain97",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxb0crmh95v/",
+    "contribution": "Reports using Ternary Bonsai2, described as compressed Qwen27B, and judges its coding much worse than Claude, even Sonnet3.5.",
+    "type": "negative compressed-model report",
+    "relevance": "Substantive dissent, but the tested compressed derivative differs from the stock model under discussion.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What hardware, harness, task, quant/compression scheme and failure examples underpin the comparison?",
+    "transferability": "Do not transfer a compressed derivative's failures directly to all Qwen27B variants; compare exact artifacts on shared tasks.",
+    "themes": [
+      "weights",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C450",
+    "disposition": "qualifying",
+    "author": "KEIY75",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxb37ix3s85/",
+    "contribution": "Concludes it must be configuration because their 'heretic' Qwen reportedly built an entire Asterisk call center without problems; recommends llama.",
+    "type": "positive task anecdote",
+    "relevance": "A concrete task claim but incomplete setup and no artifact, tests or task boundary.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "Which model/version/quant, hardware, harness and Asterisk functionality; was the call center deployed and tested?",
+    "transferability": "One unspecified positive project cannot prove the poster's failure is configuration or that another variant is equivalent.",
+    "themes": [
+      "runtime",
+      "alternatives",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C451",
+    "disposition": "qualifying",
+    "author": "AnticRaven",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxbdrs0egf9/",
+    "contribution": "Says they tried this and found overthinking, then calls Qwen3.8 Flash Next the best alternative.",
+    "type": "negative reasoning anecdote and alternative",
+    "relevance": "Retains experience-based dissent and an alternative despite very little detail.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "What exact 'this' setup, reasoning mode, task and outcome; was Flash Next evaluated on the same workload?",
+    "transferability": "Overthinking is a reported symptom, not a demonstrated universal property; alternative superiority remains unmeasured.",
+    "themes": [
+      "reasoning",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C452",
+    "disposition": "qualifying",
+    "author": "tuborgwarrior",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxbfat1dgo5/",
+    "contribution": "Suggests testing context choking/early automatic compaction and says a weaker model that sees the full task may sometimes outperform a stronger model with incomplete context.",
+    "type": "context diagnostic hypothesis",
+    "relevance": "Identifies a plausible information-retention tradeoff without measured evidence.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Is compaction occurring early; what requirements or files are lost; does a fuller-context model improve the same task?",
+    "transferability": "Compare retained task information and quality, not parameter count alone; the proposed tradeoff needs workload-specific validation.",
+    "themes": [
+      "context",
+      "harness",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C453",
+    "disposition": "qualifying",
+    "author": "TomFlatterhand",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxbhzgm6isi/",
+    "contribution": "In German, reports Qwen3.8-27B 8Q at a full 262144-token setting, argues hardware can matter and Claude-oriented project/docs structure might confuse other models, and says Qwen can code but Hermes repeatedly gets tangled. Is building a custom agent and recommends larger hardware/models, potentially multiple RTX6000 Pro cards.",
+    "type": "high-context report and harness dissent",
+    "relevance": "Contrasts positive Hermes reports and adds documentation/harness confounds; actual GPU specification is not supplied.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What hardware/runtime/KV setup supports 262144; are tokens actually occupied; what Hermes failures and project-structure comparisons were observed?",
+    "transferability": "The stated configuration does not prove long-context comprehension; hardware expansion and documentation mismatch remain hypotheses, not established fixes.",
+    "themes": [
+      "weights",
+      "context",
+      "hardware",
+      "harness",
+      "workflow",
+      "alternatives"
+    ]
+  },
+  {
+    "ref": "C454",
+    "disposition": "qualifying",
+    "author": "Virtual_Rice7837",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxbzmcnchia/",
+    "contribution": "Reports a 4090/ninfer setup with decent context and over 50 tokens/s but unacceptable .NET/Java coding quality despite extensive prompting/front-end experimentation. Large Blazor/Java app tasks failed and even targeted edits usually needed personal or frontier-model correction; preferred LibreChat. Supplies 131072 context/KV capacity, one concurrent request, int8 KV, MTP draft3, 32768 max output, preserve-thinking/vision and tiered continuation-cache flags.",
+    "type": "detailed negative setup report",
+    "relevance": "Strong counterexample to 'only configuration' narratives: substantial runtime details, task domains and failed supervision economics, though no independently inspectable traces.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What exact weight artifact/quant, sampling/template, hardware memory use and reproducible task traces; what proportion of edits failed? Full literal flags remain in corpus.",
+    "transferability": "Important negative professional-workload evidence, but one model/runtime/front-end combination cannot establish a universal 27B ceiling or disprove every positive report.",
+    "themes": [
+      "runtime",
+      "kv",
+      "context",
+      "harness",
+      "workflow",
+      "knowledge",
+      "alternatives",
+      "economics",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C455",
+    "disposition": "qualifying",
+    "author": "anaNimrod",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxc2yjfgrkz/",
+    "contribution": "Recommends a cloud agent coordinating the local model as a subagent, suggesting OpenCode's free-tier DeepSeek v4.1 Flash as a starting point.",
+    "type": "hybrid orchestration recommendation",
+    "relevance": "Proposes a narrower role for the local model rather than fully autonomous replacement.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What tasks, routing, supervision frequency, privacy requirements and actual free-tier limits support this setup?",
+    "transferability": "Cloud/local delegation is a testable workflow choice, not evidence that standalone local agents are universally ineffective.",
+    "themes": [
+      "workflow",
+      "harness",
+      "alternatives",
+      "economics"
+    ]
+  },
+  {
+    "ref": "C456",
+    "disposition": "qualifying",
+    "author": "moochine2",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxccjloran7/",
+    "contribution": "Asks the quant and speculates it might be 1–2-bit, links an ISTA-DASLab GSQ-RCO27B alternative, recommends 64GB RAM to avoid memory exhaustion rather than promise speed, and suggests Strata with the 125B coder.",
+    "type": "diagnostic question and upgrade/model advice",
+    "relevance": "Specific artifact and memory-capacity suggestions, but low-bit diagnosis and larger-model fit are unknown.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual question: which quant is in use? What memory use and task comparisons support the linked quant or 125B option on this hardware?",
+    "transferability": "More RAM can be evaluated for capacity, but does not establish a speed/quality gain; retain the source's distinction between capacity and acceleration.",
+    "themes": [
+      "weights",
+      "hardware",
+      "alternatives",
+      "runtime",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C457",
+    "disposition": "qualifying",
+    "author": "Jazzlike-Plate",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxcl6y6e10l/",
+    "contribution": "Reports a similar experience using Ollama and asks why that was a major mistake, having assumed the server made no difference.",
+    "type": "runtime question and negative anecdote",
+    "relevance": "Direct unresolved challenge to blanket server-blame explanations.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "Actual question: why would Ollama make such a difference; what serving-layer behaviors alter outcomes? Missing exact model/settings and matched-runtime trace.",
+    "transferability": "Requires comparing templates, truncation, tool parsing and defaults rather than assuming server choice inherently changes model intelligence.",
+    "themes": [
+      "runtime",
+      "template",
+      "context",
+      "harness",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C458",
+    "disposition": "qualifying",
+    "author": "icecraft1337",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxdaud9kskg/",
+    "contribution": "In German, suspects a harness problem and reports excellent results with a custom harness at 128K, Swift1.5 Qwen3.8-27B IQ4_XS, Q4 KV and llama.cpp; says Pi should also be a lightweight option.",
+    "type": "detailed low-bit positive setup report",
+    "relevance": "Specific weight/KV/context example directly disputes claims that low-bit KV or Q4 weights are inherently unusable.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What hardware, custom-harness logic, actual context occupancy, tasks and success criteria were used?",
+    "transferability": "Useful counterexample candidate, not proof of reliable 128K comprehension or identical behavior in stock Qwen27B/other harnesses.",
+    "themes": [
+      "harness",
+      "context",
+      "weights",
+      "kv",
+      "runtime",
+      "alternatives"
+    ]
+  },
+  {
+    "ref": "C459",
+    "disposition": "qualifying",
+    "author": "Great_Airport_4495",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxdf7t7fg6c/",
+    "contribution": "Claims high-quant Qwen27B or especially larger Flash Next can compare favorably with Opus4.5/4.6 but not Claude5.5 autonomy. Says 24GB allows at most Q4, requires close supervision, and insists KV should be at least 8-bit to avoid coherence problems.",
+    "type": "capability and configuration claims",
+    "relevance": "Retains a nuanced frontier-gap view but the quant ceiling, capability ranking and KV floor are unsupported.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What offload/context assumptions establish 'at most Q4'; which matched tasks support rankings and the 8-bit-KV requirement?",
+    "transferability": "Do not universalize the GPU-only quant ceiling or KV floor; successful mixed/Q4-KV reports here contradict a blanket requirement without resolving it.",
+    "themes": [
+      "weights",
+      "hardware",
+      "kv",
+      "context",
+      "alternatives",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C460",
+    "disposition": "qualifying",
+    "author": "Wolkenflitzer",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxdjdz0fpgj/",
+    "contribution": "Recommends Qwen Flash Next with Strata and says it handled everything they tried.",
+    "type": "positive alternative anecdote",
+    "relevance": "Substantive alternative endorsement with no task or configuration detail.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "What exact model/quant, hardware, tasks and failure criteria are hidden by 'everything'?",
+    "transferability": "A candidate alternative, not demonstrated superiority or fit on the poster's machine.",
+    "themes": [
+      "alternatives",
+      "runtime",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C461",
+    "disposition": "qualifying",
+    "author": "No_Ad_5933",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxdn96ygbz9/",
+    "contribution": "Reports Strata, Pi and Graphify codebase indexing on an RTX2080 Super8GB/32GB RAM supporting repository explanations and single-file scripts without issues; calls the model 'qwen-3.8-flash-next-coder 27B' and links the tools.",
+    "type": "alternative setup and indexing report",
+    "relevance": "Concrete low-memory/narrow-task report with ambiguous model naming.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What exact model artifact is meant by 'Flash Next coder 27B'; what quant/offload, task size and repository-indexing effects were tested?",
+    "transferability": "Narrow script/repository-explanation success on a differently named model does not demonstrate multi-file autonomous coding or settle 27B capability.",
+    "themes": [
+      "runtime",
+      "alternatives",
+      "hardware",
+      "harness",
+      "workflow",
+      "knowledge",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C462",
+    "disposition": "qualifying",
+    "author": "PressTilde",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxedo6taaw3/",
+    "contribution": "Links their Bantam Factory project and reports fixing 27B failures by constraining output and using a factory-style workflow with Q4_K_S or IQ4, calling it faster, more accurate and able to finish.",
+    "type": "constrained-workflow implementation report",
+    "relevance": "Concrete project/workflow and low-bit positive claim, but performance comparison is unquantified.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What constraints, exact model/runtime/hardware, task set and before/after outcomes demonstrate improvement; is the linked implementation reproducible?",
+    "transferability": "Structured execution is a testable pattern; the existence of a link does not independently verify accuracy or establish all Q4 models work equally.",
+    "themes": [
+      "workflow",
+      "harness",
+      "weights",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C463",
+    "disposition": "qualifying",
+    "author": "ruineka",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxeg4kkg6ua/",
+    "contribution": "Praises Qwen3.8-27B, describes adding another dual Intel Arc B60 48GB arrangement to their workstation and recommends DeepSeek harness based on the perceived payoff.",
+    "type": "hardware/harness anecdote",
+    "relevance": "Substantive favorable hardware/harness experience, but the exact card/memory configuration is ambiguous.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What exact GPU arrangement, quant, tasks, throughput, context and measured quality underlie the praise?",
+    "transferability": "Different accelerator/runtime setup and unclear capacity make transfer to a single 3090 uncertain; praise alone is not reliability evidence.",
+    "themes": [
+      "hardware",
+      "harness",
+      "workflow"
+    ]
+  },
+  {
+    "ref": "C464",
+    "disposition": "qualifying",
+    "author": "BeatDistinct317",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxet1la76hx/",
+    "contribution": "Asks whether anyone knows or has rumors about Sonnet's parameter count/quantization, and speculates a model above 300B would explain why 27B should not compete.",
+    "type": "model-size question and expectation hypothesis",
+    "relevance": "Retains a substantive unanswered comparison question while treating closed-model size speculation as unknown.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual questions: what parameter count and quantization does Sonnet use; are there rumors? No verified architecture data or matched-task evidence is supplied.",
+    "transferability": "Parameter speculation is not a measured capability comparison and cannot by itself establish what a 27B model should complete.",
+    "themes": [
+      "weights",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C465",
+    "disposition": "qualifying",
+    "author": "FRackgfxhjxgfhj",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxeumcvmmjo/",
+    "contribution": "Says local deployment needs RAG, memory, tuning and setup rather than comparison to Claude, and calls Ollama plus OpenWebUI powerful.",
+    "type": "setup recommendation and runtime dissent",
+    "relevance": "Direct dissent from categorical Ollama dismissal, though no workload or successful configuration is described.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Which retrieval/memory/tuning settings, model, tasks and tool-loop support make the proposed stack effective?",
+    "transferability": "Treat as a candidate stack and setup hypothesis; chat/RAG capability is not the same as autonomous coding reliability.",
+    "themes": [
+      "runtime",
+      "harness",
+      "workflow",
+      "knowledge",
+      "alternatives"
+    ]
+  },
+  {
+    "ref": "C466",
+    "disposition": "qualifying",
+    "author": "robertotomas",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxez5v5cs69/",
+    "contribution": "Recommends checking weight precision and KV bit depth, speculating Q4 KV may be responsible. Also lists faulty MTP/wrong predictive models, missing nvfp4 scaling factors, or mismatched current OpenAI protocol/runtime usage as possible causes.",
+    "type": "configuration fault checklist",
+    "relevance": "Provides concrete untested failure hypotheses beyond raw model size.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Are MTP, nvfp4, Q4 KV or protocol mismatches actually present; what traces demonstrate each suspected fault?",
+    "transferability": "Audit only features in use; none of these hypothetical implementation errors is established in the poster's setup, and Q4 KV is not shown universally broken.",
+    "themes": [
+      "weights",
+      "kv",
+      "runtime",
+      "harness",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C467",
+    "disposition": "qualifying",
+    "author": "mechitworks",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxf7fsfmmjn/",
+    "contribution": "Claims Ollama truncates when context exceeds what it can handle and Claude Code fills context quickly. Reports an nvfp4 Qwen3.8-27B on RTX5090 via vLLM/Pi at 180K with automatic compaction.",
+    "type": "context-loss claim and positive setup report",
+    "relevance": "Concrete alternative stack and truncation hypothesis; no observed Ollama trace is provided.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Which Ollama version/configuration and retained messages demonstrate truncation; what artifact, KV format, occupied context and task results support the 180K report?",
+    "transferability": "Check configured windows and compaction end to end; a different GPU/runtime/quant report does not prove Ollama inherently fails or that 180K is fully coherent.",
+    "themes": [
+      "runtime",
+      "context",
+      "harness",
+      "weights",
+      "hardware"
+    ]
+  },
+  {
+    "ref": "C468",
+    "disposition": "qualifying",
+    "author": "nosimsol",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxftgg4o3ab/",
+    "contribution": "Reports Qwen3.8-27B FP8 on vLLM being accurate most of the time and comparable to Luna5.6.",
+    "type": "positive precision/runtime comparison report",
+    "relevance": "Concrete precision/server pair but an otherwise unsupported capability comparison.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What is Luna5.6, what hardware/tasks/context are used and how is comparable accuracy measured?",
+    "transferability": "Anecdotal FP8 success is not a frontier-equivalence benchmark or proof that FP8 is necessary.",
+    "themes": [
+      "weights",
+      "runtime",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C469",
+    "disposition": "qualifying",
+    "author": "thisisme_whoareyou",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxg24x4njj9/",
+    "contribution": "Says newly begun tests of complex logic already fail before trying coding.",
+    "type": "negative reasoning anecdote",
+    "relevance": "Substantive negative capability report without task/setup details.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "Which logic problems, model artifact, reasoning settings, prompts and expected answers failed?",
+    "transferability": "Retain as dissent but not a measured reasoning ceiling or diagnosis of coding-agent behavior.",
+    "themes": [
+      "reasoning",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C470",
+    "disposition": "qualifying",
+    "author": "Sizzin",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxg4cwwccki/",
+    "contribution": "Warns a single 24GB system will struggle with multiple users and doubts Q4 for serious tasks, though small steps might work. Reports FP8/Pi strong enough for unattended overnight work and says stock FP8 beat alternatives in informal usage, explicitly without benchmarks. Claims Claude-oriented context is bloated and Flash Next better for niche knowledge.",
+    "type": "autonomy report with precision/domain advice",
+    "relevance": "Concrete FP8/Pi success with an explicit non-benchmark caveat and concurrency/domain concerns.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What hardware, task scope, overnight failure rate, actual context/tool overhead and quant comparisons were used; were niche-domain claims tested?",
+    "transferability": "Do not transfer unattended confidence or FP8 superiority across tasks; the author explicitly limits evidence to informal use, and Q4 doubts conflict with positive Q4 reports.",
+    "themes": [
+      "hardware",
+      "weights",
+      "harness",
+      "context",
+      "workflow",
+      "knowledge",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C471",
+    "disposition": "qualifying",
+    "author": "sadomazoku",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxgf6pnx3fl/",
+    "contribution": "Attributes failure entirely to configuration, reporting Qwen Q4_K_M coding on a 24GB GPU with no RAM offload and no remaining need for frontier coding models. Recommends leaving Ollama, starting with llama.cpp and moving toward vLLM for a team.",
+    "type": "same-memory positive setup report",
+    "relevance": "Direct counterexample to '24GB/Q4 cannot work', but no runtime settings, task examples or concurrency measurements.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What exact GPU, runtime/template/settings, context, tasks and success criteria support 'never any issue'; how was Ollama compared?",
+    "transferability": "Useful single-user configuration candidate, not proof of a 100% configuration cause or team-serving performance.",
+    "themes": [
+      "weights",
+      "hardware",
+      "runtime",
+      "harness",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C472",
+    "disposition": "qualifying",
+    "author": "bigb159",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxhdetmdiua/",
+    "contribution": "Reports code/tool calls unreliable below Q6 in their experience and says limited VRAM makes concurrency painfully slow; suggests scheduling team usage or adding a GPU.",
+    "type": "precision and concurrency anecdote",
+    "relevance": "Direct disagreement with Q4 successes and relevant multi-user capacity concern.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "Which model artifacts, harness, hardware, tasks and concurrency levels establish the Q6 threshold and slowdown?",
+    "transferability": "The threshold is experiential and setup-dependent; measure concurrent memory/latency before treating an extra GPU as sufficient.",
+    "themes": [
+      "weights",
+      "hardware",
+      "harness",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C473",
+    "disposition": "qualifying",
+    "author": "w1ldr3dx",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxhin83o6n9/",
+    "contribution": "Requests the actual task/failure details and reports Swift1.5 Qwen3.8-27B Q5_K_M, xhigh reasoning, llama.cpp server and Pi on a 5090 successfully extending Steam Frame VR gamescope, KWin, Wacom drivers, wlserver and Xwayland for tablet/pen drawing use.",
+    "type": "detailed complex-task success report",
+    "relevance": "One of the most task-specific positive reports, contradicting claims that xhigh necessarily derails 27B; no code/test evidence is included.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Actual challenge: what is the poster building and how exactly did it fail? Missing patch/test artifacts, context and degree of human intervention in the reported compositor work.",
+    "transferability": "Strong anecdotal candidate task, not independently verified autonomous success; Swift variant, Q5 and5090 hardware differ from stock Qwen on 3090.",
+    "themes": [
+      "weights",
+      "reasoning",
+      "runtime",
+      "harness",
+      "hardware",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C474",
+    "disposition": "qualifying",
+    "author": "flatfalafel",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxjur0zclgh/",
+    "contribution": "Asks for beginner resources on llama.cpp after learning similar lessons.",
+    "type": "learning-resource question",
+    "relevance": "Substantive unresolved setup/learning need, not a performance claim.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Actual question: which llama.cpp resources are appropriate for newcomers?",
+    "transferability": "No capability inference; a useful answer would need platform and desired server/model workflow context.",
+    "themes": [
+      "runtime",
+      "workflow"
+    ]
+  },
+  {
+    "ref": "C475",
+    "disposition": "qualifying",
+    "author": "International_Emu772",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxhishpppk0/",
+    "contribution": "Recommends GLM4.7 Flash as the best coding model for 24GB cards.",
+    "type": "alternative-model recommendation",
+    "relevance": "Retains a concrete alternative but unsupported ranking.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Which quant/context/hardware fit and matched coding tasks justify 'best'?",
+    "transferability": "A candidate to evaluate, not a proven ranking or guarantee of fitting every24GB workload.",
+    "themes": [
+      "alternatives",
+      "hardware",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C476",
+    "disposition": "qualifying",
+    "author": "Sufficient_Phone_242",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxhmhs5es2s/",
+    "contribution": "Reports having '3.7b' with two RTX3090s, claims around 200K context is needed, and says it is still not worthwhile because it makes more errors or is slower than paying $200/month.",
+    "type": "negative cost/performance report",
+    "relevance": "Relevant practical dissent with hardware/cost framing, but model identity is ambiguous in the source.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What does '3.7b' denote; what model/quant, tasks, times, error costs and $200 subscription were compared?",
+    "transferability": "Do not silently reinterpret the model name or treat 200K as a validated minimum; total human time and subscription comparisons are workload-dependent.",
+    "themes": [
+      "hardware",
+      "context",
+      "economics",
+      "alternatives",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C477",
+    "disposition": "qualifying",
+    "author": "Certain_Series6810",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxiw8fahxnm/",
+    "contribution": "Says quant, harness and runtime all matter; recommends llama.cpp or vLLM, Pi or another lean harness, and quantization of 4-bit or higher.",
+    "type": "configuration recommendation",
+    "relevance": "Concise multi-layer advice, not a reproducible result.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "Which exact model/settings, tasks and comparisons support the proposed 4-bit floor or stack choices?",
+    "transferability": "Useful experimental defaults, not established sufficient conditions for reliable coding.",
+    "themes": [
+      "runtime",
+      "harness",
+      "weights",
+      "context"
+    ]
+  },
+  {
+    "ref": "C478",
+    "disposition": "qualifying",
+    "author": "hopsec_",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxj12w7xk0y/",
+    "contribution": "Identifies context size as the main issue in their experience, says mainstream harnesses poorly handle constrained windows and some assume provider-side compaction, and describes an unreleased custom Qwen27B-focused Sidecar harness with a beta invitation.",
+    "type": "custom-harness/context report",
+    "relevance": "Concrete development experience but no released artifact or outcome measurements in the corpus.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Which mainstream harness versions lack compaction; what window, tasks and measured results support Sidecar's advantage; is code available for review?",
+    "transferability": "Inspect actual compaction ownership rather than assuming provider/client behavior; unreleased implementation limits reproducibility.",
+    "themes": [
+      "context",
+      "harness",
+      "runtime",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C479",
+    "disposition": "qualifying",
+    "author": "humanpersonlol",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxj137mpuw5/",
+    "contribution": "Speculates Sonnet5.5 is about700B and dismisses27B as benchmark-optimized and therefore weak.",
+    "type": "model-size/capability speculation",
+    "relevance": "Retains a substantive, weakly supported dissent despite dismissive wording.",
+    "evidence": "E0 unsupported opinion/question",
+    "open_questions": "What verified Sonnet architecture or evidence of benchmark optimization supports the claim; which real tasks were tested?",
+    "transferability": "Unknown closed-model size and 'benchmaxxed' labeling cannot establish a local model's practical task ceiling.",
+    "themes": [
+      "alternatives",
+      "weights",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C480",
+    "disposition": "qualifying",
+    "author": "fathergoat_adventure",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxj6ktus1wg/",
+    "contribution": "Reports good Qwen3.8-27B coding on a 4090 with ninfer at about 250K context, contrasting earlier unusable windows, repeated new sessions and degrading compaction. Believes a3090 implementation exists and suggests searching for it.",
+    "type": "runtime/context improvement report",
+    "relevance": "Concrete24GB positive report, in tension with the negative4090/ninfer .NET/Java report in C454.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What weight/KV precision, actual occupied context, tasks, speed, memory/offload and exact 3090 compatibility support the account?",
+    "transferability": "Test the runtime on representative tasks; similar VRAM/context claims do not explain divergent quality or guarantee 3090 fit/speed.",
+    "themes": [
+      "runtime",
+      "hardware",
+      "context",
+      "harness",
+      "workflow",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C481",
+    "disposition": "qualifying",
+    "author": "mamjazzo",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxj83ew5ggz/",
+    "contribution": "Reports GPT-OSS20B doing well on16GB VRAM.",
+    "type": "adjacent alternative setup report",
+    "relevance": "Concrete alternative/memory point but unspecified task or quant.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "What quant, runtime, hardware, context and coding tasks support 'pretty good'?",
+    "transferability": "Different model/task evidence is only a candidate alternative, not a demonstrated replacement for autonomous Qwen27B coding.",
+    "themes": [
+      "alternatives",
+      "hardware",
+      "weights",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C482",
+    "disposition": "qualifying",
+    "author": "darksteelsteed",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxjhyyyc49w/",
+    "contribution": "Claims Claude-oriented harness context can overwhelm a local model, recommends Pi/OMP/OpenCode and says using the wrong Qwen3.8 template was the main cause of their own initial failures.",
+    "type": "template failure anecdote and harness advice",
+    "relevance": "Specific firsthand template-correction lead amid broader unsupported harness claims.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "Which exact template/runtime/model versions failed and succeeded; what prompt/token overhead was measured in the Claude harness?",
+    "transferability": "Verify rendered chat/tool templates and context size; the template anecdote does not establish that all Claude harness use breaks local models.",
+    "themes": [
+      "template",
+      "harness",
+      "context",
+      "runtime",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C483",
+    "disposition": "qualifying",
+    "author": "filliravaz",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxjldv1zzc0/",
+    "contribution": "Reports a security-focused Qwen3.8-27B variant working efficiently and approaching, though not matching, frontier quality through OpenCode. Believes the model needs a specific Jinja template and says correct temperatures/penalties strongly affect output.",
+    "type": "domain-variant report and configuration advice",
+    "relevance": "Relevant template/sampling/harness lead, but a specialized variant and unspecified security tasks limit direct comparison.",
+    "evidence": "E2 setup-specific first-person, not independently verified",
+    "open_questions": "Which variant/quant, hardware, template, sampling values and evaluated tasks support the claims; was a wrong-template comparison performed?",
+    "transferability": "Specialized security-model experience does not establish general coding parity; test exact templates and settings rather than treating the believed requirement as independently verified.",
+    "themes": [
+      "alternatives",
+      "knowledge",
+      "harness",
+      "template",
+      "sampling",
+      "methodology"
+    ]
+  },
+  {
+    "ref": "C484",
+    "disposition": "excluded",
+    "author": "starwaver",
+    "permalink": "https://www.reddit.com/r/LocalLLM/comments/1xjvc08/local_qwen_27b_is_practically_unusable_for_coding/19rxjnuucjcmb/",
+    "contribution": "Agrees that their experience with Qwen was similar without adding a task, setup, failure or other detail.",
+    "type": "pure agreement/reaction",
+    "relevance": "Excluded: agreement-only crossreference with no added substantive information.",
+    "evidence": "E1 vague first-person",
+    "open_questions": "No new substantive question or verification detail.",
+    "transferability": "No independent technical inference warranted.",
+    "themes": [
+      "methodology"
+    ]
+  }
+]

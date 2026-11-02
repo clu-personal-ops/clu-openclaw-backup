@@ -1,0 +1,305 @@
+{
+  "traceSchema": "openclaw-trajectory",
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-30T04:19:37.716Z",
+  "traceId": "ed13724e-028c-4615-b63b-f74ae2e1d82b",
+  "sessionId": "ed13724e-028c-4615-b63b-f74ae2e1d82b",
+  "sessionKey": "agent:main:dashboard:08fb1da6-bb2a-44a8-9c72-e1c610f668b7",
+  "harness": {
+    "type": "openclaw",
+    "name": "OpenClaw",
+    "version": "2026.10.8",
+    "os": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "release": "27.0.0",
+      "label": "macos 27.0.1 (arm64)"
+    },
+    "runtime": {
+      "node": "v24.22.1"
+    },
+    "invocation": [
+      "$OPENCLAW_STATE_DIR/tools/node-v24.22.1/bin/node",
+      "$OPENCLAW_STATE_DIR/tools/node-v24.22.1/lib/node_modules/openclaw/dist/index.js",
+      "gateway",
+      "--port",
+      "18789"
+    ],
+    "entrypoint": "$OPENCLAW_STATE_DIR/tools/node-v24.22.1/lib/node_modules/openclaw/dist/index.js",
+    "workspaceDir": "$OPENCLAW_STATE_DIR/workspace",
+    "sessionFile": "$OPENCLAW_STATE_DIR/agent:main:dashboard:08fb1da6-bb2a-44a8-9c72-e1c610f668b7"
+  },
+  "model": {
+    "provider": "***",
+    "name": "qwen/qwen3.5-9b",
+    "api": "openai-completions",
+    "fastMode": false,
+    "thinkLevel": "medium",
+    "reasoningLevel": "off"
+  },
+  "config": {
+    "redacted": {
+      "meta": {
+        "lastTouchedVersion": "2026.10.8",
+        "migrations": {
+          "modelPolicyAllowlist": true,
+          "utilityModelSeparation": true
+        }
+      },
+      "wizard": {
+        "lastRunAt": "2026-10-29T05:24:20.992Z",
+        "lastRunVersion": "2026.10.8",
+        "lastRunCommand": "configure",
+        "lastRunMode": "local",
+        "securityAcknowledgedAt": "2026-10-29T05:11:35.619Z"
+      },
+      "telemetry": {
+        "enabled": false,
+        "consentedAt": "2026-10-29T05:11:38.737Z"
+      },
+      "secrets": {
+        "providers": {
+          "reconnected_lmstudio": {
+            "source": "__OPENCLAW_REDACTED__",
+            "path": "__OPENCLAW_REDACTED__",
+            "mode": "__OPENCLAW_REDACTED__"
+          },
+          "reconnected_telegram": {
+            "source": "__OPENCLAW_REDACTED__",
+            "path": "__OPENCLAW_REDACTED__",
+            "mode": "__OPENCLAW_REDACTED__"
+          }
+        }
+      },
+      "models": {
+        "providers": {
+          "apple-fm": {
+            "baseUrl": "http://127.0.0.1",
+            "api": "openai-completions",
+            "timeoutSeconds": 120,
+            "authHeader": false,
+            "models": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            }
+          },
+          "lmstudio": {
+            "baseUrl": "http://127.0.0.1:1234/v1",
+            "api": "openai-completions",
+            "models": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            }
+          }
+        }
+      },
+      "agents": {
+        "defaults": {
+          "model": {
+            "primary": "openai/gpt-6-astra"
+          },
+          "utilityModel": "apple-fm/system",
+          "models": {
+            "apple-fm/system": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            },
+            "openai/gpt-6-astra": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            },
+            "lmstudio/google/gemma-4-26b-a4b-qat": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            },
+            "lmstudio/openai/gpt-oss-20b": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            },
+            "lmstudio/qwen/qwen3.5-9b": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            },
+            "lmstudio/qwen/qwen3.6-35b-a3b": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            },
+            "lmstudio/qwen/qwen3.8-27b": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            }
+          },
+          "workspace": "$WORKSPACE_DIR",
+          "maxConcurrent": 72,
+          "subagents": {
+            "maxConcurrent": 8,
+            "archiveAfterMinutes": 60
+          },
+          "compaction": {
+            "mode": "safeguard"
+          }
+        },
+        "entries": {
+          "main": {
+            "name": "main",
+            "workspace": "$WORKSPACE_DIR",
+            "agentDir": "$OPENCLAW_STATE_DIR/agents/main/agent",
+            "identity": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            }
+          }
+        }
+      },
+      "tools": {
+        "profile": "full",
+        "deny": [
+          "firecrawl"
+        ],
+        "web": {
+          "search": {
+            "enabled": true,
+            "provider": "parallel-free",
+            "openaiCodex": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            }
+          },
+          "fetch": {
+            "enabled": true
+          }
+        },
+        "sessions": {
+          "visibility": "tree"
+        },
+        "elevated": {
+          "enabled": false
+        }
+      },
+      "commands": {
+        "native": "auto",
+        "nativeSkills": "auto",
+        "restart": true,
+        "ownerAllowFrom": [
+          "telegram:9013562211"
+        ]
+      },
+      "hooks": {
+        "internal": {
+          "entries": {
+            "session-memory": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            }
+          }
+        }
+      },
+      "channels": {
+        "telegram": {
+          "enabled": true,
+          "groups": {
+            "*": {
+              "truncated": true,
+              "reason": "trajectory-depth-limit",
+              "limitDepth": 6
+            }
+          },
+          "groupAllowFrom": [
+            "9013562211"
+          ],
+          "dmPolicy": "pairing",
+          "groupPolicy": "allowlist"
+        }
+      },
+      "gateway": {
+        "port": 18789,
+        "mode": "local",
+        "bind": "loopback",
+        "auth": {
+          "mode": "token"
+        },
+        "tailscale": {
+          "mode": "serve"
+        }
+      },
+      "memory": {
+        "search": {
+          "provider": "***",
+          "fallback": "none",
+          "model": "text-embedding-qwen3-embedding-0.6b"
+        }
+      },
+      "plugins": {
+        "allow": [
+          "alibaba",
+          "anthropic",
+          "apple-fm",
+          "azure-speech",
+          "bonjour",
+          "browser",
+          "canvas",
+          "clawrouter",
+          "codex",
+          "copilot-proxy",
+          "cua-computer",
+          "deepgram",
+          "device-pair",
+          "document-extract",
+          "elevenlabs",
+          "fal",
+          "file-transfer",
+          "firecrawl",
+          "geolocation",
+          "github",
+          "github-copilot",
+          "google",
+          "huggingface",
+          "kie",
+          "linux-node",
+          "litellm",
+          "***",
+          "memory-core",
+          "microsoft",
+          "microsoft-foundry",
+          "minimax",
+          "nvidia",
+          "ollama",
+          "openai",
+          "opencode-go",
+          "openrouter",
+          "parallel",
+          "runway",
+          "senseaudio",
+          "sglang",
+          "talk-voice",
+          "telegram",
+          "together",
+          "tts-local-cli",
+          "vllm",
+          "web-readability",
+          "xai"
+        ],
+        "entries": "[Truncated]"
+      },
+      "messages": "[Truncated]"
+    },
+    "runtime": "[Truncated]"
+  },
+  "plugins": "[Truncated]",
+  "skills": "[Truncated]",
+  "prompting": "[Truncated]",
+  "redaction": "[Truncated]",
+  "metadata": "[Truncated]"
+}

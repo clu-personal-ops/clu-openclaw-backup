@@ -1,0 +1,75 @@
+{
+  "traceSchema": "openclaw-trajectory",
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-30T04:19:37.716Z",
+  "traceId": "ed13724e-028c-4615-b63b-f74ae2e1d82b",
+  "sessionId": "ed13724e-028c-4615-b63b-f74ae2e1d82b",
+  "sessionKey": "agent:main:dashboard:08fb1da6-bb2a-44a8-9c72-e1c610f668b7",
+  "finalStatus": "success",
+  "aborted": false,
+  "externalAbort": false,
+  "timedOut": false,
+  "idleTimedOut": false,
+  "timedOutDuringCompaction": false,
+  "timedOutDuringToolExecution": false,
+  "timedOutByRunBudget": false,
+  "promptErrorSource": null,
+  "usage": {
+    "input": 42322,
+    "output": 5084,
+    "cacheRead": 0,
+    "cacheWrite": 0,
+    "reasoningTokens": 3263,
+    "total": 47406,
+    "cost": {
+      "total": 0
+    }
+  },
+  "promptCache": {
+    "lastCallUsage": {
+      "input": 42322,
+      "output": 5084,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "cost": {
+        "total": 0
+      },
+      "contextUsage": {
+        "state": "available",
+        "promptTokens": 42322,
+        "totalTokens": 47406
+      },
+      "reasoningTokens": 3263,
+      "total": 47406
+    },
+    "observation": {
+      "broke": false,
+      "previousCacheRead": 0,
+      "cacheRead": 0,
+      "changes": [
+        {
+          "code": "***",
+          "detail": "message 42 (user) differs from the previous request; history must be append-only; changed fields: envelope.timestamp, envelope.__openclaw, envelope.other"
+        }
+      ]
+    },
+    "lastCacheTouchAt": 1793333641790
+  },
+  "compactionCount": 0,
+  "assistantTexts": [
+    "[Malformed diagnostic JSON redacted]"
+  ],
+  "stopReason": "stop",
+  "finalPromptText": "I meant simply the 2 most recent files I believe are the ones to be kept, under no circumstances  do we touch the one linked to the disaster recovery plan. The other one is just for historical potential convenience purposes. The task can start with GPT Sol doing a double check of this plan... cause he's been helping me with a bunch of stuff a may ID if something is off.\n\nPlease double check, I was under the impression that the 2 most recent backups would be the ones that we would keep, based on what I've been articulating to you, is that not the case?\n\nI would like to test out auto motion, set it for 4 hours from now, if that is how it works.",
+  "itemLifecycle": {
+    "startedCount": 0,
+    "completedCount": 0,
+    "activeCount": 0
+  },
+  "toolMetas": [],
+  "didSendViaMessagingTool": false,
+  "successfulCronAdds": 0,
+  "messagingToolSentTexts": [],
+  "messagingToolSentMediaUrls": [],
+  "messagingToolSentTargets": []
+}

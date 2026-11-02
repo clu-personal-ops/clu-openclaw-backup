@@ -1,0 +1,11 @@
+STATUS: PASS
+Elapsed: 135.8 seconds
+Finish reason: stop
+Prompt tokens: 738
+Completion tokens: 1053
+PASS: Final text delivered
+PASS: Normal completion
+PASS: Required sections
+PASS: All incidents covered
+PASS: Draft-only restriction
+PASS: Within time budget

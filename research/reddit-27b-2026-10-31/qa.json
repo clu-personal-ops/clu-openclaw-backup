@@ -1,0 +1,20 @@
+{
+  "comment_records": 591,
+  "qualifying": 534,
+  "excluded": 57,
+  "source_question_comments": 145,
+  "all_refs_unique": true,
+  "all_source_author_links_match": true,
+  "all_qualifying_have_required_fields_and_themes": true,
+  "feed_union_matches_corpus": true,
+  "body_variants": 0,
+  "all_children_terminal": true,
+  "executive_summary_last": true,
+  "exclusion_groups": {
+    "Reaction/joke/agreement/no additional substance": 27,
+    "Deleted/unreadable": 2,
+    "Peripheral privacy tangent": 2,
+    "Insult/dismissal/authorship speculation": 8,
+    "Redundant crossreference/no self-contained detail": 18
+  }
+}
