@@ -1,0 +1,72 @@
+{
+  "google/gemma-4-26b-a4b-qat.json": {
+    "preset": "",
+    "operation": {
+      "fields": []
+    },
+    "load": {
+      "fields": [
+        {
+          "key": "llm.load.contextLength",
+          "value": 32768
+        }
+      ]
+    }
+  },
+  "qwen/qwen3.8-27b.json": {
+    "preset": "",
+    "operation": {
+      "fields": []
+    },
+    "load": {
+      "fields": [
+        {
+          "key": "llm.load.contextLength",
+          "value": 64000
+        }
+      ]
+    }
+  },
+  "qwen/qwen3.6-35b-a3b.json": {
+    "preset": "",
+    "operation": {
+      "fields": []
+    },
+    "load": {
+      "fields": [
+        {
+          "key": "llm.load.contextLength",
+          "value": 32768
+        }
+      ]
+    }
+  },
+  "qwen/qwen3.5-9b.json": {
+    "preset": "",
+    "operation": {
+      "fields": []
+    },
+    "load": {
+      "fields": [
+        {
+          "key": "llm.load.contextLength",
+          "value": 64000
+        }
+      ]
+    }
+  },
+  "openai/gpt-oss-20b.json": {
+    "preset": "",
+    "operation": {
+      "fields": []
+    },
+    "load": {
+      "fields": [
+        {
+          "key": "llm.load.contextLength",
+          "value": 32768
+        }
+      ]
+    }
+  }
+}

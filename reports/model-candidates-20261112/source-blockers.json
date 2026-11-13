@@ -1,0 +1,9 @@
+{
+  "gemma_text_original": {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-MLX",
+    "native_lms_resolution": "Failed to resolve HF revision: HTTP401",
+    "hardware_rejected": false,
+    "substitution_authorized": false,
+    "next": "Use simple accessible exact-model native-compatible source if found; otherwise obtain source access or explicit owner decision. Do not reconstruct automatically."
+  }
+}

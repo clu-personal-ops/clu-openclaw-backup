@@ -1,0 +1,54 @@
+[
+  {
+    "path": "models.providers.lmstudio.api",
+    "value": "openai-completions"
+  },
+  {
+    "path": "models.providers.lmstudio.models",
+    "value": [
+      {
+        "id": "qwen/qwen3.6-35b-a3b",
+        "name": "Qwen3.6 35B",
+        "reasoning": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "contextWindow": 32768,
+        "contextTokens": 32768,
+        "maxTokens": 4096,
+        "compat": {
+          "supportsTools": true,
+          "supportsReasoningEffort": true,
+          "supportedReasoningEfforts": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "reasoningEffortMap": {
+            "off": "none",
+            "minimal": "minimal",
+            "low": "low",
+            "medium": "medium",
+            "high": "high",
+            "xhigh": "xhigh"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "path": "models.providers.lmstudio.timeoutSeconds",
+    "value": 180
+  },
+  {
+    "path": "agents.defaults.models[\"lmstudio/qwen/qwen3.6-35b-a3b\"].params",
+    "value": {
+      "thinking": "off",
+      "reasoning_effort": "none"
+    }
+  }
+]

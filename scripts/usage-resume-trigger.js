@@ -1,0 +1,14 @@
+const usageResult = await exec({command:"openclaw gateway call usage.status --json"});
+const usage = JSON.parse(String(usageResult.aggregated ?? ""));
+const provider = usage.providers?.find(x => x.provider === "openai");
+if (!provider || !Array.isArray(provider.windows) || !provider.windows.length || provider.windows.some(w => typeof w.usedPercent !== "number")) throw Error("OpenAI usage snapshot unavailable");
+if (provider.windows.some(w => w.usedPercent >= 100)) return {fire:false};
+const sessionResult = await exec({command:"openclaw gateway call sessions.list --json --params '{\"limit\":200}'"});
+const listing = JSON.parse(String(sessionResult.aggregated ?? ""));
+if (!Array.isArray(listing.sessions)) throw Error("Session list unavailable");
+const previous = trigger.state ?? {};
+const candidates = listing.sessions.filter(x => x.agentId === "main" && ["main", "direct"].includes(x.classification) && x.modelProvider === "openai" && x.status === "failed" && !x.hasActiveRun && Number(x.updatedAt) > 1794451781736 && /usage|limit|quota|temporarily unavailable|cooldown/i.test(String(x.lastRunError ?? "")));
+candidates.sort((a,b) => Number(b.updatedAt) - Number(a.updatedAt));
+const target = candidates.find(x => previous.key !== x.key || Number(previous.updatedAt) !== Number(x.updatedAt));
+if (!target) return {fire:false,state:previous};
+return {fire:true,message:"Resume exact sessionKey " + target.key + ". Last failure: " + String(target.lastRunError).slice(0,300),state:{key:target.key,updatedAt:target.updatedAt}};

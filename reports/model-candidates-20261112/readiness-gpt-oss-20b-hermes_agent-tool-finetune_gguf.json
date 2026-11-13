@@ -1,0 +1,15 @@
+{
+  "model": "gpt-oss-20b-hermes_agent-tool-finetune_gguf",
+  "identifier": "clu-model-prep-ea4c37748091",
+  "requested_default_context": 32768,
+  "inference_performed": false,
+  "load_output": "\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 0% \u280b\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 0% \u2819\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 2% \u2819\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 2% \u2839\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 2% \u2838\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 4% \u2838\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 4% \u283c\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 6% \u283c\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 6% \u2834\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 6% \u2826\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 7% \u2826\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 7% \u2827\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 7% \u2807\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 9% \u2807\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 9% \u280f\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 11% \u280f\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 11% \u280b\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 11% \u2819\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 12% \u2819\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 12% \u2839\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 12% \u2838\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 14% \u2838\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 14% \u283c\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 15% \u283c\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 15% \u2834\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 15% \u2826\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 17% \u2826\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 17% \u2827\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 18% \u2827\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 18% \u2807\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 18% \u280f\u001b[?25l\nLoading gpt-oss-20b-hermes_agent-tool-finetune_gguf 100% \u280f\n\u001b[K\u001b[?25hModel loaded successfully in 1.57s.\n(14.72 GiB)\nTo use the model in the API/SDK, use the identifier \"clu-model-prep-ea4c37748091\".\n",
+  "observed_context": 32768,
+  "capabilities": {
+    "vision": false,
+    "trained_for_tool_use": true
+  },
+  "status": "load-and-default-context-verified",
+  "cleanup_output": "Model \"clu-model-prep-ea4c37748091\" unloaded.\n",
+  "owned_instance_unloaded": true
+}

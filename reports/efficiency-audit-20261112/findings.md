@@ -1,0 +1,19 @@
+# November 12 efficiency audit — bounded follow-through
+
+## Scope and limits
+
+Read-only `sessions.usage`, agent main, November 12 in America/New_York, family grouping. Two bounded queries only; no raw transcript reads or monitoring infrastructure. The second report still says refreshing: 19 cached files, 2 pending/stale. Its 68.44M total / 64.66M cache reads / 3.36M input / 424.2K output and 1,017 exec calls are partial, later-in-the-day observations, NOT an exact reproduction of the owner's earlier 53.1M/900-call snapshot. No provider-invoice or dollar-savings claim. The specific previously reported 170K request was not independently recovered.
+
+## Three highest-value recommendations
+
+1. **Bound carried engineering context at meaningful checkpoints.** One established development session accounts for 44.83M reported tokens, 43.01M cache reads, 828 assistant messages and 739 tool calls. This housekeeping session itself accounts for 12.51M tokens and 11.84M cache reads in the partial snapshot. The established session's input-plus-cache divided by assistant-message count is about 53.8K; housekeeping is about 127.2K. These are approximate message-normalized context loads, not exact per-request prompt measurements. Preserve durable state and use concise relevant checkpoint excerpts at natural handoffs; do not reset healthy work. Conditional scale: avoiding 100 unnecessary turns at the established session's observed average would avoid roughly 5.4M repeated prompt-sized tokens; this is a scenario, not measured savings. Cache reuse is productive reuse, not automatically waste.
+
+2. **Batch deterministic operations and emit bounded results rather than full artifacts.** Exec represents 1,017 of 1,220 reported tool calls (83%). The inspected 31 development regression logs contain 6,696 executed tests, 242.7 seconds and 124,524 bytes. Preserve safety/regression checks; the demonstrated runtime is small, and failures led to substantive bug fixes. Remove repeated model-facing inspection and broad outputs instead. A concrete avoidable mistake during this audit was emitting about 47.7K characters of generated protocol imports; a 2K-character schema excerpt would have avoided about 45.7K characters (96%) for that observation. Large JSON should be summarized locally instead of read past a tool's output cap and retried.
+
+3. **Keep task tool/schema context selective and reuse discovery.** Recorded schema snapshots range from 1,538 characters for 2 tools to 26,340 characters for 146 tools; two snapshots also include 11,693 characters of skill descriptions. Scope discovery to the needed capability and emit names/selected fields rather than reprinting entire catalog descriptions. At the broad end the difference versus an observed 4-tool/1,968-character snapshot is about 24K schema characters per invocation; actual achievable savings depend on preserving necessary capabilities. Importantly, the largest development session already has a 4-tool schema snapshot, so schemas alone do NOT explain its 44.83M total. No tool policy/configuration changes were made by this audit.
+
+## Productive work versus unproven waste
+
+Productive evidence includes accepted local artifacts, source/authority preflight, independent regression tests, rejected incorrect outputs, persistent budget/recovery checks, real CLI integrations and no-inference resumes. Aggregate 39 errors cannot all be labeled waste; expected rejection tests also print errors. Thirty process calls and eight wait calls were reported; counts alone do not establish a dominant polling loop. No exact daily savings percentage or attribution of all 1,017 exec calls is justified by this bounded audit.
+
+Source artifacts: private-usage-report.json and private-usage-report-refreshed.json (local, private), plus existing development regression logs. No reasoning settings, orchestrator architecture, schedules or monitoring infrastructure were changed for this audit.

@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "69d4242425435626bbc6571b",
+    "id": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "likes": 11,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 568,
+    "tags": [
+      "mlx",
+      "safetensors",
+      "gemma4",
+      "gemma",
+      "gemma-4",
+      "moe",
+      "vlm",
+      "multimodal",
+      "vision",
+      "agent",
+      "tool-use",
+      "function-calling",
+      "hermes",
+      "dora",
+      "image-text-to-text",
+      "conversational",
+      "en",
+      "base_model:jason-schulz/Gemma-4-26B-A4B-Hermes-MLX",
+      "base_model:quantized:jason-schulz/Gemma-4-26B-A4B-Hermes-MLX",
+      "license:gemma",
+      "4-bit",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "mlx",
+    "createdAt": "2026-04-06T21:22:44.000Z",
+    "modelId": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX"
+  }
+]

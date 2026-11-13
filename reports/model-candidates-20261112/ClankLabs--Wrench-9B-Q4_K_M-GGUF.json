@@ -1,0 +1,88 @@
+{
+  "_id": "69c5e1d7a345f4c7edc01790",
+  "id": "ClankLabs/Wrench-9B-Q4_K_M-GGUF",
+  "private": false,
+  "pipeline_tag": "text-generation",
+  "tags": [
+    "gguf",
+    "tool-calling",
+    "function-calling",
+    "agent",
+    "clank",
+    "text-generation",
+    "en",
+    "base_model:Qwen/Qwen3.5-9B",
+    "base_model:quantized:Qwen/Qwen3.5-9B",
+    "license:apache-2.0",
+    "region:us"
+  ],
+  "downloads": 5410,
+  "likes": 13,
+  "modelId": "ClankLabs/Wrench-9B-Q4_K_M-GGUF",
+  "author": "ClankLabs",
+  "sha": "6d4f489d2a1ebb0f41f6cc8779a07df5917e5ddc",
+  "lastModified": "2026-04-03T20:50:15.000Z",
+  "gated": false,
+  "disabled": false,
+  "widgetData": [
+    {
+      "text": "Hi, what can you help me with?"
+    },
+    {
+      "text": "What is 84 * 3 / 2?"
+    },
+    {
+      "text": "Tell me an interesting fact about the universe!"
+    },
+    {
+      "text": "Explain quantum computing in simple terms."
+    }
+  ],
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "apache-2.0",
+    "language": [
+      "en"
+    ],
+    "base_model": "Qwen/Qwen3.5-9B",
+    "tags": [
+      "tool-calling",
+      "function-calling",
+      "agent",
+      "gguf",
+      "clank"
+    ],
+    "pipeline_tag": "text-generation"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "72cdf35173fbca1a71e39f4d7563a8304c7e7d39",
+      "size": 1593
+    },
+    {
+      "rfilename": "Modelfile",
+      "blobId": "2de1d7108e66f134ce19f109e848017957a63f54",
+      "size": 328
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "a5e35dc9f64ffe000e86dbc7e4cf2ad412f84e9d",
+      "size": 3152
+    },
+    {
+      "rfilename": "Wrench-9B-Q4_K_M-GGUF .gguf",
+      "blobId": "b596fa15d34665822b57931b1be27577335381a6",
+      "size": 5629108640,
+      "lfs": {
+        "sha256": "e21435c7150794cccddf2ab0737fb5509eba681e7c9a89b1dc9e51948c4f78b7",
+        "size": 5629108640,
+        "pointerSize": 135
+      }
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-03-27T01:48:07.000Z",
+  "usedStorage": 11258217280
+}

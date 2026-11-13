@@ -1,0 +1,65 @@
+{
+  "changedPaths": [
+    ".agents.defaults.models.lmstudio/qwen/qwen3.6-35b-a3b.params",
+    ".models.providers.lmstudio.timeoutSeconds",
+    ".models.providers.lmstudio.models",
+    ".models.providers.lmstudio.api"
+  ],
+  "provider": {
+    "baseUrl": "http://127.0.0.1:1234/v1",
+    "api": "openai-completions",
+    "models": [
+      {
+        "id": "qwen/qwen3.6-35b-a3b",
+        "name": "Qwen3.6 35B",
+        "reasoning": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "contextWindow": 32768,
+        "contextTokens": 32768,
+        "maxTokens": 4096,
+        "compat": {
+          "supportsTools": true,
+          "supportsReasoningEffort": true,
+          "supportedReasoningEfforts": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "reasoningEffortMap": {
+            "off": "none",
+            "minimal": "minimal",
+            "low": "low",
+            "medium": "medium",
+            "high": "high",
+            "xhigh": "xhigh"
+          }
+        }
+      }
+    ],
+    "params": {
+      "preload": false
+    },
+    "timeoutSeconds": 180
+  },
+  "modelOverride": {
+    "params": {
+      "thinking": "off",
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "extra_body": {
+        "reasoning_effort": "none"
+      }
+    }
+  },
+  "solAndAgentEntriesUnchanged": true,
+  "lmstudioChangedPaths": [
+    ".developer.unloadPreviousJITModelOnLoad"
+  ]
+}

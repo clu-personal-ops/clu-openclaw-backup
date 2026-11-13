@@ -1,0 +1,145 @@
+# Fine-Tuned Model Candidates for Orchestrator
+
+We’ve identified several Hugging Face fine-tuned models to test as **drop-in replacements** for Clu’s existing local models. Each candidate is described with its format, license, and intended specialization. Any model not directly compatible (LoRA adapters, Apple-only formats, etc.) is noted but not automatically installed. All downloads use LM Studio’s CLI (`lms get/import`) or HF tools with safety checks. 
+
+- **ClankLabs/Wrench-9B-Q4_K_M-GGUF** – LoRA fine-tune of Qwen3.5-9B for tool-calling and error recovery. 4-bit GGUF (~5.6 GB) (quant Q4_K_M) runnable in ~8 GB VRAM. License Apache-2.0. Recommended: test with Wrench’s suggested sampling (temp ~0.4, top-p ~0.95, presence-penalty 1.5, context 8192).
+
+- **samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF** – QLoRA fine-tune of Qwen3.6-35B-A3B (MoE, 3B active params) for agentic workflows. GGUF format available (Q4_K_M ≈20 GB, needs ~24 GB VRAM). Apache-2.0 license. Purpose: improved multi-step reasoning and tool execution. Suggest moderate sampling (e.g. temp 0.3, top-p 0.9) to encourage output diversity.
+
+- **fesalfayed/gpt-oss-20b-hermes_agent-tool-finetune_gguf** – Hermes-Agent tool-use fine-tune of OpenAI GPT-OSS 20B. GGUF quantizations shipped (Q3_K_M, Q4_K_M, Q5_K_M, Q8_0, F16). Recommended default: Q4_K_M (~12.5 GB) for 16 GB RAM. Improves function-calling, loop coherence and prompt adherence. Apache-2.0 license. **LM Studio note:** After downloading, enable “Use Jinja chat template” for this model so it follows the Harmony chat format. Initial sampling: temp ~0.7 (lower (≈0.2) for strict JSON tasks), top-p ~0.95.
+
+- **fesalfayed/gpt-oss-20b-hermes_agent-tool-finetune_mlx** – *Apple Silicon (MLX format)* version of the above GPT-OSS fine-tune. MLX (quantized for M1/M2/M3) for native metal/accelerator execution. Only usable on compatible hardware. (If not on Mac, **skip** this; use GGUF instead.)
+
+- **jason-schulz/Gemma-4-26B-A4B-Hermes-MLX** – *Apple-only* MLX format, weight-grafted fine-tune of Gemma-4 (26B, image-text) language tower for Hermes Agent (text-only). MLX 4-bit, runs on M5 GPUs (requires metal/MLX). Vision encoder untouched. License “gemma” (Google’s Gemma license). Use only if on Apple hardware; *not* for Linux/Windows.
+
+- **jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX** – Apple MLX, multimodal (text+vision) version of above. Even heavier, Apple-only. Included for completeness but skip unless testing vision use-cases on Mac.
+
+- **superqwen/qwen3.8-27b-swe-lora** – LoRA adapter for Qwen3.8-27B (SWE-bench coding trajectories). **Requires merging with base Qwen3.8**, not a standalone. *Skipping automatic install.* Could consider merging manually later if a Qwen3.8 fine-tune is needed.
+
+- **Other discovered fine-tunes:** None were identified as clearly loadable alternatives beyond the above. For example, “br1-pist/Qwen3.8-27B-AgentCoder” exists (27B BF16), but is too large to deploy. We will only test the models above, plus the existing five baselines.
+
+## Environment Verification
+
+First, Sol should check the host system and LM Studio status to guide downloads:
+
+```bash
+# --- Basic system info ---
+uname -a                   # OS and kernel
+lsb_release -a            # Distro/version
+python --version          # Python version
+which lms && lms --version # LM Studio CLI version
+```
+
+Check hardware resources:
+
+```bash
+# --- GPU/Hardware check ---
+lms runtime ls            # List installed LM Studio runtimes (see if 'mlx' is available)
+if command -v nvidia-smi > /dev/null; then nvidia-smi; else echo "No NVIDIA GPU detected"; fi
+free -h                  # RAM available
+df -h /                 # Disk free
+```
+
+- *Objective:* Confirm if running on Apple Silicon (uname shows “Darwin” or `uname -m` = `arm64`) to know if MLX models can run. Ensure at least 32–64 GB free disk (the new models total ~40+ GB). Ensure LM Studio is up-to-date (should support MLX if on Mac; if not, skip MLX models). 
+
+## Download & Import Commands
+
+Next, use the `lms` CLI to fetch the GGUF candidates. We **do not** load or activate them yet, just store files in the local models directory. (If LM Studio is not logged in, `lms get` may ask or fail; alternatively use `huggingface-cli` or `hf_hub_download` with a token.) For reliability, use quantization specifiers where noted:
+
+```bash
+# --- Download fine-tuned model files (do NOT load into active set) ---
+lms get ClankLabs/Wrench-9B-Q4_K_M-GGUF --gguf
+lms get samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF --gguf
+lms get fesalfayed/gpt-oss-20b-hermes_agent-tool-finetune_gguf@Q4_K_M --gguf
+
+# On Apple Silicon, optionally download MLX variants:
+if [[ "$(uname -m)" == "arm64" ]]; then
+  lms get fesalfayed/gpt-oss-20b-hermes_agent-tool-finetune_mlx --mlx
+  lms get jason-schulz/Gemma-4-26B-A4B-Hermes-MLX --mlx
+  lms get jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX --mlx
+else
+  echo "Not on Apple Silicon: skipping MLX-only models."
+fi
+
+# Verify downloads in LM Studio directory
+lms ls    # should list new model folders and .gguf files
+lms ps    # shows currently loaded models (should remain the original five)
+```
+
+If any `lms get` fails (network, permissions, space), Sol should log the error and skip that model. Do **not** overwrite or remove existing models. If needed, use `lms import` for manually downloaded files (see docs).
+
+After downloading, produce a brief manifest:
+
+```bash
+# --- Manifest of downloads ---
+echo "Downloaded models and sizes:" > model_manifest.txt
+lms ls | grep -E 'Wrench-9B|Carnice|gpt-oss-20b-hermes' >> model_manifest.txt
+if [[ "$(uname -m)" == "arm64" ]]; then
+  lms ls | grep -E 'Gemma-4-26B-A4B' >> model_manifest.txt
+fi
+wc -h model_manifest.txt
+```
+
+Include file sizes and quantization info from `lms ls`. (Note: LM Studio may show quant suffix or `@quant`.) 
+
+## Default Settings per Model
+
+For testing, use these initial settings (adjust as needed during evaluation):
+
+- **Wrench-9B:** Enable sampling (not greedy). Suggested command-line flags from the model card: 
+  ```
+  --temp 0.4 --top-k 20 --top-p 0.95 --min-p 0 --presence-penalty 1.5 -c 8192
+  ```
+ . Set temperature >0 (e.g. 0.4) to avoid overly repetitive answers. Use LM Studio “JSON mode” (strict output) since orchestrator needs parseable outputs.
+
+- **Carnice-35B:** Similar style. Start with moderate sampling: e.g. `--temp 0.3`, `--top-p 0.9`, presence-penalty ~0.5. Context 8192. (No published template, so use default Qwen JSON output, but allow a bit of freedom for reasoning.) 
+
+- **GPT-OSS-20B (GGUF):** In LM Studio, **enable Jinja chat template** for this model (to preserve the Harmony system messages). Then use: `--temp 0.7`, `--top-p 0.95`. Also set `--min-p 0.1` if testing a MoE quant (helps avoid all logits at zero). These settings follow the recommended profile for balanced response; lower temp (e.g. 0.2) for strict tasks. Context 8192.
+
+- **GPT-OSS-20B (MLX, Apple):** Same parameters as GGUF version, but must run via MLX engine. (Only relevant if on Apple hardware.)
+
+- **Gemma-4-26B (Hermes-MLX):** If testing on Mac, use MLX. No special sampling advice given; a starting point: `--temp 0.5`, `--top-p 0.9`. Vision tasks are outside current pipeline (skip unless vision evaluation is added).
+
+- **Gemma-4-26B (Hermes-VLM-MLX):** Same as above for vision-enabled testing. 
+
+- **Strict JSON/Tool Policies:** Keep `strict_json=True` in pipeline; do not enable model-initiated tool calls. All outputs should be JSON or text as per orchestrator design. 
+
+- **Stop sequences:** Use OpenAI chat default (stop at end-of-stream). For function calls, use the pipeline’s existing extraction. 
+
+- **Context Window:** 8192 tokens (as used by base LM Studio configs).
+
+Persist these as “trial profiles” (e.g. in LM Studio’s model settings or command args) without altering the global orchestrator. 
+
+## Benchmarking Plan
+
+For each new model vs. its base, run isolated trials covering Clu’s key tasks. For example:
+
+1. **JSON Extraction Tasks:** Give a prompt requiring structured output (like the agents do for function calls, citations, or data extraction). Measure correctness of JSON and failure rate vs base model. 
+
+2. **Tool-instruction Workflows:** Simulate a multi-step agent scenario (even though tools aren’t actually called, feed mock API responses). Check if the model generates correct function calls and remains consistent over multiple turns.
+
+3. **Coding Assistance:** Simple code generation or editing tasks, since Carnice and Wrench are tuned for coding/agentic tasks. Verify syntax correctness and compliance with instructions.
+
+4. **Error Recovery:** Provide a scenario where a tool output is erroneous and see if the model intelligently retries or adapts (Carnice especially claims error recovery training).
+
+5. **System Prompt Adherence:** Try giving contradictory system/user instructions and see if the model correctly refuses or follows the primary system role (as Hermes-tuned models should respect).
+
+6. **Speed/Resource:** Measure token/sec and peak memory for each model on the test machine (especially important for large or MoE models).
+
+For each test, log the output, validation result (pass/fail), and time taken. Compare new model vs. old model (same quantization and conditions). Use deterministic tasks (seeded) to ensure repeatability.
+
+## Keep vs. Discard Criteria
+
+After trials, decide per model:
+
+- **Keep if:** It **outperforms** the base model (higher accuracy, fewer retries, better JSON/formatted output) on its target tasks **without new failure modes**. Any modest slowdown is acceptable if accuracy/reliability gains are significant (e.g. a 9B model solving tasks that only 35B could do before is a win). 
+
+- **Discard if:** It does **not** improve measurable success rate, or introduces unacceptable issues (e.g. hallucinations, ignoring prompts). Also discard if it fails technical constraints (e.g. too slow or memory-hungry compared to baseline). 
+
+For MLX (Apple-only) candidates: include only if running on Mac; otherwise skip. If an MLX model shows value (e.g. Gemma's vision + tool insights), note but do not override Linux pipeline.
+
+No changes to the orchestrator code or model routing are needed now. We treat each fine-tune as a **drop-in alternative** for its base model and only switch if justified. Keep the original model available as fallback.
+
+All steps should be logged. Sol should **not** load any new model into the active orchestrator config until after evaluation. Just downloading and preparing with the settings above is required at this stage. 
+
+**Sources:** Model details and recommended settings are drawn from the Hugging Face model cards and LM Studio documentation. These inform the download commands and initial sampling parameters.

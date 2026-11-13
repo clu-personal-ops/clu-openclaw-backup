@@ -1,0 +1,22 @@
+[
+  {
+    "repo": "ClankLabs/Wrench-9B-Q4_K_M-GGUF",
+    "filename": "Wrench-9B-Q4_K_M-GGUF .gguf",
+    "status": "verified",
+    "revision": "6d4f489d2a1ebb0f41f6cc8779a07df5917e5ddc",
+    "expected_sha256": "e21435c7150794cccddf2ab0737fb5509eba681e7c9a89b1dc9e51948c4f78b7",
+    "size_bytes": 5629108640,
+    "path": "/Users/clu/.lmstudio/models/ClankLabs/Wrench-9B-Q4_K_M-GGUF/Wrench-9B-Q4_K_M-GGUF .gguf",
+    "sha256": "e21435c7150794cccddf2ab0737fb5509eba681e7c9a89b1dc9e51948c4f78b7"
+  },
+  {
+    "repo": "samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF",
+    "filename": "Carnice-Qwen3.6-MoE-35B-A3B-Q4_K_M.gguf",
+    "status": "verified",
+    "revision": "36280156b43acad5bd1c53fde19731ae276cfd56",
+    "expected_sha256": "4879cd1bc36d42c77bd935b92e27c80020fd6294468df308574e2e061878f58d",
+    "size_bytes": 21166757824,
+    "path": "/Users/clu/.lmstudio/models/samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF/Carnice-Qwen3.6-MoE-35B-A3B-Q4_K_M.gguf",
+    "sha256": "4879cd1bc36d42c77bd935b92e27c80020fd6294468df308574e2e061878f58d"
+  }
+]

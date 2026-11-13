@@ -1,0 +1,7 @@
+{
+  "turn": 1,
+  "seconds": 0.356,
+  "exitCode": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"error\": {\n    \"type\": \"cli_error\",\n    \"message\": \"Gateway agent from agent exec would lose inter-session attribution. Use the attributed session-messaging tool available to this run, or return the result through normal subagent completion. Do not retry through another CLI route or remove the exec marker.\"\n  }\n}\n",
+  "stderr": "[openclaw] The CLI command failed.\n[openclaw] For help, run `openclaw doctor`.\n"
+}

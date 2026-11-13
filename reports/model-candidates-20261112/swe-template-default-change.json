@@ -1,0 +1,5 @@
+{
+  "change": "default reasoning_effort xhigh -> low to match adapter training; no role/tool syntax changes",
+  "original_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+  "updated_sha256": "690af918a83d305315d94bde649fc7fa8d8c12afc096fe1683092c29727129b2"
+}

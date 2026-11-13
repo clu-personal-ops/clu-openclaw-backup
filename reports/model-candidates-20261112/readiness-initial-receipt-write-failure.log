@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/clu/.openclaw/workspace/reports/model-candidates-20261112/verify-ready.py", line 21, in <module>
+    results.append(result);(R/'readiness-'+rec['model_key'].replace('/','--')+'.json').write_text(json.dumps(result,indent=2));print(json.dumps(result),flush=True)
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'

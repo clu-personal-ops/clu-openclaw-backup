@@ -1,0 +1,69 @@
+{
+  "task": "all six model families prepared with actual per-model defaults",
+  "processes": {
+    "original_downloads": "calm-glade",
+    "adapter_and_gemma_downloads": "glow-nexus",
+    "initial_context_readiness": "young-sage"
+  },
+  "completed": [
+    "all6 assessed hardware-potential viable at4bit",
+    "SWE adapter downloaded; merged400 matched modules into separate15.15GB MLX checkpoint; OG5 preserved",
+    "Wrench downloaded and checksum verified",
+    "candidate default configuration writer implemented and applied to indexed models"
+  ],
+  "next": [
+    "Collect initial context readiness; correct identity/default mismatch if observed",
+    "On glow-nexus completion verify shards then run prepare-gemma-text.py with installed native MLX Python; clearly label derived public source, not inaccessible original",
+    "Collect original download completion; resolve remaining inventory keys",
+    "Run apply-defaults.py after complete checkpoints; verify saved default contexts with bounded task-owned load/unload, no inference",
+    "Update profiles and HANDOFF for all6; verify OG5 defaults/pipeline source unchanged; return final per-family state"
+  ],
+  "pipeline_code_and_benchmarking": "out of scope",
+  "text_source_blocker": "original named repo HTTP401; public VLM language-tower alternative under preparation",
+  "completion_owner": {
+    "session": "swift-prairie",
+    "pid": 55526,
+    "mechanism": "LM Studio lms get; nonempty stdout completion wakes originating conversation"
+  },
+  "after_completion_event": [
+    "Collect native lms get result",
+    "Verify exact GPT-OSS installed file size and SHA256 against pinned metadata; preserve old .part until owner approves cleanup",
+    "Apply remaining candidate-specific LM Studio defaults and collect bounded readiness receipts without generation",
+    "Refresh manifest and handoff with accurate current statuses",
+    "Report completed native-install candidates and original Gemma text-source access blocker; do not silently reconstruct substitute; ping owner"
+  ],
+  "download_policy": "Owner objected to external downloader; use LM Studio managed downloads only",
+  "stopped_processes": [
+    "calm-glade external downloader",
+    "neat-mist automatic export/default controller"
+  ],
+  "do_not_run": [
+    "download.py",
+    "download-expanded.py",
+    "finish-all.py",
+    "prepare-gemma-text.py"
+  ],
+  "text_only_gemma": "Original source HTTP401. Automatic local reconstruction paused in response to native-only objection; requires clarified acceptable source/path.",
+  "native_download_restarted": true,
+  "prior_partial_preserved": true,
+  "owner_clarification": "Desired end state is ordinary LM Studio-installed selectable models with sensible defaults, like Discover downloads. Avoid needless complication; native lms download continues. No new parallel runtimes/services or automatic custom text-model reconstruction.",
+  "preferred_path": "Finish native GPT-OSS transfer, retain installed ordinary selectable checkpoints, finish LM Studio candidate defaults/readiness. Report inaccessible original Gemma text-only source rather than introducing extra conversion infrastructure.",
+  "cleanup_authorized": "Owner explicitly requests removal of task-created waste; preserve installed models, active native download, baseline files, compact provenance/default rollback receipts. Remove abandoned external GPT-OSS partial and redundant adapter/conversion intermediates after confirming no active use; verify reclaimed disk.",
+  "native_goal_id": "70aefa93-c578-4526-9f3a-8816908cc9e8",
+  "goal_status": "complete-except-gemma-text-source-blocker",
+  "verified_ready_models": [
+    "wrench-9b",
+    "qwen3.8-27b-swe-superqwen-mlx",
+    "carnice-qwen3.6-moe-35b-a3b",
+    "gemma-4-26b-a4b-hermes-vlm-mlx",
+    "gpt-oss-20b-hermes_agent-tool-finetune_gguf"
+  ],
+  "last_batch_result": "Carnice and GemmaVLM saved defaults inherit32K context during actual native load; task-owned instances unloaded; four candidates now load/context-ready, no inference",
+  "next_actions": [
+    "Collect existing swift-prairie native GPT-OSS completion, then size/hash verification, save defaults and ordinary load/context/unload verification",
+    "Resolve original Gemma text source blocker without unagreed reconstruction; do not count VLM as exact original text checkpoint",
+    "Refresh final roster/handoff; verify OG5 preservation and cleanup; proactively notify owner"
+  ],
+  "final_continuation_task": "After each technical batch reassess full objective, plan next1\u20133 concrete actions and start first ready authorized action in same run; no checklist-only stopping; preserve owned completion and exact resume state.",
+  "gpt_oss": "size+sha256 verified, defaults saved, load-ready"
+}

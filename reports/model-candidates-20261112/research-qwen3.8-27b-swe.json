@@ -1,0 +1,522 @@
+[
+  {
+    "_id": "6a97dda5725d7265d331d82e",
+    "id": "sweetand/qwen3.8-27b-1C",
+    "likes": 30,
+    "trendingScore": 5,
+    "private": false,
+    "downloads": 36131,
+    "tags": [
+      "gguf",
+      "1C",
+      "1\u0421",
+      "bsl",
+      "onescript",
+      "image-text-to-text",
+      "ru",
+      "en",
+      "base_model:Qwen/Qwen3.8-27B",
+      "base_model:quantized:Qwen/Qwen3.8-27B",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "createdAt": "2026-09-02T08:26:13.000Z",
+    "modelId": "sweetand/qwen3.8-27b-1C"
+  },
+  {
+    "_id": "6a96e86fa822865200e5b77a",
+    "id": "SASVAAI/Qwen3.8-27b-SWE-Smith-Agent-LORA",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 38,
+    "tags": [
+      "peft",
+      "safetensors",
+      "lora",
+      "sft",
+      "trl",
+      "bf16_lora",
+      "agent",
+      "tool-use",
+      "swe-agent",
+      "code",
+      "text-generation",
+      "conversational",
+      "en",
+      "base_model:Qwen/Qwen3.8-27B",
+      "base_model:adapter:Qwen/Qwen3.8-27B",
+      "license:apache-2.0",
+      "model-index",
+      "region:us"
+    ],
+    "pipeline_tag": "text-generation",
+    "library_name": "peft",
+    "createdAt": "2026-09-01T14:59:59.000Z",
+    "modelId": "SASVAAI/Qwen3.8-27b-SWE-Smith-Agent-LORA"
+  },
+  {
+    "_id": "6aa4c1b45742475f97606365",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-CMT-EHRDQ-SFT-100-turns",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-12T03:06:28.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-CMT-EHRDQ-SFT-100-turns"
+  },
+  {
+    "_id": "6aa6c7acb82a750ffce51d04",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-CMT-EHRDQ-CT-SFT-100-turns",
+    "likes": 1,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-13T15:56:28.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-CMT-EHRDQ-CT-SFT-100-turns"
+  },
+  {
+    "_id": "6aaa0ca12bab0e374af5bd3c",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-V2-Core-CMT-EHRDQ-SFT-LR-5en6",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-16T03:27:29.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-V2-Core-CMT-EHRDQ-SFT-LR-5en6"
+  },
+  {
+    "_id": "6aaa0dda7147702600238e18",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-V2-Coverage-CMT-EHRDQ-SFT-LR-5en6",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 2,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-16T03:32:42.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-V2-Coverage-CMT-EHRDQ-SFT-LR-5en6"
+  },
+  {
+    "_id": "6aab0ea846f574fd37702c84",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-V2-Core-CMT-EHRDQ-SFT-LR-1en5",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-16T21:48:24.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-V2-Core-CMT-EHRDQ-SFT-LR-1en5"
+  },
+  {
+    "_id": "6aab0ec290c2ad2df89f64a4",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-V2-Coverage-CMT-EHRDQ-SFT-LR-1en5",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-16T21:48:50.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-V2-Coverage-CMT-EHRDQ-SFT-LR-1en5"
+  },
+  {
+    "_id": "6aabb834bcfb26d53f618972",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-V2-Core-CMT-EHRDQ-CT-SFT-LR-5en6",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-17T09:51:48.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-V2-Core-CMT-EHRDQ-CT-SFT-LR-5en6"
+  },
+  {
+    "_id": "6aabca5d0e100a969802e128",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-V2-Coverage-CMT-EHRDQ-CT-SFT-LR-5en6",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-17T11:09:17.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-V2-Coverage-CMT-EHRDQ-CT-SFT-LR-5en6"
+  },
+  {
+    "_id": "6aac71eeb651b52db4d4d083",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-V2-Core-CMT-EHRDQ-CT-SFT-LR-1en5",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-17T23:04:14.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-V2-Core-CMT-EHRDQ-CT-SFT-LR-1en5"
+  },
+  {
+    "_id": "6aac7217eba907af05138467",
+    "id": "hab-swe/Qwen3.8-27B-MedCLI-V2-Coverage-CMT-EHRDQ-CT-SFT-LR-1en5",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "conversational",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-09-17T23:04:55.000Z",
+    "modelId": "hab-swe/Qwen3.8-27B-MedCLI-V2-Coverage-CMT-EHRDQ-CT-SFT-LR-1en5"
+  },
+  {
+    "_id": "6ab87b72523bc89cc35a18c0",
+    "id": "hab-swe/20260925-medcli-v2-grpo-qwen3.8-27b-2node-rw24-a2400-r2-no-vision",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "safetensors",
+      "region:us"
+    ],
+    "createdAt": "2026-09-27T02:12:02.000Z",
+    "modelId": "hab-swe/20260925-medcli-v2-grpo-qwen3.8-27b-2node-rw24-a2400-r2-no-vision"
+  },
+  {
+    "_id": "6abf0faf6352ca4f975df047",
+    "id": "hab-swe/20261001-medcli-v2-grpo-qwen3.8-27b-2node-teacher-gold-strict",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "safetensors",
+      "region:us"
+    ],
+    "createdAt": "2026-10-02T01:58:07.000Z",
+    "modelId": "hab-swe/20261001-medcli-v2-grpo-qwen3.8-27b-2node-teacher-gold-strict"
+  },
+  {
+    "_id": "6ac1688b3a1ba0d8547d6f1d",
+    "id": "hab-swe/20261003-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top20-ehr-prec20",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "safetensors",
+      "region:us"
+    ],
+    "createdAt": "2026-10-03T20:41:47.000Z",
+    "modelId": "hab-swe/20261003-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top20-ehr-prec20"
+  },
+  {
+    "_id": "6ac6b7580a06781003e0159b",
+    "id": "hab-swe/20261005-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top50-ehr-prec20-from35",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "safetensors",
+      "region:us"
+    ],
+    "createdAt": "2026-10-07T21:19:20.000Z",
+    "modelId": "hab-swe/20261005-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top50-ehr-prec20-from35"
+  },
+  {
+    "_id": "6ac9e48aa0d63e6bb9b60014",
+    "id": "hab-swe/20261007-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top50-ehr-prec20-scratch",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "safetensors",
+      "region:us"
+    ],
+    "createdAt": "2026-10-10T07:08:58.000Z",
+    "modelId": "hab-swe/20261007-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top50-ehr-prec20-scratch"
+  },
+  {
+    "_id": "6acd6774b586e1eec14aea56",
+    "id": "hab-swe/20261001-medcli-v2-grpo-qwen3.8-27b-2node-teacher-gold-strict-megatron",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "region:us"
+    ],
+    "createdAt": "2026-10-12T23:04:20.000Z",
+    "modelId": "hab-swe/20261001-medcli-v2-grpo-qwen3.8-27b-2node-teacher-gold-strict-megatron"
+  },
+  {
+    "_id": "6acd723b6aa2c2062881928c",
+    "id": "hab-swe/20261005-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top50-ehr-prec20-from35-megatron",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "region:us"
+    ],
+    "createdAt": "2026-10-12T23:50:19.000Z",
+    "modelId": "hab-swe/20261005-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top50-ehr-prec20-from35-megatron"
+  },
+  {
+    "_id": "6acd76a354cc57f9dc6cd6c7",
+    "id": "hab-swe/20261007-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top50-ehr-prec20-scratch-megatron",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "region:us"
+    ],
+    "createdAt": "2026-10-13T00:09:07.000Z",
+    "modelId": "hab-swe/20261007-medcli-v2-grpo-qwen3.8-27b-2node-ctm-top50-ehr-prec20-scratch-megatron"
+  },
+  {
+    "_id": "6ad25be47225aabde15470fa",
+    "id": "superqwen/qwen3.8-27b-swe-lora",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 88,
+    "tags": [
+      "peft",
+      "safetensors",
+      "lora",
+      "qwen3.8",
+      "tool-calling",
+      "coding-agent",
+      "text-generation",
+      "conversational",
+      "dataset:SWE-bench/SWE-smith-trajectories",
+      "base_model:Qwen/Qwen3.8-27B",
+      "base_model:adapter:Qwen/Qwen3.8-27B",
+      "license:apache-2.0",
+      "region:us"
+    ],
+    "pipeline_tag": "text-generation",
+    "library_name": "peft",
+    "createdAt": "2026-10-16T17:16:20.000Z",
+    "modelId": "superqwen/qwen3.8-27b-swe-lora"
+  },
+  {
+    "_id": "6ae2e6b6806afbef098ababb",
+    "id": "the-sweater-cat/Qwen3.8-27B-GSQ-RCO-IQ3_XXS-BF16",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 63,
+    "tags": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "quantization",
+      "gsq",
+      "rco",
+      "dequantized",
+      "bf16",
+      "conversational",
+      "dataset:the-sweater-cat/qwen38-27b-deepswe",
+      "base_model:ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "base_model:finetune:ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "createdAt": "2026-10-29T06:24:54.000Z",
+    "modelId": "the-sweater-cat/Qwen3.8-27B-GSQ-RCO-IQ3_XXS-BF16"
+  },
+  {
+    "_id": "6ae50843b3d555680170621d",
+    "id": "asparius/qwen3.8-27b-swe-opus47-lora",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 28,
+    "tags": [
+      "peft",
+      "safetensors",
+      "base_model:adapter:Qwen/Qwen3.8-27B",
+      "lora",
+      "transformers",
+      "text-generation",
+      "conversational",
+      "arxiv:1910.09700",
+      "base_model:Qwen/Qwen3.8-27B",
+      "region:us"
+    ],
+    "pipeline_tag": "text-generation",
+    "library_name": "peft",
+    "createdAt": "2026-10-30T21:12:35.000Z",
+    "modelId": "asparius/qwen3.8-27b-swe-opus47-lora"
+  },
+  {
+    "_id": "6ae97d3471d7169dfdb8719e",
+    "id": "spotapovadm/qwen3.8-27b-swe-lora",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 39,
+    "tags": [
+      "peft",
+      "safetensors",
+      "lora",
+      "qwen3.8",
+      "tool-calling",
+      "coding-agent",
+      "text-generation",
+      "conversational",
+      "dataset:SWE-bench/SWE-smith-trajectories",
+      "base_model:Qwen/Qwen3.8-27B",
+      "base_model:adapter:Qwen/Qwen3.8-27B",
+      "license:apache-2.0",
+      "region:us"
+    ],
+    "pipeline_tag": "text-generation",
+    "library_name": "peft",
+    "createdAt": "2026-11-03T06:20:36.000Z",
+    "modelId": "spotapovadm/qwen3.8-27b-swe-lora"
+  },
+  {
+    "_id": "6af2434cc854cb463b53b78f",
+    "id": "the-sweater-cat/Qwen3.8-27B-trellis-3.0bpw",
+    "likes": 0,
+    "trendingScore": 0,
+    "private": false,
+    "downloads": 686,
+    "tags": [
+      "trellis",
+      "safetensors",
+      "qwen3_5",
+      "quantization",
+      "qtip",
+      "ptq",
+      "3p0-bpw",
+      "base_model:Qwen/Qwen3.8-27B",
+      "base_model:quantized:Qwen/Qwen3.8-27B",
+      "license:apache-2.0",
+      "region:us"
+    ],
+    "library_name": "trellis",
+    "createdAt": "2026-11-09T22:03:56.000Z",
+    "modelId": "the-sweater-cat/Qwen3.8-27B-trellis-3.0bpw"
+  }
+]

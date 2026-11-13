@@ -1,0 +1,182 @@
+[
+  {
+    "repo": "superqwen/qwen3.8-27b-swe-lora",
+    "revision": "c26577ac18d6f0ba37d728aee6ca5fc1b6d5f09a",
+    "filename": "README.md",
+    "size_bytes": 3792,
+    "path": "/Users/clu/.openclaw/workspace/reports/model-candidates-20261112/swe-adapter-source/README.md",
+    "status": "verified",
+    "sha256": "3e7ff989056e425512acb4b013c596e6528968231ef156166fb24f03b21ab218",
+    "expected_sha256": null
+  },
+  {
+    "repo": "superqwen/qwen3.8-27b-swe-lora",
+    "revision": "c26577ac18d6f0ba37d728aee6ca5fc1b6d5f09a",
+    "filename": "adapter_config.json",
+    "size_bytes": 1231,
+    "path": "/Users/clu/.openclaw/workspace/reports/model-candidates-20261112/swe-adapter-source/adapter_config.json",
+    "status": "verified",
+    "sha256": "3164d95c22ecde3c2f9d69efba73458b9f644d769fa382bfc4546ab01984aeb9",
+    "expected_sha256": null
+  },
+  {
+    "repo": "superqwen/qwen3.8-27b-swe-lora",
+    "revision": "c26577ac18d6f0ba37d728aee6ca5fc1b6d5f09a",
+    "filename": "adapter_model.safetensors",
+    "size_bytes": 435280528,
+    "path": "/Users/clu/.openclaw/workspace/reports/model-candidates-20261112/swe-adapter-source/adapter_model.safetensors",
+    "status": "verified",
+    "sha256": "714fd806ed10d01f53b9dc13c4886671e730437e87fedeb8e0c8ae45c4359745",
+    "expected_sha256": "714fd806ed10d01f53b9dc13c4886671e730437e87fedeb8e0c8ae45c4359745"
+  },
+  {
+    "repo": "superqwen/qwen3.8-27b-swe-lora",
+    "revision": "c26577ac18d6f0ba37d728aee6ca5fc1b6d5f09a",
+    "filename": "chat_template.jinja",
+    "size_bytes": 8952,
+    "path": "/Users/clu/.openclaw/workspace/reports/model-candidates-20261112/swe-adapter-source/chat_template.jinja",
+    "status": "verified",
+    "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "expected_sha256": null
+  },
+  {
+    "repo": "superqwen/qwen3.8-27b-swe-lora",
+    "revision": "c26577ac18d6f0ba37d728aee6ca5fc1b6d5f09a",
+    "filename": "tokenizer.json",
+    "size_bytes": 19989339,
+    "path": "/Users/clu/.openclaw/workspace/reports/model-candidates-20261112/swe-adapter-source/tokenizer.json",
+    "status": "verified",
+    "sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f",
+    "expected_sha256": "a5cd9732badce41de57e6efce8302930ded1c1188c5f81feb2bd6c24c4a1941f"
+  },
+  {
+    "repo": "superqwen/qwen3.8-27b-swe-lora",
+    "revision": "c26577ac18d6f0ba37d728aee6ca5fc1b6d5f09a",
+    "filename": "tokenizer_config.json",
+    "size_bytes": 1466,
+    "path": "/Users/clu/.openclaw/workspace/reports/model-candidates-20261112/swe-adapter-source/tokenizer_config.json",
+    "status": "verified",
+    "sha256": "f6fdf337c2c5f4ed8190168a772c83f5c9364d225abae63223fde372e3cfb71f",
+    "expected_sha256": null
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "README.md",
+    "size_bytes": 4778,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/README.md",
+    "status": "verified",
+    "sha256": "e9568e0f2fccb6ead101e3cf0dfb757b7776bb8692b61bc7cb49f533d658dba2",
+    "expected_sha256": null
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "chat_template.jinja",
+    "size_bytes": 12045,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/chat_template.jinja",
+    "status": "verified",
+    "sha256": "2dfbfc7d538912f4ea11d29d85b4e25d7bc26386e53f57529f1d707c28b5828c",
+    "expected_sha256": null
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "config.json",
+    "size_bytes": 11781,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/config.json",
+    "status": "verified",
+    "sha256": "b485908c026054f2bb864a3682a0207be4746ca61d43f46bfa6291bdbb2b83ad",
+    "expected_sha256": null
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "generation_config.json",
+    "size_bytes": 208,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/generation_config.json",
+    "status": "verified",
+    "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de",
+    "expected_sha256": null
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "model-00001-of-00004.safetensors",
+    "size_bytes": 4942642901,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/model-00001-of-00004.safetensors",
+    "status": "verified",
+    "sha256": "ca74bd1b9fdbea60d70e7373e9141ed21d7560533170466dba2b57571c4e4fc4",
+    "expected_sha256": "ca74bd1b9fdbea60d70e7373e9141ed21d7560533170466dba2b57571c4e4fc4"
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "model-00002-of-00004.safetensors",
+    "size_bytes": 4999765770,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/model-00002-of-00004.safetensors",
+    "status": "verified",
+    "sha256": "6acc1a311a885b833970d86174f715cc5c947cef7bd3c2456551e0937b71ebd2",
+    "expected_sha256": "6acc1a311a885b833970d86174f715cc5c947cef7bd3c2456551e0937b71ebd2"
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "model-00003-of-00004.safetensors",
+    "size_bytes": 4886943845,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/model-00003-of-00004.safetensors",
+    "status": "verified",
+    "sha256": "074ab3ed87eeb1d3247339d714fe61f6fc834f37be3aff105a74149c46d0cb65",
+    "expected_sha256": "074ab3ed87eeb1d3247339d714fe61f6fc834f37be3aff105a74149c46d0cb65"
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "model-00004-of-00004.safetensors",
+    "size_bytes": 511853429,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/model-00004-of-00004.safetensors",
+    "status": "verified",
+    "sha256": "0367c697125dd9ca5863dc79952d20def480b5132f61edcabcd7f9d16fe54de3",
+    "expected_sha256": "0367c697125dd9ca5863dc79952d20def480b5132f61edcabcd7f9d16fe54de3"
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "model.safetensors.index.json",
+    "size_bytes": 170140,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/model.safetensors.index.json",
+    "status": "verified",
+    "sha256": "ad43f124dc13a4db930880f8484b924334cf53048f9099a3eb4b959e09481fcf",
+    "expected_sha256": null
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "processor_config.json",
+    "size_bytes": 902,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/processor_config.json",
+    "status": "verified",
+    "sha256": "1bd0d00776284f369c1eff5fb631e865dfcdca861e0b7d60dbef27fcf37436a8",
+    "expected_sha256": null
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "tokenizer.json",
+    "size_bytes": 32169626,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/tokenizer.json",
+    "status": "verified",
+    "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+    "expected_sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f"
+  },
+  {
+    "repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "revision": "e5ac3347b6fc99d574e0b911dc284dec331d0cfd",
+    "filename": "tokenizer_config.json",
+    "size_bytes": 2685,
+    "path": "/Users/clu/.lmstudio/models/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX/tokenizer_config.json",
+    "status": "verified",
+    "sha256": "b9686f02a0bb2d5de25e5bed7949d5858109e62cbb1111ce4cea731885e779e9",
+    "expected_sha256": null
+  }
+]

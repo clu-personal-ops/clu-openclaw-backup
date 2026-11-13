@@ -1,0 +1,41 @@
+{
+  "owner_scope": "all six, binary hardware feasibility; download viable versions and apply defaults; no quality selection or pipeline evaluation",
+  "families": [
+    {
+      "family": "Wrench 9B",
+      "hardware_viable": true,
+      "version": "GGUF Q4_K_M",
+      "state": "downloaded and verified; readiness check running"
+    },
+    {
+      "family": "Carnice 35B A3B",
+      "hardware_viable": true,
+      "version": "GGUF Q4_K_M",
+      "state": "download active"
+    },
+    {
+      "family": "GPT-OSS Hermes 20B",
+      "hardware_viable": true,
+      "version": "GGUF Q4_K_M",
+      "state": "download queued in original transfer process"
+    },
+    {
+      "family": "Superqwen SWE LoRA 27B",
+      "hardware_viable": true,
+      "version": "adapter applied to installed MLX4bit base, separate fused text checkpoint",
+      "state": "adapter downloaded and all400 module pairs fused; indexed; defaults saved"
+    },
+    {
+      "family": "Gemma Hermes text-only",
+      "hardware_viable": true,
+      "version": "4bit MLX; investigate public text-only export from VLM language tower",
+      "state": "original named text repo returns401; not a hardware rejection; export script prepared pending verified public source"
+    },
+    {
+      "family": "Gemma Hermes multimodal",
+      "hardware_viable": true,
+      "version": "public 4bit MLX VLM",
+      "state": "download active; saved defaults prepared; not yet complete"
+    }
+  ]
+}

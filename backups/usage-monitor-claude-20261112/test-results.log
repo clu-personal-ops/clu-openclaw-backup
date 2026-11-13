@@ -1,0 +1,29 @@
+PASS available is silent initially and repeatedly
+PASS cooldown exact recovery and weekly remainder
+PASS hourly cooldown dedup despite weekly consumption
+PASS early manual recovery once
+PASS unknown reset never guessed
+PASS both exhausted use latest reset
+PASS expired exhausted time not called restored
+PASS partial, malformed, error and stale snapshots rejected
+PASS retrieval failure reported once, cooldown remembered, retrieval recovery reported
+PASS one expiration scheduled, native delivery exact route
+PASS existing identical reminder not duplicated
+PASS early recovery cancels outdated reminder
+PASS reset change replaces one-shot, no duplicate
+PASS running expiration does not cancel its own native notification
+PASS executing old expiration can schedule new reset under a new key
+PASS stale queued expiration silent
+PASS end-to-end reducer run, no external notification
+PASS expiration verifies actual restoration
+PASS duplicate OpenAI provider observations cannot establish availability
+PASS failure diagnostic exposes stage/code but not stderr or credentials
+PASS unavailable signal fails the run and preserves phase/reminder, including repeated failure
+PASS unavailable signal fails the run and preserves phase/reminder, including repeated failure
+PASS reminder failure preserves pending transition for recovery
+PASS Sol cooldown identifies fallback without claiming Claude availability
+PASS restoration identifies primary headroom without switching models
+PASS unknown primary signal does not imply backup failure or availability
+PASS fallback context does not add hourly chatter
+27 scenarios passed; scheduler fixtures only, no fake notifications.
+PASS Claude strict parser, model limits, independent cooldown/recovery, unknown preservation, deduplication and combined fallback notices

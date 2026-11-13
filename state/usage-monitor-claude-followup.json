@@ -1,0 +1,20 @@
+{
+  "requestedAt": "2026-11-12",
+  "ownerIntent": "Sol remains primary; Claude is backup. Incorporate backup into notification-only monitor AFTER validating repaired current version.",
+  "status": "authenticated_claude_quota_monitoring_deployed",
+  "currentRepair": "23 fixtures and side-effect-free live OpenAI dry run passed; post-repair scheduled receipt unavailable in current caller scope",
+  "recommendation": [
+    "Retain distinct Sol cooldown/restoration notifications",
+    "Add independently confirmed Claude backup cooldown/restoration when authenticated quota signals exist",
+    "Report both unavailable only when both independently confirmed exhausted; missing data means unknown, never available",
+    "No model calls, automatic provider switching, session resumption, or second recurring job"
+  ],
+  "observations": [
+    "Direct API HTTP 200 using existing Claude Code credential in memory",
+    "Integrated adapter reports available; 5h remaining 100%, weekly remaining 100%",
+    "Combined production reducer dry run returned NO_REPLY with zero state writes, scheduler mutations, notifications or inference calls"
+  ],
+  "nextStep": "Observe ordinary scheduled run when authorized history visibility is available; do not force notifications. Credential accessor must be revalidated after OpenClaw upgrades. Claude-specific recovery checks are hourly; Sol expiration reminders unchanged.",
+  "implemented": "Existing hourly monitor performs authenticated read-only Claude OAuth usage GET; independent Claude cooldown/reset-change, recovery and check-error transitions plus combined Sol notices.",
+  "validation": "27 original scenarios plus Claude parser/transition suite pass; real integrated adapter and combined dry run pass"
+}

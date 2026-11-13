@@ -1,0 +1,54 @@
+{
+  "id": "da3f305d-d775-464c-8efa-93aa638475b6",
+  "schedule": {
+    "kind": "at",
+    "at": "2026-11-12T14:07:41.399Z"
+  },
+  "enabled": true,
+  "deleteAfterRun": true,
+  "runs": {
+    "entries": [
+      {
+        "ts": 1794492461470,
+        "jobId": "da3f305d-d775-464c-8efa-93aa638475b6",
+        "action": "finished",
+        "status": "ok",
+        "completionStatus": "succeeded",
+        "diagnostics": {
+          "summary": "NO_REPLY",
+          "entries": [
+            {
+              "ts": 1794492461470,
+              "source": "exec",
+              "severity": "info",
+              "message": "command ok: \"/Users/clu/.openclaw/tools/node-v24.22.1/bin/node\" \"/Users/clu/.openclaw/workspace/scripts/usage-monitor.mjs\" \"--expiration\" \"1794492461399\"",
+              "exitCode": 0
+            }
+          ]
+        },
+        "runAtMs": 1794492461416,
+        "durationMs": 54,
+        "delivered": false,
+        "deliveryStatus": "not-delivered",
+        "deliverySuppressionReason": "silent",
+        "delivery": {
+          "intended": {
+            "channel": "telegram",
+            "to": "telegram:9013562211",
+            "accountId": "default",
+            "source": "explicit"
+          },
+          "delivered": false
+        },
+        "tsIso": "2026-11-12T09:07:41.470-05:00",
+        "runAtIso": "2026-11-12T09:07:41.416-05:00"
+      }
+    ],
+    "total": 1,
+    "offset": 0,
+    "limit": 1,
+    "hasMore": false,
+    "nextOffset": null
+  },
+  "deletedAfterSilentSuccess": true
+}

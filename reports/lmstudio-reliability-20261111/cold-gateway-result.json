@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-11-11T22:01:15.174840",
+  "seconds": 9.536,
+  "exitCode": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"capability\": \"model.run\",\n  \"transport\": \"gateway\",\n  \"provider\": \"lmstudio\",\n  \"model\": \"qwen/qwen3.6-35b-a3b\",\n  \"attempts\": [],\n  \"outputs\": [\n    {\n      \"text\": \"COLD-JIT-OK\",\n      \"mediaUrl\": null\n    }\n  ]\n}\n",
+  "stderr": ""
+}

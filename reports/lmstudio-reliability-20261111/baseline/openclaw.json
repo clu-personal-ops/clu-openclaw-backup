@@ -1,0 +1,502 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/Users/clu/.openclaw/workspace",
+      "models": {
+        "apple-fm/system": {
+          "agentRuntime": {
+            "id": "openclaw"
+          }
+        },
+        "openai/gpt-6-astra": {},
+        "lmstudio/google/gemma-4-26b-a4b-qat": {},
+        "lmstudio/openai/gpt-oss-20b": {},
+        "lmstudio/qwen/qwen3.5-9b": {},
+        "lmstudio/qwen/qwen3.6-35b-a3b": {},
+        "lmstudio/qwen/qwen3.8-27b": {}
+      },
+      "utilityModel": "apple-fm/system",
+      "model": {
+        "primary": "lmstudio/qwen/qwen3.6-35b-a3b",
+        "fallbacks": []
+      },
+      "systemAgent": {
+        "agentId": "main"
+      },
+      "heartbeat": {
+        "agentId": "main",
+        "every": "0m"
+      }
+    },
+    "entries": {
+      "main": {
+        "name": "Clu",
+        "workspace": "/Users/clu/.openclaw/workspace",
+        "agentDir": "/Users/clu/.openclaw/agents/main/agent",
+        "identity": {
+          "name": "Clu"
+        },
+        "model": {
+          "primary": "openai/gpt-6.1-sol",
+          "fallbacks": []
+        },
+        "subagents": {
+          "allowAgents": []
+        },
+        "thinkingDefault": "medium"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "anthropic": {
+        "config": {
+          "sessionCatalog": {
+            "enabled": false
+          }
+        }
+      },
+      "codex": {
+        "config": {
+          "sessionCatalog": {
+            "enabled": false
+          },
+          "codexPlugins": {
+            "plugins": {
+              "gmail@openai-curated": {
+                "enabled": true,
+                "marketplaceName": "openai-curated",
+                "pluginName": "gmail"
+              }
+            },
+            "enabled": true
+          }
+        },
+        "enabled": true
+      },
+      "apple-fm": {
+        "enabled": true
+      },
+      "telegram": {
+        "enabled": true
+      },
+      "parallel": {
+        "enabled": true
+      },
+      "firecrawl": {
+        "enabled": true
+      },
+      "openai": {
+        "enabled": true
+      },
+      "lmstudio": {
+        "enabled": true
+      },
+      "llm-task": {
+        "enabled": true,
+        "llm": {
+          "allowModelOverride": true,
+          "allowAuthProfileOverride": true
+        },
+        "config": {}
+      },
+      "lobster": {
+        "enabled": true
+      },
+      "imessage": {
+        "enabled": true
+      },
+      "browser": {
+        "enabled": true
+      },
+      "memory-core": {
+        "config": {
+          "dreaming": {
+            "enabled": false
+          }
+        }
+      }
+    },
+    "allow": [
+      "alibaba",
+      "anthropic",
+      "apple-fm",
+      "azure-speech",
+      "bonjour",
+      "browser",
+      "canvas",
+      "clawrouter",
+      "codex",
+      "copilot-proxy",
+      "cua-computer",
+      "deepgram",
+      "device-pair",
+      "document-extract",
+      "elevenlabs",
+      "fal",
+      "file-transfer",
+      "firecrawl",
+      "geolocation",
+      "github",
+      "github-copilot",
+      "google",
+      "huggingface",
+      "kie",
+      "linux-node",
+      "litellm",
+      "lmstudio",
+      "memory-core",
+      "microsoft",
+      "microsoft-foundry",
+      "minimax",
+      "nvidia",
+      "ollama",
+      "openai",
+      "opencode-go",
+      "openrouter",
+      "parallel",
+      "runway",
+      "senseaudio",
+      "sglang",
+      "talk-voice",
+      "telegram",
+      "together",
+      "tts-local-cli",
+      "vllm",
+      "web-readability",
+      "xai",
+      "lobster",
+      "imessage",
+      "llm-task"
+    ]
+  },
+  "meta": {
+    "migrations": {
+      "modelPolicyAllowlist": true,
+      "utilityModelSeparation": true
+    },
+    "lastTouchedVersion": "2026.10.8"
+  },
+  "wizard": {
+    "securityAcknowledgedAt": "2026-10-29T05:11:35.619Z",
+    "lastRunAt": "2026-11-02T17:37:55.720Z",
+    "lastRunVersion": "2026.10.8",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "telemetry": {
+    "enabled": false,
+    "consentedAt": "2026-10-29T05:11:38.737Z"
+  },
+  "gateway": {
+    "mode": "local",
+    "port": 18789,
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": {
+        "source": "store",
+        "provider": "default",
+        "id": "OPENCLAW_GATEWAY_TOKEN"
+      }
+    },
+    "tailscale": {
+      "mode": "serve"
+    },
+    "controlUi": {
+      "newSessionModelDefaults": "configured"
+    }
+  },
+  "tools": {
+    "profile": "full",
+    "web": {
+      "search": {
+        "provider": "parallel-free",
+        "enabled": true,
+        "openaiCodex": {}
+      },
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "deny": [
+      "firecrawl"
+    ],
+    "elevated": {
+      "enabled": false
+    },
+    "sessions": {
+      "visibility": "tree"
+    },
+    "loopDetection": {
+      "enabled": true
+    },
+    "alsoAllow": [
+      "llm-task",
+      "lobster"
+    ],
+    "agentToAgent": {
+      "enabled": false
+    },
+    "sessions_spawn": {
+      "attachments": {
+        "enabled": true
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "apple-fm": {
+        "baseUrl": "http://127.0.0.1",
+        "api": "openai-completions",
+        "authHeader": false,
+        "timeoutSeconds": 120,
+        "models": [
+          {
+            "id": "system",
+            "name": "AFM 3 Core Advanced",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 8192,
+            "maxTokens": 1024,
+            "compat": {
+              "supportsTools": true,
+              "supportsJsonSchemaResponseFormat": true,
+              "supportsDeveloperRole": false,
+              "supportsUsageInStreaming": true
+            }
+          }
+        ]
+      },
+      "lmstudio": {
+        "baseUrl": "http://127.0.0.1:1234/v1",
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "lmstudio/qwen/qwen3.6-35b-a3b",
+            "name": "Qwen3.6 35B",
+            "maxTokens": 4096
+          }
+        ],
+        "apiKey": {
+          "source": "file",
+          "provider": "reconnected_lmstudio",
+          "id": "value"
+        },
+        "params": {
+          "preload": false
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "groups": {},
+      "botToken": {
+        "source": "file",
+        "provider": "reconnected_telegram",
+        "id": "value"
+      },
+      "groupAllowFrom": [
+        "9013562211"
+      ],
+      "allowFrom": [
+        "9013562211"
+      ],
+      "dmPolicy": "allowlist",
+      "groupPolicy": "disabled"
+    },
+    "imessage": {
+      "enabled": true,
+      "cliPath": "/opt/homebrew/bin/imsg",
+      "dbPath": "/Users/clu/Library/Messages/chat.db",
+      "dmPolicy": "pairing",
+      "groupPolicy": "disabled",
+      "configWrites": false
+    }
+  },
+  "commands": {
+    "ownerAllowFrom": [
+      "telegram:9013562211"
+    ]
+  },
+  "hooks": {
+    "internal": {
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "secrets": {
+    "providers": {
+      "reconnected_lmstudio": {
+        "source": "file",
+        "path": "/Users/clu/.openclaw/credentials/reconnected/lmstudio-api-key",
+        "mode": "singleValue"
+      },
+      "reconnected_telegram": {
+        "source": "file",
+        "path": "/Users/clu/.openclaw/credentials/reconnected/telegram-bot-token",
+        "mode": "singleValue"
+      }
+    }
+  },
+  "memory": {
+    "search": {
+      "provider": "lmstudio",
+      "model": "text-embedding-qwen3-embedding-0.6b",
+      "fallback": "none"
+    }
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "main",
+      "match": {
+        "channel": "telegram",
+        "accountId": "default"
+      }
+    },
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "imessage",
+        "accountId": "default"
+      }
+    }
+  ],
+  "talk": {
+    "agentId": "main"
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "1password": {
+        "enabled": false
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "goplaces": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "mcporter": {
+        "enabled": false
+      },
+      "model-usage": {
+        "enabled": false
+      },
+      "nano-pdf": {
+        "enabled": false
+      },
+      "obsidian": {
+        "enabled": false
+      },
+      "openai-whisper": {
+        "enabled": false
+      },
+      "openai-whisper-api": {
+        "enabled": false
+      },
+      "openhue": {
+        "enabled": false
+      },
+      "oracle": {
+        "enabled": false
+      },
+      "ordercli": {
+        "enabled": false
+      },
+      "peekaboo": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "things-mac": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "xurl": {
+        "enabled": false
+      }
+    }
+  },
+  "messages": {
+    "queue": {
+      "mode": "followup"
+    }
+  },
+  "mcp": {
+    "servers": {
+      "notion": {
+        "url": "https://mcp.notion.com/mcp",
+        "transport": "streamable-http",
+        "auth": "oauth"
+      }
+    }
+  }
+}

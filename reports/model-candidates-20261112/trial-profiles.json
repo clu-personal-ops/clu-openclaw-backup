@@ -1,0 +1,446 @@
+{
+  "schema": 2,
+  "scope": "all6 families, hardware-fit/download/default readiness only; no quality filtering or pipeline integration",
+  "models": [
+    {
+      "role": "baseline",
+      "model_key": "google/gemma-4-26b-a4b-qat",
+      "format": "safetensors",
+      "quantization": "4bit",
+      "size_bytes": 15641333028,
+      "advertised_context": 262144,
+      "saved_load_context": 32768,
+      "proposed_role_fit_context": 32768,
+      "common_short_context": 8192,
+      "runtime_verified": false
+    },
+    {
+      "role": "baseline",
+      "model_key": "qwen/qwen3.6-35b-a3b",
+      "format": "safetensors",
+      "quantization": "4bit",
+      "size_bytes": 20429364306,
+      "advertised_context": 262144,
+      "saved_load_context": 32768,
+      "proposed_role_fit_context": 32768,
+      "common_short_context": 8192,
+      "runtime_verified": false
+    },
+    {
+      "role": "baseline",
+      "model_key": "openai/gpt-oss-20b",
+      "format": "gguf",
+      "quantization": "MXFP4",
+      "size_bytes": 12109664217,
+      "advertised_context": 131072,
+      "saved_load_context": 32768,
+      "proposed_role_fit_context": 32768,
+      "common_short_context": 8192,
+      "runtime_verified": false
+    },
+    {
+      "role": "baseline",
+      "model_key": "qwen/qwen3.8-27b",
+      "format": "safetensors",
+      "quantization": "4bit",
+      "size_bytes": 16081678492,
+      "advertised_context": 262144,
+      "saved_load_context": 64000,
+      "proposed_role_fit_context": 64000,
+      "common_short_context": 8192,
+      "runtime_verified": false
+    },
+    {
+      "role": "baseline",
+      "model_key": "qwen/qwen3.5-9b",
+      "format": "safetensors",
+      "quantization": "4bit",
+      "size_bytes": 5977257833,
+      "advertised_context": 262144,
+      "saved_load_context": 64000,
+      "proposed_role_fit_context": 64000,
+      "common_short_context": 8192,
+      "runtime_verified": false
+    },
+    {
+      "role": "candidate",
+      "requested_repo": "ClankLabs/Wrench-9B-Q4_K_M-GGUF",
+      "baseline": "qwen/qwen3.5-9b",
+      "hardware_potential_viable": true,
+      "model_key": "wrench-9b",
+      "indexed_identity": "ClankLabs/Wrench-9B-Q4_K_M-GGUF/Wrench-9B-Q4_K_M-GGUF .gguf",
+      "default_config_path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/ClankLabs/Wrench-9B-Q4_K_M-GGUF/Wrench-9B-Q4_K_M-GGUF .gguf.json",
+      "default_config": {
+        "preset": "",
+        "operation": {
+          "fields": [
+            {
+              "key": "llm.prediction.temperature",
+              "value": 0.4
+            },
+            {
+              "key": "llm.prediction.topPSampling",
+              "value": {
+                "checked": true,
+                "value": 0.95
+              }
+            },
+            {
+              "key": "llm.prediction.topKSampling",
+              "value": 20
+            },
+            {
+              "key": "llm.prediction.minPSampling",
+              "value": {
+                "checked": false,
+                "value": 0
+              }
+            },
+            {
+              "key": "llm.prediction.repeatPenalty",
+              "value": {
+                "checked": false,
+                "value": 1.0
+              }
+            },
+            {
+              "key": "llm.prediction.maxPredictedTokens",
+              "value": {
+                "checked": true,
+                "value": 8192
+              }
+            },
+            {
+              "key": "llm.prediction.contextOverflowPolicy",
+              "value": "stopAtLimit"
+            },
+            {
+              "key": "llm.prediction.llama.presencePenalty",
+              "value": {
+                "checked": true,
+                "value": 1.5
+              }
+            },
+            {
+              "key": "llm.prediction.reasoning.enableThinking",
+              "value": false
+            }
+          ]
+        },
+        "load": {
+          "fields": [
+            {
+              "key": "llm.load.contextLength",
+              "value": 32768
+            },
+            {
+              "key": "llm.load.numParallelSessions",
+              "value": 1
+            }
+          ]
+        }
+      },
+      "default_context_length": 32768,
+      "default_config_persisted": true,
+      "runtime_load_and_default_context_verified": true,
+      "prediction_sampling_behavior_verified": false,
+      "readiness_receipt": "readiness-wrench-9b.json",
+      "quality_evaluated": false,
+      "context_caveat": "Publisher card says8192; GGUF architecture advertises262144.32K saved load is hardware-verified if receipt matches, not long-context quality qualification.",
+      "metadata_caveat": "Repo label9B, embedded size_label8B; retain provenance caveat"
+    },
+    {
+      "role": "candidate",
+      "requested_repo": "samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF",
+      "baseline": "qwen/qwen3.6-35b-a3b",
+      "hardware_potential_viable": true,
+      "model_key": "carnice-qwen3.6-moe-35b-a3b",
+      "indexed_identity": "samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF/Carnice-Qwen3.6-MoE-35B-A3B-Q4_K_M.gguf",
+      "default_config_path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF/Carnice-Qwen3.6-MoE-35B-A3B-Q4_K_M.gguf.json",
+      "default_config": {
+        "preset": "",
+        "operation": {
+          "fields": [
+            {
+              "key": "llm.prediction.temperature",
+              "value": 0.3
+            },
+            {
+              "key": "llm.prediction.topPSampling",
+              "value": {
+                "checked": true,
+                "value": 0.9
+              }
+            },
+            {
+              "key": "llm.prediction.topKSampling",
+              "value": 20
+            },
+            {
+              "key": "llm.prediction.minPSampling",
+              "value": {
+                "checked": false,
+                "value": 0
+              }
+            },
+            {
+              "key": "llm.prediction.repeatPenalty",
+              "value": {
+                "checked": false,
+                "value": 1.0
+              }
+            },
+            {
+              "key": "llm.prediction.maxPredictedTokens",
+              "value": {
+                "checked": true,
+                "value": 8192
+              }
+            },
+            {
+              "key": "llm.prediction.contextOverflowPolicy",
+              "value": "stopAtLimit"
+            },
+            {
+              "key": "llm.prediction.llama.presencePenalty",
+              "value": {
+                "checked": false,
+                "value": 0
+              }
+            },
+            {
+              "key": "llm.prediction.reasoning.enableThinking",
+              "value": false
+            }
+          ]
+        },
+        "load": {
+          "fields": [
+            {
+              "key": "llm.load.contextLength",
+              "value": 32768
+            },
+            {
+              "key": "llm.load.numParallelSessions",
+              "value": 1
+            }
+          ]
+        }
+      },
+      "default_context_length": 32768,
+      "default_config_persisted": true,
+      "runtime_load_and_default_context_verified": true,
+      "prediction_sampling_behavior_verified": false,
+      "readiness_receipt": "readiness-carnice-qwen3.6-moe-35b-a3b.json",
+      "quality_evaluated": false
+    },
+    {
+      "role": "candidate",
+      "requested_repo": "fesalfayed/gpt-oss-20b-hermes_agent-tool-finetune_gguf",
+      "baseline": "openai/gpt-oss-20b",
+      "hardware_potential_viable": true,
+      "model_key": null,
+      "indexed_identity": null,
+      "default_config_path": null,
+      "default_config": null,
+      "default_context_length": 32768,
+      "default_config_persisted": false,
+      "runtime_load_and_default_context_verified": false,
+      "prediction_sampling_behavior_verified": false,
+      "readiness_receipt": null,
+      "quality_evaluated": false
+    },
+    {
+      "role": "candidate",
+      "requested_repo": "superqwen/qwen3.8-27b-swe-lora",
+      "baseline": "qwen/qwen3.8-27b",
+      "hardware_potential_viable": true,
+      "model_key": "qwen3.8-27b-swe-superqwen-mlx",
+      "indexed_identity": "clu-local/Qwen3.8-27B-SWE-superqwen-MLX-4bit",
+      "default_config_path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/clu-local/Qwen3.8-27B-SWE-superqwen-MLX-4bit.json",
+      "default_config": {
+        "preset": "",
+        "operation": {
+          "fields": [
+            {
+              "key": "llm.prediction.temperature",
+              "value": 0.0
+            },
+            {
+              "key": "llm.prediction.topPSampling",
+              "value": {
+                "checked": true,
+                "value": 0.95
+              }
+            },
+            {
+              "key": "llm.prediction.topKSampling",
+              "value": 20
+            },
+            {
+              "key": "llm.prediction.minPSampling",
+              "value": {
+                "checked": false,
+                "value": 0
+              }
+            },
+            {
+              "key": "llm.prediction.repeatPenalty",
+              "value": {
+                "checked": false,
+                "value": 1.0
+              }
+            },
+            {
+              "key": "llm.prediction.maxPredictedTokens",
+              "value": {
+                "checked": true,
+                "value": 8192
+              }
+            },
+            {
+              "key": "llm.prediction.contextOverflowPolicy",
+              "value": "stopAtLimit"
+            },
+            {
+              "key": "llm.prediction.reasoning.enableThinking",
+              "value": true
+            }
+          ]
+        },
+        "load": {
+          "fields": [
+            {
+              "key": "llm.load.contextLength",
+              "value": 32768
+            },
+            {
+              "key": "llm.load.numParallelSessions",
+              "value": 1
+            }
+          ]
+        }
+      },
+      "default_context_length": 32768,
+      "default_config_persisted": true,
+      "runtime_load_and_default_context_verified": true,
+      "prediction_sampling_behavior_verified": false,
+      "readiness_receipt": "readiness-qwen3.8-27b-swe-superqwen-mlx.json",
+      "quality_evaluated": false,
+      "preparation": "native MLX4bit local adapter fusion against quantized base, not publisher BF16 merge",
+      "provenance": "swe-merge-receipt.json",
+      "reasoning_default": "short low-effort reasoning; template default changed to low to match training"
+    },
+    {
+      "role": "candidate",
+      "requested_repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+      "baseline": "google/gemma-4-26b-a4b-qat",
+      "hardware_potential_viable": true,
+      "model_key": "gemma-4-26b-a4b-hermes-vlm-mlx",
+      "indexed_identity": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+      "default_config_path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX.json",
+      "default_config": {
+        "preset": "",
+        "operation": {
+          "fields": [
+            {
+              "key": "llm.prediction.temperature",
+              "value": 0.5
+            },
+            {
+              "key": "llm.prediction.topPSampling",
+              "value": {
+                "checked": true,
+                "value": 0.9
+              }
+            },
+            {
+              "key": "llm.prediction.topKSampling",
+              "value": 40
+            },
+            {
+              "key": "llm.prediction.minPSampling",
+              "value": {
+                "checked": false,
+                "value": 0
+              }
+            },
+            {
+              "key": "llm.prediction.repeatPenalty",
+              "value": {
+                "checked": false,
+                "value": 1.0
+              }
+            },
+            {
+              "key": "llm.prediction.maxPredictedTokens",
+              "value": {
+                "checked": true,
+                "value": 8192
+              }
+            },
+            {
+              "key": "llm.prediction.contextOverflowPolicy",
+              "value": "stopAtLimit"
+            },
+            {
+              "key": "llm.prediction.reasoning.enableThinking",
+              "value": false
+            }
+          ]
+        },
+        "load": {
+          "fields": [
+            {
+              "key": "llm.load.contextLength",
+              "value": 32768
+            },
+            {
+              "key": "llm.load.numParallelSessions",
+              "value": 1
+            }
+          ]
+        }
+      },
+      "default_context_length": 32768,
+      "default_config_persisted": true,
+      "runtime_load_and_default_context_verified": true,
+      "prediction_sampling_behavior_verified": false,
+      "readiness_receipt": "readiness-gemma-4-26b-a4b-hermes-vlm-mlx.json",
+      "quality_evaluated": false
+    },
+    {
+      "role": "candidate",
+      "requested_repo": "jason-schulz/Gemma-4-26B-A4B-Hermes-MLX",
+      "baseline": "google/gemma-4-26b-a4b-qat",
+      "hardware_potential_viable": true,
+      "model_key": null,
+      "indexed_identity": null,
+      "default_config_path": null,
+      "default_config": null,
+      "default_context_length": 32768,
+      "default_config_persisted": false,
+      "runtime_load_and_default_context_verified": false,
+      "prediction_sampling_behavior_verified": false,
+      "readiness_receipt": null,
+      "quality_evaluated": false,
+      "preparation": "local text-only export from public VLM checkpoint; inaccessible original text repository not downloaded",
+      "provenance": "gemma-text-export-receipt.json",
+      "original_source_access_blocker": "HTTP401"
+    }
+  ],
+  "evaluation_policy": {
+    "default_candidate_context_tokens": 32768,
+    "default_candidate_output_tokens": 8192,
+    "baseline_contexts_preserved": true,
+    "compare_same_workloads_and_equivalent_budgets": true,
+    "allow_model_appropriate_sampling_and_reasoning": true,
+    "effective_runtime_preflight_required": true,
+    "do_not_confuse_saved_defaults_with_explicit_caller_overrides": true,
+    "native_templates_preserved_except_documented_SWE_effort_default": true,
+    "backend_quantization_and_local_merge_confounders_explicit": true,
+    "readiness_is_not_quality_evaluation": true,
+    "tools": "deterministic executor authority; no real side effects during candidate evaluation without authorization",
+    "pipeline_discrepancy": "model_worker.py explicitly loads8192 and uses temperature0; later implementer must consume profiles rather than silently override them"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "models.providers.lmstudio.models[0].compat.supportedReasoningEfforts",
+    "value": [
+      "none"
+    ]
+  },
+  {
+    "path": "models.providers.lmstudio.models[0].compat.reasoningEffortMap",
+    "value": {
+      "off": "none",
+      "minimal": "none",
+      "low": "none",
+      "medium": "none",
+      "high": "none",
+      "xhigh": "none",
+      "max": "none"
+    }
+  },
+  {
+    "path": "agents.defaults.models[\"lmstudio/qwen/qwen3.6-35b-a3b\"].params",
+    "value": {
+      "thinking": "off"
+    }
+  }
+]

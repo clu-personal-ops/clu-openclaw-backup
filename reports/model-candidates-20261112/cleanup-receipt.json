@@ -1,0 +1,22 @@
+{
+  "removed": [
+    {
+      "path": "/Users/clu/.lmstudio/models/fesalfayed/gpt-oss-20b-hermes_agent-tool-finetune_gguf/gpt-oss-20b-hermes.Q4_K_M.gguf.part",
+      "bytes_removed": 11963994112,
+      "reason": "abandoned external partial"
+    },
+    {
+      "path": "reports/model-candidates-20261112/swe-adapter-source/adapter_model.safetensors",
+      "bytes_removed": 435280528,
+      "reason": "redundant source after verified separate merged checkpoint"
+    },
+    {
+      "path": "reports/model-candidates-20261112/swe-adapter-source/tokenizer.json",
+      "bytes_removed": 19989339,
+      "reason": "redundant source after verified separate merged checkpoint"
+    }
+  ],
+  "bytes_removed_total": 12419263979,
+  "free_space_increase_observed_bytes": 12402401280,
+  "preserved": "active downloading_*.part, installed checkpoints, small source/config/hash/rollback receipts"
+}

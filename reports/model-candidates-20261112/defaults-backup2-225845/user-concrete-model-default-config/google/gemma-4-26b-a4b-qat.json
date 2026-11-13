@@ -1,0 +1,41 @@
+{
+  "preset": "",
+  "operation": {
+    "fields": [
+      {
+        "key": "llm.prediction.temperature",
+        "value": 1.0
+      },
+      {
+        "key": "llm.prediction.topPSampling",
+        "value": {
+          "checked": true,
+          "value": 0.95
+        }
+      },
+      {
+        "key": "llm.prediction.topKSampling",
+        "value": 64
+      },
+      {
+        "key": "llm.prediction.maxPredictedTokens",
+        "value": {
+          "checked": true,
+          "value": 8192
+        }
+      },
+      {
+        "key": "llm.prediction.contextOverflowPolicy",
+        "value": "stopAtLimit"
+      }
+    ]
+  },
+  "load": {
+    "fields": [
+      {
+        "key": "llm.load.contextLength",
+        "value": 32768
+      }
+    ]
+  }
+}

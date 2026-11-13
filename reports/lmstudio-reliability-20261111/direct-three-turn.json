@@ -1,0 +1,59 @@
+[
+  {
+    "turn": 1,
+    "seconds": 0.395,
+    "message": {
+      "role": "assistant",
+      "content": "READY",
+      "reasoning_content": "",
+      "tool_calls": []
+    },
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 26,
+      "completion_tokens": 2,
+      "total_tokens": 28,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  {
+    "turn": 2,
+    "seconds": 0.197,
+    "message": {
+      "role": "assistant",
+      "content": "COBALT-731",
+      "reasoning_content": "",
+      "tool_calls": []
+    },
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 8,
+      "total_tokens": 55,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  {
+    "turn": 3,
+    "seconds": 0.241,
+    "message": {
+      "role": "assistant",
+      "content": "COBALT-731",
+      "reasoning_content": "",
+      "tool_calls": []
+    },
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 8,
+      "total_tokens": 82,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  }
+]

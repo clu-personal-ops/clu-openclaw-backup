@@ -1,0 +1,75 @@
+{
+  "id": "0691547a-cc3e-4b7a-a928-f37ea96800f9",
+  "declarationKey": "sol-usage-resume-20261111",
+  "displayName": "Resume usage-interrupted work",
+  "owner": {
+    "agentId": "main",
+    "sessionKey": "agent:main:ios-da7f42fb-7b1a-4cab-80a6-69587ba0b3ce",
+    "accountId": "default"
+  },
+  "agentId": "main",
+  "sessionKey": "agent:main:ios-da7f42fb-7b1a-4cab-80a6-69587ba0b3ce",
+  "name": "sol-usage-resume",
+  "description": "Hourly silent usage check; wake ordinary failed OpenAI main/direct turns without paused goals (native Codex goal resume unsupported)",
+  "enabled": true,
+  "createdAtMs": 1794451373545,
+  "schedule": {
+    "kind": "every",
+    "everyMs": 3600000,
+    "anchorMs": 1794480887416
+  },
+  "sessionTarget": "session:agent:main:main",
+  "wakeMode": "now",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "You are a silent usage-recovery dispatcher in the canonical main session. The trigger identifies one exact sessionKey; without one, return NO_REPLY. Recheck it with exec via openclaw gateway call sessions.list --json --params '{\"limit\":200}' and openclaw gateway call usage.status --json. Require agentId main, classification main/direct, modelProvider openai, status failed with usage/auth-limit lastRunError, no active run, available OpenAI quota, and no paused goal. Do not attempt to resume paused goals: the Gateway does not support sessions.goal.update resume for native Codex sessions. If eligible, call sessions_send with exact sessionKey, mode:\"followup\", timeoutSeconds:0, message:\"Usage appears available again. Continue the interrupted user task in this conversation from where it stopped. Review recent conversation and existing work before repeating actions. If already complete or cannot reconstruct, report that.\" On successful admission return NO_REPLY. If no longer eligible, return NO_REPLY. Do no substantive task work here; report an error only if the send fails.",
+    "model": "openai/gpt-6.1-sol",
+    "fallbacks": [],
+    "toolsAllow": [
+      "exec",
+      "sessions_send"
+    ]
+  },
+  "failureAlert": {
+    "after": 3,
+    "cooldownMs": 3600000,
+    "mode": "announce"
+  },
+  "scheduledToolPolicy": {
+    "version": 1,
+    "mode": "account",
+    "ownerSessionKey": "agent:main:ios-da7f42fb-7b1a-4cab-80a6-69587ba0b3ce",
+    "ownerAccountId": "default"
+  },
+  "trigger": {
+    "script": "const usageResult = await exec({command:\"openclaw gateway call usage.status --json\"});\nconst usage = JSON.parse(String(usageResult.aggregated ?? \"\"));\nconst provider = usage.providers?.find(x => x.provider === \"openai\");\nif (!provider || !Array.isArray(provider.windows) || !provider.windows.length || provider.windows.some(w => typeof w.usedPercent !== \"number\")) throw Error(\"OpenAI usage snapshot unavailable\");\nif (provider.windows.some(w => w.usedPercent >= 100)) return {fire:false};\nconst sessionResult = await exec({command:\"openclaw gateway call sessions.list --json --params '{\\\"limit\\\":200}'\"});\nconst listing = JSON.parse(String(sessionResult.aggregated ?? \"\"));\nif (!Array.isArray(listing.sessions)) throw Error(\"Session list unavailable\");\nconst prior = trigger.state ?? {};\nconst usageError = s => /usage|limit|quota|temporarily unavailable|cooldown/i.test(String(s ?? \"\"));\nconst candidates = listing.sessions.filter(x => x.agentId === \"main\" && [\"main\",\"direct\"].includes(x.classification) && x.modelProvider === \"openai\" && !x.hasActiveRun && Number(x.updatedAt) > 1794451781736 && (x.status === \"failed\" && usageError(x.lastRunError) && x.goal?.status !== \"paused\"));\ncandidates.sort((a,b) => Number(b.updatedAt) - Number(a.updatedAt));\nconst target = candidates.find(x => {\n  const marker = \"run:\" + x.updatedAt;\n  return prior.key !== x.key || prior.marker !== marker;\n});\nif (!target) return {fire:false,state:prior};\nconst marker = \"run:\" + target.updatedAt;\nreturn {fire:true,message:\"Recover exact sessionKey \" + target.key + \". Recovery marker \" + marker + \".\",state:{key:target.key,marker}};"
+  },
+  "delivery": {
+    "mode": "none"
+  },
+  "state": {
+    "nextRunAtMs": 1794495287416,
+    "scheduleActivatedAtMs": 1794480887416,
+    "lastRunAtMs": 1794480844813,
+    "lastRunStatus": "ok",
+    "lastStatus": "ok",
+    "lastDurationMs": 29234,
+    "lastDeliveryStatus": "delivered",
+    "lastFailureNotificationDeliveryStatus": "not-requested",
+    "consecutiveErrors": 0,
+    "consecutiveSkipped": 0,
+    "scheduleErrorCount": 0,
+    "lastDelivered": true,
+    "lastTriggerEvalAtMs": 1794491689379,
+    "triggerEvalCount": 3,
+    "triggerState": {}
+  },
+  "updatedAtMs": 1794491689379,
+  "configRevision": "sha256:-0feVbC4mpz4SJVYyEAL_Gcic9H_gYIdUxT9J_5iKXU",
+  "nextRunAtMs": 1794495287416,
+  "lastRunAtMs": 1794480844813,
+  "lastRunStatus": "ok",
+  "lastDelivered": true,
+  "lastDeliveryStatus": "delivered",
+  "lastFailureNotificationDeliveryStatus": "not-requested"
+}

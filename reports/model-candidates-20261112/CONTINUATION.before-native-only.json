@@ -1,0 +1,34 @@
+{
+  "task": "all six model families prepared with actual per-model defaults",
+  "processes": {
+    "original_downloads": "calm-glade",
+    "adapter_and_gemma_downloads": "glow-nexus",
+    "initial_context_readiness": "young-sage"
+  },
+  "completed": [
+    "all6 assessed hardware-potential viable at4bit",
+    "SWE adapter downloaded; merged400 matched modules into separate15.15GB MLX checkpoint; OG5 preserved",
+    "Wrench downloaded and checksum verified",
+    "candidate default configuration writer implemented and applied to indexed models"
+  ],
+  "next": [
+    "Collect initial context readiness; correct identity/default mismatch if observed",
+    "On glow-nexus completion verify shards then run prepare-gemma-text.py with installed native MLX Python; clearly label derived public source, not inaccessible original",
+    "Collect original download completion; resolve remaining inventory keys",
+    "Run apply-defaults.py after complete checkpoints; verify saved default contexts with bounded task-owned load/unload, no inference",
+    "Update profiles and HANDOFF for all6; verify OG5 defaults/pipeline source unchanged; return final per-family state"
+  ],
+  "pipeline_code_and_benchmarking": "out of scope",
+  "text_source_blocker": "original named repo HTTP401; public VLM language-tower alternative under preparation",
+  "completion_owner": {
+    "session": "neat-mist",
+    "pid": 54474,
+    "mechanism": "event-driven exit wait for existing transfers, then text export/defaults/readiness; nonempty terminal output wakes this conversation"
+  },
+  "after_completion_event": [
+    "Inspect FINAL_SUMMARY.json or completion-blocker.json and step logs",
+    "Resolve any real blocker without repeating completed transfers or merges",
+    "Run refresh-manifest.py to incorporate all final readiness receipts",
+    "Finalize status in HANDOFF and canonical supplement; update progress card and return owner result"
+  ]
+}

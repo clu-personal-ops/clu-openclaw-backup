@@ -1,0 +1,394 @@
+[
+  {
+    "family": "Wrench-9B-Q4_K_M-GGUF",
+    "status": "defaults-persisted-readback-verified",
+    "model_key": "wrench-9b",
+    "indexed_identity": "ClankLabs/Wrench-9B-Q4_K_M-GGUF/Wrench-9B-Q4_K_M-GGUF .gguf",
+    "path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/ClankLabs/Wrench-9B-Q4_K_M-GGUF/Wrench-9B-Q4_K_M-GGUF .gguf.json",
+    "context_length": 32768,
+    "max_output_tokens": 8192,
+    "thinking": false,
+    "default_config": {
+      "preset": "",
+      "operation": {
+        "fields": [
+          {
+            "key": "llm.prediction.temperature",
+            "value": 0.4
+          },
+          {
+            "key": "llm.prediction.topPSampling",
+            "value": {
+              "checked": true,
+              "value": 0.95
+            }
+          },
+          {
+            "key": "llm.prediction.topKSampling",
+            "value": 20
+          },
+          {
+            "key": "llm.prediction.minPSampling",
+            "value": {
+              "checked": false,
+              "value": 0
+            }
+          },
+          {
+            "key": "llm.prediction.repeatPenalty",
+            "value": {
+              "checked": false,
+              "value": 1.0
+            }
+          },
+          {
+            "key": "llm.prediction.maxPredictedTokens",
+            "value": {
+              "checked": true,
+              "value": 8192
+            }
+          },
+          {
+            "key": "llm.prediction.contextOverflowPolicy",
+            "value": "stopAtLimit"
+          },
+          {
+            "key": "llm.prediction.llama.presencePenalty",
+            "value": {
+              "checked": true,
+              "value": 1.5
+            }
+          },
+          {
+            "key": "llm.prediction.reasoning.enableThinking",
+            "value": false
+          }
+        ]
+      },
+      "load": {
+        "fields": [
+          {
+            "key": "llm.load.contextLength",
+            "value": 32768
+          },
+          {
+            "key": "llm.load.numParallelSessions",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "runtime_effective_verified": false
+  },
+  {
+    "family": "Carnice-Qwen3.6-MoE-35B-A3B-GGUF",
+    "status": "defaults-persisted-readback-verified",
+    "model_key": "carnice-qwen3.6-moe-35b-a3b",
+    "indexed_identity": "samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF/Carnice-Qwen3.6-MoE-35B-A3B-Q4_K_M.gguf",
+    "path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/samuelcardillo/Carnice-Qwen3.6-MoE-35B-A3B-GGUF/Carnice-Qwen3.6-MoE-35B-A3B-Q4_K_M.gguf.json",
+    "context_length": 32768,
+    "max_output_tokens": 8192,
+    "thinking": false,
+    "default_config": {
+      "preset": "",
+      "operation": {
+        "fields": [
+          {
+            "key": "llm.prediction.temperature",
+            "value": 0.3
+          },
+          {
+            "key": "llm.prediction.topPSampling",
+            "value": {
+              "checked": true,
+              "value": 0.9
+            }
+          },
+          {
+            "key": "llm.prediction.topKSampling",
+            "value": 20
+          },
+          {
+            "key": "llm.prediction.minPSampling",
+            "value": {
+              "checked": false,
+              "value": 0
+            }
+          },
+          {
+            "key": "llm.prediction.repeatPenalty",
+            "value": {
+              "checked": false,
+              "value": 1.0
+            }
+          },
+          {
+            "key": "llm.prediction.maxPredictedTokens",
+            "value": {
+              "checked": true,
+              "value": 8192
+            }
+          },
+          {
+            "key": "llm.prediction.contextOverflowPolicy",
+            "value": "stopAtLimit"
+          },
+          {
+            "key": "llm.prediction.llama.presencePenalty",
+            "value": {
+              "checked": false,
+              "value": 0
+            }
+          },
+          {
+            "key": "llm.prediction.reasoning.enableThinking",
+            "value": false
+          }
+        ]
+      },
+      "load": {
+        "fields": [
+          {
+            "key": "llm.load.contextLength",
+            "value": 32768
+          },
+          {
+            "key": "llm.load.numParallelSessions",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "runtime_effective_verified": false
+  },
+  {
+    "family": "gpt-oss-20b-hermes_agent-tool-finetune_gguf",
+    "status": "defaults-persisted-readback-verified",
+    "model_key": "gpt-oss-20b-hermes_agent-tool-finetune_gguf",
+    "indexed_identity": "fesalfayed/gpt-oss-20b-hermes_agent-tool-finetune_gguf/gpt-oss-20b-hermes.Q4_K_M.gguf",
+    "path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/fesalfayed/gpt-oss-20b-hermes_agent-tool-finetune_gguf/gpt-oss-20b-hermes.Q4_K_M.gguf.json",
+    "context_length": 32768,
+    "max_output_tokens": 8192,
+    "thinking": null,
+    "default_config": {
+      "preset": "",
+      "operation": {
+        "fields": [
+          {
+            "key": "llm.prediction.temperature",
+            "value": 0.7
+          },
+          {
+            "key": "llm.prediction.topPSampling",
+            "value": {
+              "checked": true,
+              "value": 0.95
+            }
+          },
+          {
+            "key": "llm.prediction.topKSampling",
+            "value": 40
+          },
+          {
+            "key": "llm.prediction.minPSampling",
+            "value": {
+              "checked": true,
+              "value": 0.1
+            }
+          },
+          {
+            "key": "llm.prediction.repeatPenalty",
+            "value": {
+              "checked": false,
+              "value": 1.0
+            }
+          },
+          {
+            "key": "llm.prediction.maxPredictedTokens",
+            "value": {
+              "checked": true,
+              "value": 8192
+            }
+          },
+          {
+            "key": "llm.prediction.contextOverflowPolicy",
+            "value": "stopAtLimit"
+          },
+          {
+            "key": "llm.prediction.llama.presencePenalty",
+            "value": {
+              "checked": false,
+              "value": 0
+            }
+          }
+        ]
+      },
+      "load": {
+        "fields": [
+          {
+            "key": "llm.load.contextLength",
+            "value": 32768
+          },
+          {
+            "key": "llm.load.numParallelSessions",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "runtime_effective_verified": false
+  },
+  {
+    "family": "Qwen3.8-27B-SWE-superqwen-MLX-4bit",
+    "status": "defaults-persisted-readback-verified",
+    "model_key": "qwen3.8-27b-swe-superqwen-mlx",
+    "indexed_identity": "clu-local/Qwen3.8-27B-SWE-superqwen-MLX-4bit",
+    "path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/clu-local/Qwen3.8-27B-SWE-superqwen-MLX-4bit.json",
+    "context_length": 32768,
+    "max_output_tokens": 8192,
+    "thinking": true,
+    "default_config": {
+      "preset": "",
+      "operation": {
+        "fields": [
+          {
+            "key": "llm.prediction.temperature",
+            "value": 0.0
+          },
+          {
+            "key": "llm.prediction.topPSampling",
+            "value": {
+              "checked": true,
+              "value": 0.95
+            }
+          },
+          {
+            "key": "llm.prediction.topKSampling",
+            "value": 20
+          },
+          {
+            "key": "llm.prediction.minPSampling",
+            "value": {
+              "checked": false,
+              "value": 0
+            }
+          },
+          {
+            "key": "llm.prediction.repeatPenalty",
+            "value": {
+              "checked": false,
+              "value": 1.0
+            }
+          },
+          {
+            "key": "llm.prediction.maxPredictedTokens",
+            "value": {
+              "checked": true,
+              "value": 8192
+            }
+          },
+          {
+            "key": "llm.prediction.contextOverflowPolicy",
+            "value": "stopAtLimit"
+          },
+          {
+            "key": "llm.prediction.reasoning.enableThinking",
+            "value": true
+          }
+        ]
+      },
+      "load": {
+        "fields": [
+          {
+            "key": "llm.load.contextLength",
+            "value": 32768
+          },
+          {
+            "key": "llm.load.numParallelSessions",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "runtime_effective_verified": false
+  },
+  {
+    "family": "Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "status": "defaults-persisted-readback-verified",
+    "model_key": "gemma-4-26b-a4b-hermes-vlm-mlx",
+    "indexed_identity": "jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX",
+    "path": "/Users/clu/.lmstudio/.internal/user-concrete-model-default-config/jason-schulz/Gemma-4-26B-A4B-Hermes-VLM-MLX.json",
+    "context_length": 32768,
+    "max_output_tokens": 8192,
+    "thinking": false,
+    "default_config": {
+      "preset": "",
+      "operation": {
+        "fields": [
+          {
+            "key": "llm.prediction.temperature",
+            "value": 0.5
+          },
+          {
+            "key": "llm.prediction.topPSampling",
+            "value": {
+              "checked": true,
+              "value": 0.9
+            }
+          },
+          {
+            "key": "llm.prediction.topKSampling",
+            "value": 40
+          },
+          {
+            "key": "llm.prediction.minPSampling",
+            "value": {
+              "checked": false,
+              "value": 0
+            }
+          },
+          {
+            "key": "llm.prediction.repeatPenalty",
+            "value": {
+              "checked": false,
+              "value": 1.0
+            }
+          },
+          {
+            "key": "llm.prediction.maxPredictedTokens",
+            "value": {
+              "checked": true,
+              "value": 8192
+            }
+          },
+          {
+            "key": "llm.prediction.contextOverflowPolicy",
+            "value": "stopAtLimit"
+          },
+          {
+            "key": "llm.prediction.reasoning.enableThinking",
+            "value": false
+          }
+        ]
+      },
+      "load": {
+        "fields": [
+          {
+            "key": "llm.load.contextLength",
+            "value": 32768
+          },
+          {
+            "key": "llm.load.numParallelSessions",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "runtime_effective_verified": false
+  },
+  {
+    "family": "Gemma-4-26B-A4B-Hermes-TEXT-local-MLX",
+    "status": "waiting-for-complete-indexed-checkpoint",
+    "matches": 0
+  }
+]

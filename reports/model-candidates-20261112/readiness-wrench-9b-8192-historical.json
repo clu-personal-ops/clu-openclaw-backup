@@ -1,0 +1,22 @@
+{
+  "model": "wrench-9b",
+  "identifier": "clu-model-prep-b1db578b139b",
+  "requested_default_context": 8192,
+  "inference_performed": false,
+  "load_output": "\u001b[?25l\nLoading wrench-9b 0% \u280b\u001b[?25l\nLoading wrench-9b 0% \u2819\u001b[?25l\nLoading wrench-9b 2% \u2819\u001b[?25l\nLoading wrench-9b 2% \u2839\u001b[?25l\nLoading wrench-9b 2% \u2838\u001b[?25l\nLoading wrench-9b 4% \u2838\u001b[?25l\nLoading wrench-9b 4% \u283c\u001b[?25l\nLoading wrench-9b 6% \u283c\u001b[?25l\nLoading wrench-9b 6% \u2834\u001b[?25l\nLoading wrench-9b 6% \u2826\u001b[?25l\nLoading wrench-9b 7% \u2826\u001b[?25l\nLoading wrench-9b 7% \u2827\u001b[?25l\nLoading wrench-9b 7% \u2807\u001b[?25l\nLoading wrench-9b 9% \u2807\u001b[?25l\nLoading wrench-9b 9% \u280f\u001b[?25l\nLoading wrench-9b 100% \u280f\n\u001b[K\u001b[?25hModel loaded successfully in 794.00ms.\n(5.24 GiB)\nTo use the model in the API/SDK, use the identifier \"clu-model-prep-b1db578b139b\".\n",
+  "observed_context": 8192,
+  "capabilities": {
+    "vision": false,
+    "trained_for_tool_use": true,
+    "reasoning": {
+      "allowed_options": [
+        "off",
+        "on"
+      ],
+      "default": "on"
+    }
+  },
+  "status": "load-and-default-context-verified",
+  "cleanup_output": "Model \"clu-model-prep-b1db578b139b\" unloaded.\n",
+  "owned_instance_unloaded": true
+}

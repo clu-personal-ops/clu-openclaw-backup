@@ -1,0 +1,48 @@
+{
+  "entries": [
+    {
+      "ts": 1794492518747,
+      "jobId": "0691547a-cc3e-4b7a-a928-f37ea96800f9",
+      "action": "finished",
+      "status": "ok",
+      "completionStatus": "succeeded",
+      "runId": "manual:0691547a-cc3e-4b7a-a928-f37ea96800f9:1794492517501:9",
+      "diagnostics": {
+        "summary": "NO_REPLY",
+        "entries": [
+          {
+            "ts": 1794492518747,
+            "source": "exec",
+            "severity": "info",
+            "message": "command ok: \"/Users/clu/.openclaw/tools/node-v24.22.1/bin/node\" \"/Users/clu/.openclaw/workspace/scripts/usage-monitor.mjs\"",
+            "exitCode": 0
+          }
+        ]
+      },
+      "runAtMs": 1794492517505,
+      "durationMs": 1242,
+      "nextRunAtMs": 1794495287416,
+      "delivered": false,
+      "deliveryStatus": "not-delivered",
+      "deliverySuppressionReason": "silent",
+      "delivery": {
+        "intended": {
+          "channel": "telegram",
+          "to": "telegram:9013562211",
+          "accountId": "default",
+          "source": "explicit"
+        },
+        "delivered": false
+      },
+      "jobName": "sol-usage-resume",
+      "tsIso": "2026-11-12T09:08:38.747-05:00",
+      "runAtIso": "2026-11-12T09:08:37.505-05:00",
+      "nextRunAtIso": "2026-11-12T09:54:47.416-05:00"
+    }
+  ],
+  "total": 11,
+  "offset": 0,
+  "limit": 1,
+  "hasMore": true,
+  "nextOffset": 1
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "notification-only existing job",
+  "jobId": "0691547a-cc3e-4b7a-a928-f37ea96800f9",
+  "provenDefects": [
+    "provider retrieval failure returned successful quiet result on repeated errors",
+    "root failure stage and status were discarded",
+    "duplicate provider observations were not rejected"
+  ],
+  "fix": [
+    "persist unknown retrieval flag and fail native command; leave confirmed phase/reminders unchanged",
+    "native existing failure alert remains responsible for failure delivery",
+    "secret-safe stage/status diagnostics; preserve causal exception",
+    "require exactly one OpenAI provider"
+  ],
+  "validation": {
+    "fixtureScenariosPassed": 23,
+    "liveDryRun": {
+      "phase": "available",
+      "weeklyRemaining": 12,
+      "snapshotAgeMs": 451,
+      "result": "NO_REPLY",
+      "stateWrites": 0,
+      "schedulerMutations": 0,
+      "notifications": 0,
+      "inferenceCalls": 0
+    }
+  },
+  "configurationUnchanged": {
+    "schedule": {
+      "kind": "every",
+      "everyMs": 3600000,
+      "anchorMs": 1794480887416
+    },
+    "delivery": "existing Telegram default account destination preserved",
+    "configRevision": "sha256:y5LUheP_VTdBVKQ8rxljVDOUC6So5OT8gTcPL_8NOCg",
+    "enabled": true,
+    "nextScheduledAt": "2026-11-13T02:54:47.416Z"
+  },
+  "limits": [
+    "exact Nov12 19:54 exception not recovered: runs API reports not-found for job confirmed by gateway-scope list/get",
+    "no forced run, duplicate test notification, provider exhaustion, restart or end-to-end restored-quota delivery induced"
+  ],
+  "rollback": "restore backed-up usage-monitor.mjs, usage-monitor.test.mjs and usage-monitor.md; no job/config restore needed"
+}

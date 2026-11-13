@@ -1,0 +1,54 @@
+{
+  "id": "1f3d23dc-f982-4d24-a245-f9e87b3cd136",
+  "schedule": {
+    "kind": "at",
+    "at": "2026-11-12T15:06:45.729Z"
+  },
+  "enabled": false,
+  "deleteAfterRun": true,
+  "run": {
+    "ok": true,
+    "enqueued": true,
+    "runId": "manual:1f3d23dc-f982-4d24-a245-f9e87b3cd136:1794492435408:8",
+    "processInstanceId": "d6dc83d5-6add-498a-9a0e-391e569fbaa4",
+    "completed": true,
+    "status": "ok",
+    "completionStatus": "succeeded",
+    "run": {
+      "ts": 1794492435438,
+      "jobId": "1f3d23dc-f982-4d24-a245-f9e87b3cd136",
+      "action": "finished",
+      "status": "ok",
+      "completionStatus": "succeeded",
+      "runId": "manual:1f3d23dc-f982-4d24-a245-f9e87b3cd136:1794492435408:8",
+      "diagnostics": {
+        "summary": "NO_REPLY",
+        "entries": [
+          {
+            "ts": 1794492435438,
+            "source": "exec",
+            "severity": "info",
+            "message": "command ok: \"/Users/clu/.openclaw/tools/node-v24.22.1/bin/node\" \"/Users/clu/.openclaw/workspace/scripts/usage-monitor.mjs\" \"--expiration\" \"1794496005729\"",
+            "exitCode": 0
+          }
+        ]
+      },
+      "runAtMs": 1794492435412,
+      "durationMs": 26,
+      "delivered": false,
+      "deliveryStatus": "not-delivered",
+      "deliverySuppressionReason": "silent",
+      "delivery": {
+        "intended": {
+          "channel": "telegram",
+          "to": "telegram:9013562211",
+          "accountId": "default",
+          "source": "explicit"
+        },
+        "delivered": false
+      },
+      "jobName": "usage-monitor-one-shot-verification"
+    }
+  },
+  "deletedAfterSilentSuccess": false
+}

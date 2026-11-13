@@ -1,0 +1,72 @@
+{
+  "provider": "lmstudio",
+  "modelRef": "lmstudio/qwen/qwen3.6-35b-a3b",
+  "expected": {
+    "models.providers.lmstudio.api": "openai-completions",
+    "models.providers.lmstudio.models": [
+      {
+        "id": "qwen/qwen3.6-35b-a3b",
+        "name": "Qwen3.6 35B",
+        "reasoning": true,
+        "input": [
+          "text",
+          "image"
+        ],
+        "contextWindow": 32768,
+        "contextTokens": 32768,
+        "maxTokens": 4096,
+        "compat": {
+          "supportsTools": true,
+          "supportsReasoningEffort": true,
+          "supportedReasoningEfforts": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "reasoningEffortMap": {
+            "off": "none",
+            "minimal": "minimal",
+            "low": "low",
+            "medium": "medium",
+            "high": "high",
+            "xhigh": "xhigh"
+          }
+        }
+      }
+    ],
+    "models.providers.lmstudio.timeoutSeconds": 180,
+    "agents.defaults.models[\"lmstudio/qwen/qwen3.6-35b-a3b\"].params": {
+      "thinking": "off",
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "extra_body": {
+        "reasoning_effort": "none"
+      }
+    }
+  },
+  "restore": [
+    {
+      "path": "models.providers.lmstudio.api",
+      "value": "openai-responses"
+    },
+    {
+      "path": "models.providers.lmstudio.models",
+      "value": [
+        {
+          "id": "lmstudio/qwen/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B",
+          "maxTokens": 4096
+        }
+      ]
+    }
+  ],
+  "unset": [
+    "models.providers.lmstudio.timeoutSeconds",
+    "agents.defaults.models[\"lmstudio/qwen/qwen3.6-35b-a3b\"].params"
+  ],
+  "lmstudioAutoEvictOriginal": true
+}
